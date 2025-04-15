@@ -1,0 +1,17 @@
+{
+  "hidefiles.configurationType": "global",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".vscode/": true,
+    ".ipynb_checkpoints/": true,
+    ".gitignore": true,
+    ".venv/": true,
+    "mapdn.egg-info/": true,
+    "wandb/": true
+  },
+  "hidefiles.selectedProfile": "Default"
+}
