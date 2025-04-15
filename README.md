@@ -1,3 +1,23 @@
+
+
+
+```bash
+conda env create -f environment.yml
+conda activate mapdn
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p float="left">
     <img src="img/CAP.jpg" width="51"/>
     <img src="img/efl.jpg" width="52" hspace="10"/> 
@@ -83,6 +103,7 @@ where $l_{v}(\cdot)$ is a voltage barrier function that measures whether the vol
 3. If you are on Linux OS (e.g. Ubuntu), please execute the following command. 
    ```bash
    conda env create -f environment.yml
+   conda activate mapdn
    ```
    If you are on Windows OS, please execute the following command. **Note that please launch the Anaconda shell by the permission of Administration.**
    ```bash
