@@ -9,6 +9,8 @@ from environments.var_voltage_control.voltage_control_env import VoltageControl
 from utilities.util import convert, dict2str
 from utilities.trainer import PGTrainer
 
+import wandb
+from datetime import datetime
 
 
 parser = argparse.ArgumentParser(description="Train rl agent.")
@@ -56,8 +58,11 @@ with open("./args/alg_args/" + argv.alg + ".yaml", "r") as f:
     alg_config_dict["action_bias"] = env_config_dict["action_bias"]
 
 log_name = "-".join([argv.env, net_topology, argv.mode, argv.alg, argv.voltage_barrier_type, argv.alias])
-alg_config_dict = {**default_config_dict, **alg_config_dict}
 
+wandb_name = "-".join([f"[{datetime.now().strftime('%m%d-%H%M')}]", net_topology, argv.mode, argv.alg, argv.voltage_barrier_type, argv.alias])
+
+
+alg_config_dict = {**default_config_dict, **alg_config_dict}
 # define envs
 env = VoltageControl(env_config_dict)
 
@@ -66,8 +71,15 @@ alg_config_dict["obs_size"] = env.get_obs_size()
 alg_config_dict["action_dim"] = env.get_total_actions()
 args = convert(alg_config_dict)
 
+wandb.init(
+    project="MAPDN",
+    config={"hp": argv, "train": alg_config_dict},
+    sync_tensorboard=True,
+    name=wandb_name,
+)
+
 # define the save path
-if argv.save_path[-1] is "/":
+if argv.save_path[-1] == "/":
     save_path = argv.save_path
 else:
     save_path = argv.save_path+"/"
