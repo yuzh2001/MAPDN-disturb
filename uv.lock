@@ -19,6 +19,12 @@ wheels = [
 ]
 
 [[package]]
+name = "antlr4-python3-runtime"
+version = "4.9.3"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+sdist = { url = "https://pypi.cstcloud.cn/packages/3e/38/7859ff46355f76f8d19459005ca000b6e7012f2f1ca597746cbcd1fbfe5e/antlr4-python3-runtime-4.9.3.tar.gz", hash = "sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b" }
+
+[[package]]
 name = "appnope"
 version = "0.1.4"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -213,6 +219,18 @@ source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2" },
+]
+
+[[package]]
+name = "colorlog"
+version = "6.9.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/d3/7a/359f4d5df2353f26172b3cc39ea32daa39af8de522205f512f458923e677/colorlog-6.9.0.tar.gz", hash = "sha256:bfba54a1b93b94f54e1f4fe48395725a3d92fd2a4af702f6bd70946bdc0c6ac2" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/e3/51/9b208e85196941db2f0654ad0357ca6388ab3ed67efdbfc799f35d1f83aa/colorlog-6.9.0-py3-none-any.whl", hash = "sha256:5906e71acd67cb07a71e779c47c4bcb45fb8c2993eebe9e5adcd6a6f1b283eff" },
 ]
 
 [[package]]
@@ -474,6 +492,47 @@ wheels = [
 ]
 
 [[package]]
+name = "hydra-colorlog"
+version = "1.2.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "colorlog" },
+    { name = "hydra-core" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/2b/fc/ab5ca078d5184ae3280d5654734860198c643cd2caaaaaece63283d9f76d/hydra-colorlog-1.2.0.tar.gz", hash = "sha256:d44f85008fabd2448c7e3b496c31b44d7610560f6fff74f3673afaa949870899" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/40/50/a08b0453c18088da369991d015ef3902a9ab532b515a41f1bfbe1394854d/hydra_colorlog-1.2.0-py3-none-any.whl", hash = "sha256:33d05fc11ca9bc7a5d69cfb3c8fb395a1bc52fa1dfe7aca6a6f5ffb57f6e7c4b" },
+]
+
+[[package]]
+name = "hydra-core"
+version = "1.3.2"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "antlr4-python3-runtime" },
+    { name = "importlib-resources" },
+    { name = "omegaconf" },
+    { name = "packaging" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/6d/8e/07e42bc434a847154083b315779b0a81d567154504624e181caf2c71cd98/hydra-core-1.3.2.tar.gz", hash = "sha256:8a878ed67216997c3e9d88a8e72e7b4767e81af37afb4ea3334b269a4390a824" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/c6/50/e0edd38dcd63fb26a8547f13d28f7a008bc4a3fd4eb4ff030673f22ad41a/hydra_core-1.3.2-py3-none-any.whl", hash = "sha256:fa0238a9e31df3373b35b0bfb672c34cc92718d21f81311d8996a16de1141d8b" },
+]
+
+[[package]]
+name = "hydra-submitit-launcher"
+version = "1.2.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "hydra-core" },
+    { name = "submitit" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/4f/93/8f19eba16318fe79f17ae5a86ed4efc9641c33151f67a0f172fbd15ddd41/hydra-submitit-launcher-1.2.0.tar.gz", hash = "sha256:e14c8eb46d020fac60ba25f82bcc368dc55851d2683dc95c88631ffcf15e4a34" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/d1/9b/0ea17f1780004c52f83566b5ca78a0844c93f5abdbbf625e40962af1ffcc/hydra_submitit_launcher-1.2.0-py3-none-any.whl", hash = "sha256:51ce468fbc91211c3a46677eefde94bbb9f721c9545af0be6dd0a95658515613" },
+]
+
+[[package]]
 name = "idna"
 version = "2.10"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -492,6 +551,18 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/56/1f/74c3e29389d34feea2d62ba3de1169efea2566eb22e9546d379756860525/importlib_metadata-2.0.0.tar.gz", hash = "sha256:77a540690e24b0305878c37ffd421785a6f7e53c8b5720d211b211de8d0e95da" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/6d/6d/f4bb28424bc677bce1210bc19f69a43efe823e294325606ead595211f93e/importlib_metadata-2.0.0-py2.py3-none-any.whl", hash = "sha256:cefa1a2f919b866c5beb7c9f7b0ebb4061f30a8a9bf16d609b000e2dfaceb9c3" },
+]
+
+[[package]]
+name = "importlib-resources"
+version = "5.12.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "zipp" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/4e/a2/3cab1de83f95dd15297c15bdc04d50902391d707247cada1f021bbfe2149/importlib_resources-5.12.0.tar.gz", hash = "sha256:4be82589bf5c1d7999aedf2a45159d10cb3ca4f19b2271f8792bc8e6da7b22f6" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/38/71/c13ea695a4393639830bf96baea956538ba7a9d06fcce7cef10bfff20f72/importlib_resources-5.12.0-py3-none-any.whl", hash = "sha256:7b1deeebbf351c7578e09bf2f63fa2ce8b5ffec296e0d349139d43cca061a81a" },
 ]
 
 [[package]]
@@ -859,6 +930,9 @@ dependencies = [
     { name = "google-pasta" },
     { name = "grpcio" },
     { name = "h5py" },
+    { name = "hydra-colorlog" },
+    { name = "hydra-core" },
+    { name = "hydra-submitit-launcher" },
     { name = "idna" },
     { name = "importlib-metadata" },
     { name = "ipykernel" },
@@ -901,6 +975,7 @@ dependencies = [
     { name = "oauthlib" },
     { name = "oct2py" },
     { name = "octave-kernel" },
+    { name = "omegaconf" },
     { name = "opencv-python" },
     { name = "openpyxl" },
     { name = "opt-einsum" },
@@ -939,6 +1014,7 @@ dependencies = [
     { name = "recommonmark" },
     { name = "requests" },
     { name = "requests-oauthlib" },
+    { name = "rich" },
     { name = "rsa" },
     { name = "ruff" },
     { name = "sacred" },
@@ -1015,6 +1091,9 @@ requires-dist = [
     { name = "google-pasta", specifier = "==0.2.0" },
     { name = "grpcio", specifier = "==1.32.0" },
     { name = "h5py", specifier = "==2.10.0" },
+    { name = "hydra-colorlog", specifier = ">=1.2.0" },
+    { name = "hydra-core", specifier = ">=1.3.2" },
+    { name = "hydra-submitit-launcher", specifier = ">=1.2.0" },
     { name = "idna", specifier = "==2.10" },
     { name = "importlib-metadata", specifier = "==2.0.0" },
     { name = "ipykernel", specifier = "==5.3.4" },
@@ -1057,6 +1136,7 @@ requires-dist = [
     { name = "oauthlib", specifier = "==3.1.0" },
     { name = "oct2py", specifier = "==4.0.6" },
     { name = "octave-kernel", specifier = "==0.32.0" },
+    { name = "omegaconf", specifier = ">=2.3.0" },
     { name = "opencv-python", specifier = "==4.4.0.46" },
     { name = "openpyxl", specifier = "==3.0.7" },
     { name = "opt-einsum", specifier = "==3.3.0" },
@@ -1095,6 +1175,7 @@ requires-dist = [
     { name = "recommonmark", specifier = "==0.4.0" },
     { name = "requests", specifier = "==2.24.0" },
     { name = "requests-oauthlib", specifier = "==1.3.0" },
+    { name = "rich", specifier = ">=0.3.3" },
     { name = "rsa", specifier = "==4.6" },
     { name = "ruff", specifier = ">=0.7.3" },
     { name = "sacred", specifier = "==0.8.2" },
@@ -1452,6 +1533,19 @@ wheels = [
 ]
 
 [[package]]
+name = "omegaconf"
+version = "2.3.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "antlr4-python3-runtime" },
+    { name = "pyyaml" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/09/48/6388f1bb9da707110532cb70ec4d2822858ddfb44f1cdf1233c20a80ea4b/omegaconf-2.3.0.tar.gz", hash = "sha256:d5d4b6d29955cc50ad50c46dc269bcd92c6e00f5f90d23ab5fee7bfca4ba4cc7" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/e3/94/1843518e420fa3ed6919835845df698c7e27e183cb997394e4a670973a65/omegaconf-2.3.0-py3-none-any.whl", hash = "sha256:7b4df175cdb08ba400f45cae3bdcae7ba8365db4d165fc65fd04b050ab63b46b" },
+]
+
+[[package]]
 name = "opencv-python"
 version = "4.4.0.46"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1626,6 +1720,15 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/63/67/97fd5c13eed834bb92afd10c794b7148580c55ad55bdd604ea82ad23d01f/plotly-5.3.1.tar.gz", hash = "sha256:6598393e898a9c5ae78397f76f07002ec41fd92e5f746d3b9806248d53885643" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/68/b2/7c7d111affebb281b1085680db7358f6204920bb5574e9e84db05c530688/plotly-5.3.1-py2.py3-none-any.whl", hash = "sha256:c3da90d41cab36722048eaa5d0eee7a286a55982835980e5f183e5536b823f07" },
+]
+
+[[package]]
+name = "pprintpp"
+version = "0.4.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+sdist = { url = "https://pypi.cstcloud.cn/packages/06/1a/7737e7a0774da3c3824d654993cf57adc915cb04660212f03406334d8c0b/pprintpp-0.4.0.tar.gz", hash = "sha256:ea826108e2c7f49dc6d66c752973c3fc9749142a798d6b254e1e301cfdbc6403" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/4e/d1/e4ed95fdd3ef13b78630280d9e9e240aeb65cc7c544ec57106149c3942fb/pprintpp-0.4.0-py2.py3-none-any.whl", hash = "sha256:b6b4dcdd0c0c0d75e4d7b2f21a9e933e5b2ce62b26e1a54537f9651ae5a5c01d" },
 ]
 
 [[package]]
@@ -1948,6 +2051,20 @@ wheels = [
 ]
 
 [[package]]
+name = "rich"
+version = "0.3.3"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "colorama" },
+    { name = "pprintpp" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/a5/c9/bc8ed45b392b94cb654a6463c9f6fbe341b6f2d64d332c6c975dbf6c6cae/rich-0.3.3.tar.gz", hash = "sha256:604edf76a2a7d40c7ecc9af5ae41cee3da3e99532c8d0aa54cc42e017ee7f63a" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/b1/45/9eba49ebc4882d6a04d5a1059122848b1ee4614e40f4c8c485ba42d18726/rich-0.3.3-py3-none-any.whl", hash = "sha256:04f1016b1aba52499104b594c17b1481504bbc7314f8b9ba1a7a9dbf3e8869c4" },
+]
+
+[[package]]
 name = "rsa"
 version = "4.6"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2119,6 +2236,19 @@ wheels = [
     { url = "https://pypi.cstcloud.cn/packages/13/63/073fc76f2405af3ad1a2e667ac237a527fcdd81d4cbc7e2b721727687453/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-macosx_10_5_x86_64.macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl", hash = "sha256:5e342ee293b896d31da67617fe65d0bdca217af193991b0cb6052353b1e0e506" },
     { url = "https://pypi.cstcloud.cn/packages/73/63/ebf4332964fba68f72cd78723a2722d77cf78f988b13461c6fbf30fc96bc/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-win32.whl", hash = "sha256:4555438c2c4f02b39fea2ed40f6ddeda88a80cd1ee9dd129be4d5f5134698cc2" },
     { url = "https://pypi.cstcloud.cn/packages/b8/de/24e4035f06540ebb4e9993238ede787063875b003e79c537511d32a74d29/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-win_amd64.whl", hash = "sha256:b361d4ac1519a2e516cabafa6bf7e93492f999f35d7d25350cd87fdc3e5cb27e" },
+]
+
+[[package]]
+name = "submitit"
+version = "1.4.6"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "cloudpickle" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/6d/90/e42b6bd5a60e214509c475d72187c7d0e97b2f10fad7238e7006de66b848/submitit-1.4.6.tar.gz", hash = "sha256:6f27037e8beacf744e372efa3998dada9f937f375f23e98a24a1207559a665a7" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/c3/e5/f5e8727f052a26b299a7ee7f90eb2543c9e48ff0002b221a579028eaf372/submitit-1.4.6-py3-none-any.whl", hash = "sha256:ec8033959dcbde6d5d2eebeac1be5d38b6d5b906e3b9529345e09d7e0beea22f" },
 ]
 
 [[package]]

@@ -492,19 +492,13 @@ class VoltageControl(MultiAgentEnv):
         """optionally update the demand and pv production according to the histories with some i.i.d. gaussian noise
         """ 
         pv = copy.copy(self._get_pv_history()[0, :])
-
-        # add uncertainty to pv data with unit truncated gaussian (only positive accepted)
-        if add_noise:
-            pv += self.pv_std * np.abs(np.random.randn(*pv.shape))
         active_demand = copy.copy(self._get_active_demand_history()[0, :])
-
-        # add uncertainty to active power of demand data with unit truncated gaussian (only positive accepted)
-        if add_noise:
-            active_demand += self.active_demand_std * np.abs(np.random.randn(*active_demand.shape))
         reactive_demand = copy.copy(self._get_reactive_demand_history()[0, :])
 
-        # add uncertainty to reactive power of demand data with unit truncated gaussian (only positive accepted)
+        # add uncertainty with unit truncated gaussian (only positive accepted)
         if add_noise:
+            pv += self.pv_std * np.abs(np.random.randn(*pv.shape))
+            active_demand += self.active_demand_std * np.abs(np.random.randn(*active_demand.shape))
             reactive_demand += self.reactive_demand_std * np.abs(np.random.randn(*reactive_demand.shape))
 
         # update the record in the pandapower
