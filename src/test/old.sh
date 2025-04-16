@@ -1,0 +1,1 @@
+python test.py --save-path mapdn/trial/model_save --alg matd3 --alias 0 --scenario case33_3min_final --voltage-barrier-type l1 --test-mode single --test-day 730 --render
