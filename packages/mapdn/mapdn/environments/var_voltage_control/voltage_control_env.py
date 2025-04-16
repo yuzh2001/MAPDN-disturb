@@ -645,7 +645,7 @@ class VoltageControl(MultiAgentEnv):
         self.viewer = Viewer()
         self._rendering_initialized = True
 
-    def render(self, mode="human"):
+    def render(self, mode="rgb_array"):
         if not self._rendering_initialized:
             self._init_render()
         return self.viewer.render(self, return_rgb_array=(mode == "rgb_array"))
