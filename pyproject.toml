@@ -30,7 +30,8 @@ dependencies = [
     "tensorboardx==2.2",
     "torch==1.10.0+cu113",
     "wandb>=0.13.5",
-    "mapdn"
+    "mapdn",
+    "numba>=0.56.4",
 ]
 
 [tool.uv.sources]

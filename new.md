@@ -3,6 +3,7 @@ first, install uv.
 
 ```
 uv sync
+apt install freeglut3-dev -y
 
-uv run src/test/test.py --save-path ./packages/mapdn/trial/model_save --alg matd3 --alias 0 --scenario case33_3min_final --voltage-barrier-type l1 --test-mode single --test-day 730 --render
+xvfb-run -s "-screen 0 1400x900x24" uv run src/test/test.py --save-path reproduction/model_save --alg mappo --alias 0 --scenario case33_3min_final --voltage-barrier-type bowl --test-mode single --test-day 730 --render
 ```
