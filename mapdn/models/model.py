@@ -2,7 +2,7 @@ import torch as th
 import torch.nn as nn
 import numpy as np
 from collections import namedtuple
-from utilities.util import prep_obs, translate_action
+from mapdn.utilities.util import prep_obs, translate_action
 
 
 
@@ -149,15 +149,15 @@ class Model(nn.Module):
 
         if self.args.agent_type == 'mlp':
             if self.args.gaussian_policy:
-                from agents.mlp_agent_gaussian import MLPAgent
+                from mapdn.agents.mlp_agent_gaussian import MLPAgent
             else:
-                from agents.mlp_agent import MLPAgent
+                from mapdn.agents.mlp_agent import MLPAgent
             Agent = MLPAgent
         elif self.args.agent_type == 'rnn':
             if self.args.gaussian_policy:
-                from agents.rnn_agent_gaussian import RNNAgent
+                from mapdn.agents.rnn_agent_gaussian import RNNAgent
             else:
-                from agents.rnn_agent import RNNAgent
+                from mapdn.agents.rnn_agent import RNNAgent
             Agent = RNNAgent
         else:
             NotImplementedError()

@@ -1,5 +1,5 @@
 import torch as th
-from utilities.util import translate_action, prep_obs
+from mapdn.utilities.util import translate_action, prep_obs
 import numpy as np
 import time
 

@@ -203,7 +203,7 @@ The the meanings of the arguments are illustrated as follows:
 The simple use of the environment is shown as the following codes.
 
 ```python
-from environments.var_voltage_control.voltage_control_env import VoltageControl
+from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 import numpy as np
 import yaml
 

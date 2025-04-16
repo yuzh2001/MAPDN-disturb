@@ -1,9 +1,9 @@
 import torch as th
 import torch.nn as nn
 import numpy as np
-from utilities.util import select_action, multinomials_log_density, normal_log_density
-from models.model import Model
-from critics.mlp_critic import MLPCritic
+from mapdn.utilities.util import select_action, multinomials_log_density, normal_log_density
+from mapdn.models.model import Model
+from mapdn.critics.mlp_critic import MLPCritic
 import torch.nn as nn
 
 

@@ -3,10 +3,10 @@ import argparse
 import yaml
 import pickle
 
-from models.model_registry import Model, Strategy
-from environments.var_voltage_control.voltage_control_env import VoltageControl
-from utilities.util import convert
-from utilities.tester import PGTester
+from mapdn.models.model_registry import Model, Strategy
+from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
+from mapdn.utilities.util import convert
+from mapdn.utilities.tester import PGTester
 
 
 

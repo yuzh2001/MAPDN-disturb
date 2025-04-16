@@ -1,10 +1,10 @@
 import torch as th
 import torch.nn as nn
 import numpy as np
-from utilities.util import select_action
-from models.model import Model
-from critics.mlp_critic import MLPCritic
-from critics.qmix import QMixer
+from mapdn.utilities.util import select_action
+from mapdn.models.model import Model
+from mapdn.critics.mlp_critic import MLPCritic
+from mapdn.critics.qmix import QMixer
 
 
 

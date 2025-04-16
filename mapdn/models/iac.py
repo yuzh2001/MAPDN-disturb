@@ -1,11 +1,11 @@
 import torch as th
 import torch.nn as nn
 import numpy as np
-from utilities.util import *
-from models.model import Model
+from mapdn.utilities.util import *
+from mapdn.models.model import Model
 from collections import namedtuple
-from learning_algorithms.actor_critic import ActorCritic
-from critics.mlp_critic import MLPCritic
+from mapdn.learning_algorithms.actor_critic import ActorCritic
+from mapdn.critics.mlp_critic import MLPCritic
 
 
 class IAC(Model):

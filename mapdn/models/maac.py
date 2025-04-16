@@ -1,9 +1,9 @@
 import torch as th
 import torch.nn as nn
 import numpy as np
-from utilities.util import select_action
-from models.model import Model
-from critics.maac_critic import AttentionCritic
+from mapdn.utilities.util import select_action
+from mapdn.models.model import Model
+from mapdn.critics.maac_critic import AttentionCritic
 
 
 
@@ -24,10 +24,10 @@ class MAAC(Model):
             input_shape = self.obs_dim
 
         if self.args.agent_type == 'mlp':
-            from agents.mlp_agent_gaussian import MLPAgent
+            from mapdn.agents.mlp_agent_gaussian import MLPAgent
             Agent = MLPAgent
         elif self.args.agent_type == 'rnn':
-            from agents.rnn_agent_gaussian import RNNAgent
+            from mapdn.agents.rnn_agent_gaussian import RNNAgent
             Agent = RNNAgent
         else:
             NotImplementedError()

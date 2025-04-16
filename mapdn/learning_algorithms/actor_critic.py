@@ -1,7 +1,7 @@
-from learning_algorithms.rl_algorithms import ReinforcementLearning
+from mapdn.learning_algorithms.rl_algorithms import ReinforcementLearning
 import torch as th
 import torch.nn as nn
-from utilities.util import multinomials_log_density, normal_log_density
+from mapdn.utilities.util import multinomials_log_density, normal_log_density
 
 
 

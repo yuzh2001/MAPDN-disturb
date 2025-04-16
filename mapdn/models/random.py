@@ -1,6 +1,6 @@
 import torch as th
 import numpy as np
-from models.model import Model
+from mapdn.models.model import Model
 
 
 

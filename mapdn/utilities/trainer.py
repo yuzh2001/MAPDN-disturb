@@ -1,8 +1,8 @@
 import numpy as np
 import torch as th
 from torch import optim
-from utilities.util import multinomial_entropy, get_grad_norm, normal_entropy
-from utilities.replay_buffer import TransReplayBuffer, EpisodeReplayBuffer
+from mapdn.utilities.util import multinomial_entropy, get_grad_norm, normal_entropy
+from mapdn.utilities.replay_buffer import TransReplayBuffer, EpisodeReplayBuffer
 
 
 

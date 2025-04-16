@@ -1,10 +1,10 @@
 import torch as th
 import torch.nn as nn
 import numpy as np
-from utilities.util import select_action
-from models.model import Model
-from learning_algorithms.ppo import PPO
-from critics.mlp_critic import MLPCritic
+from mapdn.utilities.util import select_action
+from mapdn.models.model import Model
+from mapdn.learning_algorithms.ppo import PPO
+from mapdn.critics.mlp_critic import MLPCritic
 
 
 class IPPO(Model):

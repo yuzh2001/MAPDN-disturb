@@ -1,4 +1,4 @@
-from environments.var_voltage_control.voltage_control_env import VoltageControl
+from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 import numpy as np
 import yaml
 
