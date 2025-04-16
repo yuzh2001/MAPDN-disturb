@@ -25,128 +25,6 @@ source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/3e/38/7859ff46355f76f8d19459005ca000b6e7012f2f1ca597746cbcd1fbfe5e/antlr4-python3-runtime-4.9.3.tar.gz", hash = "sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b" }
 
 [[package]]
-name = "appnope"
-version = "0.1.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/35/5d/752690df9ef5b76e169e68d6a129fa6d08a7100ca7f754c89495db3c6019/appnope-0.1.4.tar.gz", hash = "sha256:1de3860566df9caf38f01f86f65e0e13e379af54f9e4bee1e66b48f2efffd1ee" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/81/29/5ecc3a15d5a33e31b26c11426c45c501e439cb865d0bff96315d86443b78/appnope-0.1.4-py2.py3-none-any.whl", hash = "sha256:502575ee11cd7a28c0205f379b525beefebab9d161b7c964670864014ed7213c" },
-]
-
-[[package]]
-name = "argon2-cffi"
-version = "20.1.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "cffi" },
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/74/fd/d78e003a79c453e8454197092fce9d1c6099445b7e7da0b04eb4fe1dbab7/argon2-cffi-20.1.0.tar.gz", hash = "sha256:d8029b2d3e4b4cea770e9e5a0104dd8fa185c1724a0f01528ae4826a6d25f97d" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/e0/d7/5da06217807106ed6d7b4f5ccb8ec5e3f9ec969217faad4b5d1af0b55101/argon2_cffi-20.1.0-cp35-abi3-manylinux1_x86_64.whl", hash = "sha256:b160416adc0f012fb1f12588a5e6954889510f82f698e23ed4f4fa57f12a0647" },
-    { url = "https://pypi.cstcloud.cn/packages/7e/9e/286ba05f5ed9250746f562c6468e83895fa0eec0d91131c3ff701d9b6c8f/argon2_cffi-20.1.0-cp37-abi3-macosx_10_6_intel.whl", hash = "sha256:cc0e028b209a5483b6846053d5fd7165f460a1f14774d79e632e75e7ae64b82b" },
-    { url = "https://pypi.cstcloud.cn/packages/8f/01/5bf540905b8f19542167e413f62433c170a7eed3f9d114ec5b640361cf34/argon2_cffi-20.1.0-cp37-cp37m-win32.whl", hash = "sha256:18dee20e25e4be86680b178b35ccfc5d495ebd5792cd00781548d50880fee5c5" },
-    { url = "https://pypi.cstcloud.cn/packages/a0/c6/420e3cfb7f162eb51dcfdb1c2d80e5baa522c743487937c17ae0d760dd19/argon2_cffi-20.1.0-cp37-cp37m-win_amd64.whl", hash = "sha256:6678bb047373f52bcff02db8afab0d2a77d83bde61cfecea7c5c62e2335cb203" },
-    { url = "https://pypi.cstcloud.cn/packages/80/93/21244b811b6e2f2af7f75b236f922084fb6bc8e512fdefff68c37605ec4a/argon2_cffi-20.1.0-pp37-pypy37_pp73-macosx_10_7_x86_64.whl", hash = "sha256:3aa804c0e52f208973845e8b10c70d8957c9e5a666f702793256242e9167c4e0" },
-    { url = "https://pypi.cstcloud.cn/packages/a2/56/672e8a9989a7ab93ee129bfba4b6ccee969243af746b4a0004d39119d3c1/argon2_cffi-20.1.0-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:36320372133a003374ef4275fbfce78b7ab581440dfca9f9471be3dd9a522428" },
-]
-
-[[package]]
-name = "astor"
-version = "0.8.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/5a/21/75b771132fee241dfe601d39ade629548a9626d1d39f333fde31bc46febe/astor-0.8.1.tar.gz", hash = "sha256:6a6effda93f4e1ce9f618779b2dd1d9d84f1e32812c23a29b3fff6fd7f63fa5e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/c3/88/97eef84f48fa04fbd6750e62dcceafba6c63c81b7ac1420856c8dcc0a3f9/astor-0.8.1-py2.py3-none-any.whl", hash = "sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5" },
-]
-
-[[package]]
-name = "astunparse"
-version = "1.6.3"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "six" },
-    { name = "wheel" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/f3/af/4182184d3c338792894f34a62672919db7ca008c89abee9b564dd34d8029/astunparse-1.6.3.tar.gz", hash = "sha256:5ad93a8456f0d084c3456d059fd9a92cce667963232cbf763eac3bc5b7940872" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/2b/03/13dde6512ad7b4557eb792fbcf0c653af6076b81e5941d36ec61f7ce6028/astunparse-1.6.3-py2.py3-none-any.whl", hash = "sha256:c2652417f2c8b5bb325c885ae329bdf3f86424075c4fd1a128674bc6fba4b8e8" },
-]
-
-[[package]]
-name = "async-generator"
-version = "1.10"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/ce/b6/6fa6b3b598a03cba5e80f829e0dadbb49d7645f523d209b2fb7ea0bbb02a/async_generator-1.10.tar.gz", hash = "sha256:6ebb3d106c12920aaae42ccb6f787ef5eefdcdd166ea3d628fa8476abe712144" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/71/52/39d20e03abd0ac9159c162ec24b93fbcaa111e8400308f2465432495ca2b/async_generator-1.10-py3-none-any.whl", hash = "sha256:01c7bf666359b4967d2cda0000cc2e4af16a0ae098cbffcb8472fb9e8ad6585b" },
-]
-
-[[package]]
-name = "attrs"
-version = "20.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/81/d0/641b698d05f0eaea4df4f9cebaff573d7a5276228ef6b7541240fe02f3ad/attrs-20.2.0.tar.gz", hash = "sha256:26b54ddbbb9ee1d34d5d3668dd37d6cf74990ab23c828c2888dccdceee395594" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/14/df/479736ae1ef59842f512548bacefad1abed705e400212acba43f9b0fa556/attrs-20.2.0-py2.py3-none-any.whl", hash = "sha256:fce7fc47dfc976152e82d53ff92fa0407700c21acd20886a13777a0d20e655dc" },
-]
-
-[[package]]
-name = "backcall"
-version = "0.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/a2/40/764a663805d84deee23043e1426a9175567db89c8b3287b5c2ad9f71aa93/backcall-0.2.0.tar.gz", hash = "sha256:5cbdbf27be5e7cfadb448baf0aa95508f91f2bbc6c6437cd9cd06e2a4c215e1e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/4c/1c/ff6546b6c12603d8dd1070aa3c3d273ad4c07f5771689a7b69a550e8c951/backcall-0.2.0-py2.py3-none-any.whl", hash = "sha256:fbbce6a29f263178a1f7915c1940bde0ec2b2a967566fe1c65c1dfb7422bd255" },
-]
-
-[[package]]
-name = "backports-functools-lru-cache"
-version = "1.6.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/ad/2e/aa84668861c3de458c5bcbfb9813f0e26434e2232d3e294469e96efac884/backports.functools_lru_cache-1.6.1.tar.gz", hash = "sha256:8fde5f188da2d593bd5bc0be98d9abc46c95bb8a9dde93429570192ee6cc2d4a" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/da/d1/080d2bb13773803648281a49e3918f65b31b7beebf009887a529357fd44a/backports.functools_lru_cache-1.6.1-py2.py3-none-any.whl", hash = "sha256:0bada4c2f8a43d533e4ecb7a12214d9420e66eb206d54bf2d682581ca4b80848" },
-]
-
-[[package]]
-name = "bleach"
-version = "3.2.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "packaging" },
-    { name = "six" },
-    { name = "webencodings" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/04/2c/8e256291cfeaefb72d1dafc888b1ad447e754d8062520b41f1d3ffa7e139/bleach-3.2.1.tar.gz", hash = "sha256:52b5919b81842b1854196eaae5ca29679a2f2e378905c346d3ca8227c2c66080" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/03/c8/b7ed0dfea5cb287907bd22c5ff7c3ed0a65b346f2a4cf916eb9e83be66b3/bleach-3.2.1-py2.py3-none-any.whl", hash = "sha256:9f8ccbeb6183c6e6cddea37592dfb0167485c1e3b13b3363bc325aa8bda3adbd" },
-]
-
-[[package]]
-name = "brotlipy"
-version = "0.7.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "cffi" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/d9/91/bc79b88590e4f662bd40a55a2b6beb0f15da4726732efec5aa5a3763d856/brotlipy-0.7.0.tar.gz", hash = "sha256:36def0b859beaf21910157b4c33eb3b06d8ce459c942102f16988cca6ea164df" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/c0/98/446b36a3517eb1b3c70d7a32b0523b8946a90db71a95be01a05cf6dd9206/brotlipy-0.7.0-cp35-abi3-macosx_10_9_x86_64.whl", hash = "sha256:382971a641125323e90486244d6266ffb0e1f4dd920fbdcf508d2a19acc7c3b3" },
-    { url = "https://pypi.cstcloud.cn/packages/3c/58/998e70ed426a86f641d49c7a107eaf17de1f7e22d65b1e0b4e33deb172b9/brotlipy-0.7.0-cp35-abi3-manylinux1_i686.whl", hash = "sha256:82f61506d001e626ec3a1ac8a69df11eb3555a4878599befcb672c8178befac8" },
-    { url = "https://pypi.cstcloud.cn/packages/b3/1b/ca5c77fe4a5b99cef24767b48254ea50ffad813407c74aa06d93089d1014/brotlipy-0.7.0-cp35-abi3-manylinux1_x86_64.whl", hash = "sha256:7ff18e42f51ebc9d9d77a0db33f99ad95f01dd431e4491f0eca519b90e9415a9" },
-    { url = "https://pypi.cstcloud.cn/packages/a1/71/844dc49400ff6c82b169454c03376d3cf68b01543b7e99bd502a9295a5ba/brotlipy-0.7.0-cp35-abi3-manylinux2010_i686.whl", hash = "sha256:8ef230ca9e168ce2b7dc173a48a0cc3d78bcdf0bd0ea7743472a317041a4768e" },
-    { url = "https://pypi.cstcloud.cn/packages/97/2e/372bc34bd5741212ac884b5d88f284ba7369f848bccb9a80b458a9224576/brotlipy-0.7.0-cp35-abi3-manylinux2010_x86_64.whl", hash = "sha256:b7cf5bb69e767a59acc3da0d199d4b5d0c9fed7bef3ffa3efa80c6f39095686b" },
-    { url = "https://pypi.cstcloud.cn/packages/7d/19/416936acb7efa79164be7f09a95e26ba03649dcb7799254395ea2f140635/brotlipy-0.7.0-cp35-abi3-manylinux2014_aarch64.whl", hash = "sha256:e5c549ae5928dda952463196180445c24d6fad2d73cb13bd118293aced31b771" },
-    { url = "https://pypi.cstcloud.cn/packages/1d/db/94a242376511ce71e9758169dd11ca9cf5e8f675e12dede8fbcea644c089/brotlipy-0.7.0-cp35-abi3-win32.whl", hash = "sha256:79ab3bca8dd12c17e092273484f2ac48b906de2b4828dcdf6a7d520f99646ab3" },
-    { url = "https://pypi.cstcloud.cn/packages/03/53/41f17238db696c4c95019174ca5bfd2396ef379c7918ae4f6ff82529ee92/brotlipy-0.7.0-cp35-abi3-win_amd64.whl", hash = "sha256:ac1d66c9774ee62e762750e399a0c95e93b180e96179b645f28b162b55ae8adc" },
-    { url = "https://pypi.cstcloud.cn/packages/5f/d3/dbc8aafa09565a4946f788d8524e53772036f8f6ab280672775985b0f9d2/brotlipy-0.7.0-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:4e4638b49835d567d447a2cfacec109f9a777f219f071312268b351b6839436d" },
-    { url = "https://pypi.cstcloud.cn/packages/de/96/dcdd08a56d8a708bcd3130b326bd15dfa045bfd163190456949c9c15d35f/brotlipy-0.7.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:5664fe14f3a613431db622172bad923096a303d3adce55536f4409c8e2eafba4" },
-    { url = "https://pypi.cstcloud.cn/packages/05/8d/fc782a6aa2ca12f569660a397eb7dedc13ea95badafda09c78fcd051cab4/brotlipy-0.7.0-cp37-cp37m-win_amd64.whl", hash = "sha256:1379347337dc3d20b2d61456d44ccce13e0625db2611c368023b4194d5e2477f" },
-    { url = "https://pypi.cstcloud.cn/packages/05/70/4fab02ea55e4aae9a93bfe944ae3b3677120cf7bd2aaa39e4ff23c3aa27f/brotlipy-0.7.0-pp37-pypy37_pp73-manylinux1_x86_64.whl", hash = "sha256:4864ac52c116ea3e3a844248a9c9fbebb8797891cbca55484ecb6eed3ebeba24" },
-]
-
-[[package]]
 name = "cachetools"
 version = "4.1.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -234,31 +112,6 @@ wheels = [
 ]
 
 [[package]]
-name = "commonmark"
-version = "0.5.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/4d/93/3808cbcebe94d205f55a9a32857df733a603339d32c46cd32669d808d964/CommonMark-0.5.4.tar.gz", hash = "sha256:34d73ec8085923c023930dfc0bcd1c4286e28a2a82de094bb72fabcc0281cbe5" }
-
-[[package]]
-name = "crc32c"
-version = "2.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/5c/69/5e1f1b4a932bd0be51422c9a5fd2b015c13b3fbbaa3417755f34d5f09e2f/crc32c-2.2.tar.gz", hash = "sha256:2643f63dc935260f017889010998cacb7d3a535b40164d688a428494396289b8" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/60/f0/ea3bef76f5c1f4e6b9a93c989d3ae73423c548a3b02e76d7cbb65efc031f/crc32c-2.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:1dc03285b92fda24219c970ce4f6712a2e6b8021e39b9c5df6a288fed7f7d19a" },
-    { url = "https://pypi.cstcloud.cn/packages/76/c4/71003a1b40e48d788ca6c69e3293d4a37abbb7398e06dab520ae3b31457c/crc32c-2.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:0340b2e7bb84b172cda49f4225a0519ba6182f1d32dc9407db7722b612def3ca" },
-    { url = "https://pypi.cstcloud.cn/packages/6e/2d/1f874c03d13019ca1fa7a59d5df271d766eeb377b16a01766aaddbac6b54/crc32c-2.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:c2586d8c44f4a4cc5875c01018fe0447a2d5032c00878d955f9c81d5216685a6" },
-    { url = "https://pypi.cstcloud.cn/packages/9c/1e/9c8698d342d42469bd09d960fa07d527f133bd5e305f75a0fe9ddc03a4f9/crc32c-2.2-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:e758995c390da5df1148588746e7fd7e318841f6b2259a8951ed7b0bbe82271a" },
-    { url = "https://pypi.cstcloud.cn/packages/db/85/4656cc0ac33be2725d6de41eabfeb72f86c194fe26decf28162d72f9a642/crc32c-2.2-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:9a3b589f514386c22e39aaaabc5e667160f2a6337bc7206dd842cc40234c08b8" },
-    { url = "https://pypi.cstcloud.cn/packages/a1/39/2edd173e5dfe592a696d7f8c0f2050bee73251f23de3b33bddcc644b032c/crc32c-2.2-cp37-cp37m-win32.whl", hash = "sha256:186b32cedef12543b6e22bee9a19ff59f3952408d51844cbaa47490573fd3d91" },
-    { url = "https://pypi.cstcloud.cn/packages/54/44/ba4fbc222b8762675e3caed32980b1bfc0c07259eec8fb8dc864b932f467/crc32c-2.2-cp37-cp37m-win_amd64.whl", hash = "sha256:d19996c39fafcb54994a102d823aa0222e0de635cef527686b9cfd04c9aeb473" },
-    { url = "https://pypi.cstcloud.cn/packages/16/aa/11b45f546b7e431a957a55b13c8ad7d1a96aa182402fba6f72272e2afb8b/crc32c-2.2-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:a50ad56567ee8af22b50abfa568526ac5f94f41b8336e69e9efae35b96baf769" },
-    { url = "https://pypi.cstcloud.cn/packages/c4/61/b5ac6756aeea0005adfdda5633bb1aca06ee3095316f0fade4614ded26b7/crc32c-2.2-pp37-pypy37_pp73-manylinux1_x86_64.whl", hash = "sha256:150aed5cca485f42446b74d6e894b0b7b605d691d07f60ab33978f5b4437b19b" },
-    { url = "https://pypi.cstcloud.cn/packages/69/26/742fd769d8f531cae7df0ee31413ea431d3d6031d03f93e884e8895353dc/crc32c-2.2-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:582e99026273056f7d7a660b404681d404e546b9572d4d2da8acd980e56ab222" },
-    { url = "https://pypi.cstcloud.cn/packages/9d/3a/24f4e1ee3e1005185fdd7d10f38346a7b7b7a052a863d6cea59d062003db/crc32c-2.2-pp37-pypy37_pp73-win32.whl", hash = "sha256:ef4afc420361bec4992c3643cd582299c5053a0c8c5d4d0bdc5a19c9fb2bd558" },
-]
-
-[[package]]
 name = "cryptography"
 version = "3.1.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -291,30 +144,12 @@ wheels = [
 ]
 
 [[package]]
-name = "dataclasses"
-version = "0.6"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/59/e4/2f921edfdf1493bdc07b914cbea43bc334996df4841a34523baf73d1fb4f/dataclasses-0.6.tar.gz", hash = "sha256:6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/26/2f/1095cdc2868052dd1e64520f7c0d5c8c550ad297e944e641dbf1ffbb9a5d/dataclasses-0.6-py3-none-any.whl", hash = "sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f" },
-]
-
-[[package]]
 name = "decorator"
 version = "4.4.2"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/da/93/84fa12f2dc341f8cf5f022ee09e109961055749df2d0c75c5f98746cfe6c/decorator-4.4.2.tar.gz", hash = "sha256:e3a62f0520172440ca0dcc823749319382e377f37f140a0b99ef45fecb84bfe7" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/ed/1b/72a1821152d07cf1d8b6fce298aeb06a7eb90f4d6d41acec9861e7cc6df0/decorator-4.4.2-py2.py3-none-any.whl", hash = "sha256:41fa54c2a0cc4ba648be4fd43cff00aedf5b9465c9bf18d64325bc225f08f760" },
-]
-
-[[package]]
-name = "defusedxml"
-version = "0.6.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/a4/5f/f8aa58ca0cf01cbcee728abc9d88bfeb74e95e6cb4334cfd5bed5673ea77/defusedxml-0.6.0.tar.gz", hash = "sha256:f684034d135af4c6cbb949b8a4d2ed61634515257a67299e5f940fbaa34377f5" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/06/74/9b387472866358ebc08732de3da6dc48e44b0aacd2ddaa5cb85ab7e986a2/defusedxml-0.6.0-py2.py3-none-any.whl", hash = "sha256:6687150770438374ab581bb7a1b327a847dd9c5749e396102de3fad4e8a3ef93" },
 ]
 
 [[package]]
@@ -330,44 +165,6 @@ wheels = [
 ]
 
 [[package]]
-name = "docopt"
-version = "0.6.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491" }
-
-[[package]]
-name = "docutils"
-version = "0.16"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz", hash = "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/81/44/8a15e45ffa96e6cf82956dd8d7af9e666357e16b0d93b253903475ee947f/docutils-0.16-py2.py3-none-any.whl", hash = "sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af" },
-]
-
-[[package]]
-name = "dpcpp-cpp-rt"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "intel-opencl-rt" },
-    { name = "intel-openmp" },
-    { name = "intel-sycl-rt" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/19/c9/6fb141a7d54cd021147f2122270e8a0179a924dcd0facf767cb1c50e0f6b/dpcpp_cpp_rt-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:7ca8f606f6c4b772b86bd16d4f341b81873070d7c59c9cf9b92f26357a195683" },
-    { url = "https://pypi.cstcloud.cn/packages/9f/37/e3a75a932c63f4572d18e54b8e4d1dab331615bd3432358f05ca580eeed5/dpcpp_cpp_rt-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:98ae1ba8e0aa167b37360df0a8d030c0c39373602fb02d39f3e9363c9a87cde4" },
-]
-
-[[package]]
-name = "entrypoints"
-version = "0.3"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/b4/ef/063484f1f9ba3081e920ec9972c96664e2edb9fdc3d8669b0e3b8fc0ad7c/entrypoints-0.3.tar.gz", hash = "sha256:c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/ac/c6/44694103f8c221443ee6b0041f69e2740d89a25641e62fb4f2ee568f2f9c/entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19" },
-]
-
-[[package]]
 name = "et-xmlfile"
 version = "1.1.0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -375,21 +172,6 @@ sdist = { url = "https://pypi.cstcloud.cn/packages/3d/5d/0413a31d184a20c763ad741
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/96/c2/3dd434b0108730014f1b96fd286040dc3bcb70066346f7e01ec2ac95865f/et_xmlfile-1.1.0-py3-none-any.whl", hash = "sha256:a2ba85d1d6a74ef63837eed693bcb89c3f752169b0e3e7ae5b16ca5e1b3deada" },
 ]
-
-[[package]]
-name = "flatbuffers"
-version = "1.12"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/4d/c4/7b995ab9bf0c7eaf10c386d29a03408dfcf72648df4102b1f18896c3aeea/flatbuffers-1.12.tar.gz", hash = "sha256:63bb9a722d5e373701913e226135b28a6f6ac200d5cc7b4d919fa38d73b44610" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/eb/26/712e578c5f14e26ae3314c39a1bdc4eb2ec2f4ddc89b708cf8e0a0d20423/flatbuffers-1.12-py2.py3-none-any.whl", hash = "sha256:9e9ef47fa92625c4721036e7c4124182668dc6021d9e7c73704edd395648deb9" },
-]
-
-[[package]]
-name = "gast"
-version = "0.2.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz", hash = "sha256:fe939df4583692f0512161ec1c880e0a10e71e6a232da045ab8edd3756fbadf0" }
 
 [[package]]
 name = "gitdb"
@@ -445,18 +227,6 @@ wheels = [
 ]
 
 [[package]]
-name = "google-pasta"
-version = "0.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/35/4a/0bd53b36ff0323d10d5f24ebd67af2de10a1117f5cf4d7add90df92756f1/google-pasta-0.2.0.tar.gz", hash = "sha256:c9f2c8dfc8f96d0d5808299920721be30c9eec37f2389f28904f454565c8a16e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/a3/de/c648ef6835192e6e2cc03f40b19eeda4382c49b5bafb43d88b931c4c74ac/google_pasta-0.2.0-py3-none-any.whl", hash = "sha256:b32482794a366b5366a32c92a9a9201b107821889935a02b3e51f6b432ea84ed" },
-]
-
-[[package]]
 name = "grpcio"
 version = "1.32.0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -496,23 +266,6 @@ source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/27/57/257106672b5eeb5735a239c54f0e74a0e2e69ebec592f3643c0ee1a08d5e/gymnasium-notices-0.0.1.tar.gz", hash = "sha256:3e8c868046f56dea84c949cc7e97383cccfab27152fc3f4968754e4c9c087ab9" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/d4/88/2520e5851ac21a66e32c7be2f718f3a329253c018a8781e1143fe27c8065/gymnasium_notices-0.0.1-py3-none-any.whl", hash = "sha256:be68c8399e88b554b6db1eb3c484b00f229cbe5c930f64f6ae9cd1a6e93db1c5" },
-]
-
-[[package]]
-name = "h5py"
-version = "2.10.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "numpy" },
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/5f/97/a58afbcf40e8abecededd9512978b4e4915374e5b80049af082f49cebe9a/h5py-2.10.0.tar.gz", hash = "sha256:84412798925dc870ffd7107f045d7659e60f5d46d1c70c700375248bf6bf512d" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/1a/8b/4d01ae9a9d50a0bcc7b0b9aae41785d8d9de6fa9bba04dc20b1582181d2d/h5py-2.10.0-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:51ae56894c6c93159086ffa2c94b5b3388c0400548ab26555c143e7cfa05b8e5" },
-    { url = "https://pypi.cstcloud.cn/packages/7f/d9/0ddeea0a6dcb0e330c5d98a72c2fed52a0430f48d69e5bf4d50024f3c0ba/h5py-2.10.0-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:16ead3c57141101e3296ebeed79c9c143c32bdd0e82a61a2fc67e8e6d493e9d1" },
-    { url = "https://pypi.cstcloud.cn/packages/3f/c0/abde58b837e066bca19a3f7332d9d0493521d7dd6b48248451a9e3fe2214/h5py-2.10.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:f0e25bb91e7a02efccb50aba6591d3fe2c725479e34769802fcdd4076abfa917" },
-    { url = "https://pypi.cstcloud.cn/packages/81/67/1456efe696304577d13af7ba12292fbe2c68acc37c8638494e5b15c53bd2/h5py-2.10.0-cp37-cp37m-win32.whl", hash = "sha256:f23951a53d18398ef1344c186fb04b26163ca6ce449ebd23404b153fd111ded9" },
-    { url = "https://pypi.cstcloud.cn/packages/a1/6b/7f62017e3f0b32438dd90bdc1ff0b7b1448b6cb04a1ed84f37b6de95cd7b/h5py-2.10.0-cp37-cp37m-win_amd64.whl", hash = "sha256:8bb1d2de101f39743f91512a9750fb6c351c032e5cd3204b4487383e34da7f75" },
 ]
 
 [[package]]
@@ -604,300 +357,12 @@ wheels = [
 ]
 
 [[package]]
-name = "intel-cmplr-lib-rt"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/56/8a/f69fd4caf6eb708972c1d46ca7997dcb62ed4eb9ca3a715e9d71387ee2cf/intel_cmplr_lib_rt-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:d2e4ab0418c0b14906226f49059435eb152b2f3c9886317afc9f54456c5071d2" },
-    { url = "https://pypi.cstcloud.cn/packages/73/49/aa2f577a3bb8dfd0bd67447d6aa8ed70c7296b3328d8dac5a8856ad154eb/intel_cmplr_lib_rt-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:83df2192194f850bf423367234d4c52002f14804bf9d01cba2b66b09eb000210" },
-]
-
-[[package]]
-name = "intel-cmplr-lib-ur"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "umf" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/41/6b/6fa8a01f373179bb449b10b785fb19748640fb7cde28a70fdb820ef05362/intel_cmplr_lib_ur-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:eb3bf736ee31099b41b5d9d06a6ce8d8fa7a326ca0b7dfe4765422d2d8618047" },
-    { url = "https://pypi.cstcloud.cn/packages/57/76/4a721537b548243523fc82913fac9f8ac824c26aadfa41838141f46df5d9/intel_cmplr_lib_ur-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:ef30aa10917dafea3e65804c1e66f2a7efc0181a2acdc11ff2f45a1fc5f49dd8" },
-]
-
-[[package]]
-name = "intel-cmplr-lic-rt"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/a5/be/ad136451a614174b20365db6f74d3ba3452eeece3793602cdb23731eca71/intel_cmplr_lic_rt-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:a29c38ab02616e4ca235a956bd63089cc187132d4a8d73ccba47ba58341bc48e" },
-    { url = "https://pypi.cstcloud.cn/packages/9d/74/7d755c07d4db1875596b956878708755b1276762b9c70c940e2789b059cd/intel_cmplr_lic_rt-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:760bf2af2760c498233ab5a6196bc6fd4df0776124f72224bd51fdbfd44faed2" },
-]
-
-[[package]]
-name = "intel-opencl-rt"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "intel-cmplr-lic-rt" },
-    { name = "tbb" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/98/bf/c6c2c3812491cc023ff60372558038de9f026f197ebd855b0a5f29e1aeb8/intel_opencl_rt-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:4b8c0446cae856cf9272ed3b7df5122ff3a65d35cee9e82700a818d3fdec0502" },
-    { url = "https://pypi.cstcloud.cn/packages/b2/a2/7503588136da00d6d364635bb78f85d6215d0df2c043bca82aff4a52d885/intel_opencl_rt-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:fdbec0a6ae321fb68a961d3becbd5d8c9dbfbbabb16f56c551439baad3fd3241" },
-]
-
-[[package]]
-name = "intel-openmp"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "intel-cmplr-lib-ur" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/27/13/b69500c0597f1c50732a7e96fbc3cb72c3f1a70ea83a8568ba20978fcc0a/intel_openmp-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:3fcaf73862136a36cc191be539d67bbc5aa20aceadb53a1179ff74ee286e4600" },
-    { url = "https://pypi.cstcloud.cn/packages/41/2d/ef41ac92c26dcddd4e9dbd5ef84cd229e14cb6274657e07099ee279d65ba/intel_openmp-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:3c5c3ab2778134af00a61cb4af5a1ca6d060b6aecae793c3c787fe99b964e5e1" },
-]
-
-[[package]]
-name = "intel-sycl-rt"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "intel-cmplr-lib-rt" },
-    { name = "intel-cmplr-lib-ur" },
-    { name = "intel-cmplr-lic-rt" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/15/48/533fb60bd90876d11a8dd4ac7037f87f79f8b7bbaebbee6fec2562017b41/intel_sycl_rt-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:6635595f34bd03ca83d55d20196c7c2604ee3f6302e1f712e333ab50ee8f3fd5" },
-    { url = "https://pypi.cstcloud.cn/packages/1e/c4/86e3846c2e4fdeb949b36e29c4553f20ad48f233c2e248eb7e92de054368/intel_sycl_rt-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:35f954e80fbe078837ee5743d6d5df830008f2eeb49a8569ebb415ffcb58e4fa" },
-]
-
-[[package]]
-name = "ipykernel"
-version = "5.3.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "appnope", marker = "sys_platform == 'darwin'" },
-    { name = "ipython" },
-    { name = "jupyter-client" },
-    { name = "tornado" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/fc/fd/a0ba26eef615a14c54285b4a62d5e906e0c53000b662e2e4c0b2df7cf004/ipykernel-5.3.4.tar.gz", hash = "sha256:9b2652af1607986a1b231c62302d070bc0534f564c393a5d9d130db9abbbe89d" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/52/19/c2812690d8b340987eecd2cbc18549b1d130b94c5d97fcbe49f5f8710edf/ipykernel-5.3.4-py3-none-any.whl", hash = "sha256:d6fbba26dba3cebd411382bc484f7bc2caa98427ae0ddb4ab37fe8bfeb5c7dd3" },
-]
-
-[[package]]
-name = "ipython"
-version = "7.18.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "appnope", marker = "sys_platform == 'darwin'" },
-    { name = "backcall" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "decorator" },
-    { name = "jedi" },
-    { name = "pexpect", marker = "sys_platform != 'win32'" },
-    { name = "pickleshare" },
-    { name = "prompt-toolkit" },
-    { name = "pygments" },
-    { name = "setuptools" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/ed/c6/2c40e1fc10690dfbe891a948aa1b0dd4890fd2bce9d2eb29c97a84bb0fcb/ipython-7.18.1.tar.gz", hash = "sha256:a331e78086001931de9424940699691ad49dfb457cea31f5471eae7b78222d5e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/72/36/89e1bb437f4f2275c33acc6eb333ab2d1c64e732ad23d6f34825b512e1a3/ipython-7.18.1-py3-none-any.whl", hash = "sha256:2e22c1f74477b5106a6fb301c342ab8c64bb75d702e350f05a649e8cb40a0fb8" },
-]
-
-[[package]]
-name = "ipython-genutils"
-version = "0.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/e8/69/fbeffffc05236398ebfcfb512b6d2511c622871dca1746361006da310399/ipython_genutils-0.2.0.tar.gz", hash = "sha256:eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl", hash = "sha256:72dd37233799e619666c9f639a9da83c34013a73e8bbc79a7a6348d93c61fab8" },
-]
-
-[[package]]
-name = "jedi"
-version = "0.17.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "parso" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/39/67/50d1653038dafe06ca2cc55c4598c5f8318d519c12a7a288d7826280ee22/jedi-0.17.2.tar.gz", hash = "sha256:86ed7d9b750603e4ba582ea8edc678657fb4007894a12bcf6f4bb97892f31d20" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/c3/d4/36136b18daae06ad798966735f6c3fb96869c1be9f8245d2a8f556e40c36/jedi-0.17.2-py2.py3-none-any.whl", hash = "sha256:98cc583fa0f2f8304968199b01b6b4b94f469a1f4a74c1560506ca2a211378b5" },
-]
-
-[[package]]
-name = "jinja2"
-version = "2.11.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "markupsafe" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz", hash = "sha256:89aab215427ef59c34ad58735269eb58b1a5808103067f7bb9d5836c651b3bb0" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/30/9e/f663a2aa66a09d838042ae1a2c5659828bb9b41ea3a6efa20a20fd92b121/Jinja2-2.11.2-py2.py3-none-any.whl", hash = "sha256:f0a4641d3cf955324a89c04f3d94663aa4d638abe8f733ecd3582848e1c37035" },
-]
-
-[[package]]
 name = "joblib"
 version = "0.17.0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/ef/e9/80bdaef3848e8aa5e518f516bdfb79cc5d81c57ead939c541c20eecd7633/joblib-0.17.0.tar.gz", hash = "sha256:9e284edd6be6b71883a63c9b7f124738a3c16195513ad940eae7e3438de885d5" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/fc/c9/f58220ac44a1592f79a343caba12f6837f9e0c04c196176a3d66338e1ea8/joblib-0.17.0-py3-none-any.whl", hash = "sha256:698c311779f347cf6b7e6b8a39bb682277b8ee4aba8cf9507bc0cf4cd4737b72" },
-]
-
-[[package]]
-name = "json5"
-version = "0.9.5"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/8d/b4/d09c00cb7bc88b17118be48f94d4b8d0ce7b572690625ca2b5477e05ce0e/json5-0.9.5.tar.gz", hash = "sha256:703cfee540790576b56a92e1c6aaa6c4b0d98971dc358ead83812aa4d06bdb96" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/2b/81/22bf51a5bc60dde18bb6164fd597f18ee683de8670e141364d9c432dd3cf/json5-0.9.5-py2.py3-none-any.whl", hash = "sha256:af1a1b9a2850c7f62c23fde18be4749b3599fd302f494eebf957e2ada6b9e42c" },
-]
-
-[[package]]
-name = "jsonpickle"
-version = "1.5.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "importlib-metadata" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/7d/b0/cc3759ffb431c8b7626d098b2348efa5705e91b30d96ca43c6c01f58cfa4/jsonpickle-1.5.2.tar.gz", hash = "sha256:9e899bcf94bb1ce6e17beccf880d096fd6221681faede55aa7a8349556822359" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/e9/ec/35910cf6ab87f8a013036f01f732f871a23b6058123a7bd0c7b08fbbc937/jsonpickle-1.5.2-py2.py3-none-any.whl", hash = "sha256:7ace67f85a5cfd148e0d2b7defb63d97e856dd5151c092cc6c48dcc91f39f471" },
-]
-
-[[package]]
-name = "jsonschema"
-version = "3.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "attrs" },
-    { name = "importlib-metadata" },
-    { name = "pyrsistent" },
-    { name = "setuptools" },
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/69/11/a69e2a3c01b324a77d3a7c0570faa372e8448b666300c4117a516f8b1212/jsonschema-3.2.0.tar.gz", hash = "sha256:c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/c5/8f/51e89ce52a085483359217bc72cdbf6e75ee595d5b1d4b5ade40c7e018b8/jsonschema-3.2.0-py2.py3-none-any.whl", hash = "sha256:4e5b3cf8216f577bee9ce139cbe72eca3ea4f292ec60928ff24758ce626cd163" },
-]
-
-[[package]]
-name = "jupyter-client"
-version = "6.1.7"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "jupyter-core" },
-    { name = "python-dateutil" },
-    { name = "pyzmq" },
-    { name = "tornado" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/c3/7a/53e652fb8cbca92ae5f325cbd8b2ba123b57fbc1cc5e8a47ad1c62d75e93/jupyter_client-6.1.7.tar.gz", hash = "sha256:49e390b36fe4b4226724704ea28d9fb903f1a3601b6882ce3105221cd09377a1" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/dc/41/9fa443d5ae8907dd8f7d12146cb0092dc053afd67b5b57e7e8786a328547/jupyter_client-6.1.7-py3-none-any.whl", hash = "sha256:c958d24d6eacb975c1acebb68ac9077da61b5f5c040f22f6849928ad7393b950" },
-]
-
-[[package]]
-name = "jupyter-core"
-version = "4.6.3"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "pywin32", marker = "sys_platform == 'win32'" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/28/64/8bdde111be57a2a3d54376db29b5f25ab9c68ffd3d6554989db24d5c1b7a/jupyter_core-4.6.3.tar.gz", hash = "sha256:394fd5dd787e7c8861741880bdf8a00ce39f95de5d18e579c74b882522219e7e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/63/0d/df2d17cdf389cea83e2efa9a4d32f7d527ba78667e0153a8e676e957b2f7/jupyter_core-4.6.3-py2.py3-none-any.whl", hash = "sha256:a4ee613c060fe5697d913416fc9d553599c05e4492d58fac1192c9a6844abb21" },
-]
-
-[[package]]
-name = "jupyterlab"
-version = "2.2.8"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "jinja2" },
-    { name = "jupyterlab-server" },
-    { name = "notebook" },
-    { name = "tornado" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/39/dc/a0d48fa885fce1efa8a7dcee9c86d52cf59aa312cc35fc78077c841ee411/jupyterlab-2.2.8.tar.gz", hash = "sha256:c8377bee30504919c1e79949f9fe35443ab7f5c4be622c95307e8108410c8b8c" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/d7/a9/d7c904ee406d1ce320fd1d91e05111fa158e66bb217f68d070b5f58c5937/jupyterlab-2.2.8-py3-none-any.whl", hash = "sha256:95d0509557881cfa8a5fcdf225f2fca46faf1bc52fc56a28e0b72fcc594c90ab" },
-]
-
-[[package]]
-name = "jupyterlab-pygments"
-version = "0.1.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "pygments" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/d1/79/3677d138eeacbba7cf6d0e51e6b8c094448329f7b8a523a5d2599bc898e7/jupyterlab_pygments-0.1.2.tar.gz", hash = "sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/a8/6f/c34288766797193b512c6508f5994b830fb06134fdc4ca8214daba0aa443/jupyterlab_pygments-0.1.2-py2.py3-none-any.whl", hash = "sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008" },
-]
-
-[[package]]
-name = "jupyterlab-server"
-version = "1.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "jinja2" },
-    { name = "json5" },
-    { name = "jsonschema" },
-    { name = "notebook" },
-    { name = "requests" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/92/54/5f321ca4cebfb644ac59eb21601b46a2ff9831ffe1b4e5a588f2a7e98d48/jupyterlab_server-1.2.0.tar.gz", hash = "sha256:5431d9dde96659364b7cc877693d5d21e7b80cea7ae3959ecc2b87518e5f5d8c" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/b4/eb/560043dcd8376328f8b98869efed66ef68307278406ab99c7f63a34d4ae2/jupyterlab_server-1.2.0-py3-none-any.whl", hash = "sha256:55d256077bf13e5bc9e8fbd5aac51bef82f6315111cec6b712b9a5ededbba924" },
-]
-
-[[package]]
-name = "kaleido"
-version = "0.2.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/e0/f7/0ccaa596ec341963adbb4f839774c36d5659e75a0812d946732b927d480e/kaleido-0.2.1-py2.py3-none-macosx_10_11_x86_64.whl", hash = "sha256:ca6f73e7ff00aaebf2843f73f1d3bacde1930ef5041093fe76b83a15785049a7" },
-    { url = "https://pypi.cstcloud.cn/packages/45/8e/4297556be5a07b713bb42dde0f748354de9a6918dee251c0e6bdcda341e7/kaleido-0.2.1-py2.py3-none-macosx_11_0_arm64.whl", hash = "sha256:bb9a5d1f710357d5d432ee240ef6658a6d124c3e610935817b4b42da9c787c05" },
-    { url = "https://pypi.cstcloud.cn/packages/ae/b3/a0f0f4faac229b0011d8c4a7ee6da7c2dca0b6fd08039c95920846f23ca4/kaleido-0.2.1-py2.py3-none-manylinux1_x86_64.whl", hash = "sha256:aa21cf1bf1c78f8fa50a9f7d45e1003c387bd3d6fe0a767cfbbf344b95bdc3a8" },
-    { url = "https://pypi.cstcloud.cn/packages/a1/2b/680662678a57afab1685f0c431c2aba7783ce4344f06ec162074d485d469/kaleido-0.2.1-py2.py3-none-manylinux2014_aarch64.whl", hash = "sha256:845819844c8082c9469d9c17e42621fbf85c2b237ef8a86ec8a8527f98b6512a" },
-    { url = "https://pypi.cstcloud.cn/packages/88/89/4b6f8bb3f9ab036fd4ad1cb2d628ab5c81db32ac9aa0641d7b180073ba43/kaleido-0.2.1-py2.py3-none-win32.whl", hash = "sha256:ecc72635860be616c6b7161807a65c0dbd9b90c6437ac96965831e2e24066552" },
-    { url = "https://pypi.cstcloud.cn/packages/f7/9a/0408b02a4bcb3cf8b338a2b074ac7d1b2099e2b092b42473def22f7b625f/kaleido-0.2.1-py2.py3-none-win_amd64.whl", hash = "sha256:4670985f28913c2d063c5734d125ecc28e40810141bdb0a46f15b76c1d45f23c" },
-]
-
-[[package]]
-name = "keras-applications"
-version = "1.0.8"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "h5py" },
-    { name = "numpy" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/21/56/4bcec5a8d9503a87e58e814c4e32ac2b32c37c685672c30bc8c54c6e478a/Keras_Applications-1.0.8.tar.gz", hash = "sha256:5579f9a12bcde9748f4a12233925a59b93b73ae6947409ff34aa2ba258189fe5" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl", hash = "sha256:df4323692b8c1174af821bf906f1e442e63fa7589bf0f1230a0b6bdc5a810c95" },
-]
-
-[[package]]
-name = "keras-preprocessing"
-version = "1.1.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "numpy" },
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/5e/f1/b44337faca48874333769a29398fe4666686733c8880aa160b9fd5dfe600/Keras_Preprocessing-1.1.2.tar.gz", hash = "sha256:add82567c50c8bc648c14195bf544a5ce7c1f76761536956c3d2978970179ef3" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/79/4c/7c3275a01e12ef9368a892926ab932b33bb13d55794881e3573482b378a7/Keras_Preprocessing-1.1.2-py2.py3-none-any.whl", hash = "sha256:7b82029b130ff61cc99b55f3bd27427df4838576838c5b2f65940e4fcec99a7b" },
 ]
 
 [[package]]
@@ -915,19 +380,6 @@ wheels = [
 ]
 
 [[package]]
-name = "llvmlite"
-version = "0.34.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/0b/96/07bfa93a103fb9e3e9ae7f9f7c6687ae714aee66b6f3000da3fad71e0aa2/llvmlite-0.34.0.tar.gz", hash = "sha256:f03ee0d19bca8f2fe922bb424a909d05c28411983b0c2bc58b020032a0d11f63" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/37/1c/18ab3765b1c60981ed636e7f851c660c3d808f0d3a5870a215f1c74176b2/llvmlite-0.34.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:bb96989bc57a1ccb131e7a0e061d07b68139b6f81a98912345d53d9239e231e1" },
-    { url = "https://pypi.cstcloud.cn/packages/f6/f7/80d93e610f27549adff84b081a577aea43513cd43b87fded21665c8814e7/llvmlite-0.34.0-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:6d3f81992f52a94077e7b9b16497029daf5b5eebb2cce56f3c8345bbc9c6308e" },
-    { url = "https://pypi.cstcloud.cn/packages/4b/df/88c6d62e39947c5b1f2b1eb2239d1aa3013d6a61a75730f8b8997b6e66c6/llvmlite-0.34.0-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:d841248d1c630426c93e3eb3f8c45bca0dab77c09faeb7553b1a500220e362ce" },
-    { url = "https://pypi.cstcloud.cn/packages/cf/8d/a698cc9a76ba7b4a0c6ef7e9fa349548d87b46938037c8aac99169849171/llvmlite-0.34.0-cp37-cp37m-win32.whl", hash = "sha256:408b15ffec30696406e821c89da010f1bb1eb0aa572be4561c98eb2536d610ab" },
-    { url = "https://pypi.cstcloud.cn/packages/c5/a3/c4963b9b8bafba8cb7c266a6436e514b3a08bd300e31621ccbec7f1a8708/llvmlite-0.34.0-cp37-cp37m-win_amd64.whl", hash = "sha256:5d1f370bf150db7239204f09cf6a0603292ea28bac984e69b167e16fe160d803" },
-]
-
-[[package]]
 name = "mapdn"
 version = "0.1.0"
 source = { editable = "packages" }
@@ -937,327 +389,61 @@ name = "mapdn-tweak"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "absl-py" },
-    { name = "argon2-cffi" },
-    { name = "astor" },
-    { name = "astunparse" },
-    { name = "async-generator" },
-    { name = "attrs" },
-    { name = "backcall" },
-    { name = "backports-functools-lru-cache" },
-    { name = "bleach" },
-    { name = "brotlipy" },
-    { name = "cachetools" },
-    { name = "certifi" },
-    { name = "cffi" },
-    { name = "chardet" },
-    { name = "cloudpickle" },
-    { name = "colorama" },
-    { name = "commonmark" },
-    { name = "crc32c" },
-    { name = "cryptography" },
-    { name = "cycler" },
-    { name = "dataclasses" },
-    { name = "decorator" },
-    { name = "defusedxml" },
-    { name = "docopt" },
-    { name = "docutils" },
-    { name = "entrypoints" },
-    { name = "et-xmlfile" },
-    { name = "flatbuffers" },
-    { name = "gast" },
-    { name = "gitdb" },
-    { name = "gitpython" },
-    { name = "google-auth" },
-    { name = "google-auth-oauthlib" },
-    { name = "google-pasta" },
-    { name = "grpcio" },
     { name = "gymnasium" },
-    { name = "h5py" },
     { name = "hydra-colorlog" },
     { name = "hydra-core" },
     { name = "hydra-submitit-launcher" },
-    { name = "idna" },
     { name = "imageio" },
-    { name = "ipykernel" },
-    { name = "ipython" },
-    { name = "ipython-genutils" },
-    { name = "jedi" },
-    { name = "jinja2" },
     { name = "joblib" },
-    { name = "json5" },
-    { name = "jsonpickle" },
-    { name = "jsonschema" },
-    { name = "jupyter-client" },
-    { name = "jupyter-core" },
-    { name = "jupyterlab" },
-    { name = "jupyterlab-pygments" },
-    { name = "jupyterlab-server" },
-    { name = "kaleido" },
-    { name = "keras-applications" },
-    { name = "keras-preprocessing" },
-    { name = "kiwisolver" },
-    { name = "llvmlite" },
     { name = "mapdn" },
-    { name = "markdown" },
-    { name = "markupsafe" },
     { name = "matplotlib" },
-    { name = "metakernel" },
-    { name = "mistune" },
-    { name = "mkl-fft" },
-    { name = "mkl-random" },
-    { name = "mkl-service" },
-    { name = "munch" },
-    { name = "nbclient" },
-    { name = "nbconvert" },
-    { name = "nbformat" },
-    { name = "nest-asyncio" },
-    { name = "networkx" },
-    { name = "notebook" },
-    { name = "numba" },
     { name = "numpy" },
     { name = "numpy-stl" },
-    { name = "oauthlib" },
-    { name = "oct2py" },
-    { name = "octave-kernel" },
     { name = "omegaconf" },
-    { name = "opencv-python" },
-    { name = "openpyxl" },
-    { name = "opt-einsum" },
-    { name = "packaging" },
     { name = "pandapower" },
     { name = "pandas" },
-    { name = "pandocfilters" },
-    { name = "parso" },
-    { name = "pexpect" },
-    { name = "pickleshare" },
-    { name = "pillow" },
-    { name = "pip" },
     { name = "plotly" },
-    { name = "prometheus-client" },
-    { name = "prompt-toolkit" },
-    { name = "protobuf" },
-    { name = "ptyprocess" },
-    { name = "py-cpuinfo" },
-    { name = "pyasn1" },
-    { name = "pyasn1-modules" },
-    { name = "pycparser" },
-    { name = "pygame" },
     { name = "pyglet" },
-    { name = "pygments" },
-    { name = "pyopenssl" },
-    { name = "pyparsing" },
-    { name = "pypower" },
-    { name = "pyrsistent" },
-    { name = "pysocks" },
-    { name = "python-dateutil" },
-    { name = "python-igraph" },
-    { name = "python-utils" },
-    { name = "pytz" },
     { name = "pyyaml" },
-    { name = "pyzmq" },
-    { name = "recommonmark" },
-    { name = "requests" },
-    { name = "requests-oauthlib" },
     { name = "rich" },
-    { name = "rsa" },
     { name = "ruff" },
-    { name = "sacred" },
-    { name = "scipy" },
-    { name = "send2trash" },
-    { name = "setuptools" },
-    { name = "simplegeneric" },
     { name = "six" },
-    { name = "smmap" },
-    { name = "soundfile" },
-    { name = "tenacity" },
     { name = "tensorboard" },
     { name = "tensorboard-data-server" },
     { name = "tensorboard-plugin-wit" },
     { name = "tensorboardx" },
-    { name = "tensorflow" },
-    { name = "tensorflow-estimator" },
-    { name = "termcolor" },
-    { name = "terminado" },
-    { name = "testpath" },
-    { name = "texttable" },
     { name = "torch" },
-    { name = "tornado" },
-    { name = "traitlets" },
-    { name = "typing-extensions" },
-    { name = "urllib3" },
     { name = "wandb", version = "0.13.5", source = { registry = "https://pypi.cstcloud.cn/simple" }, marker = "sys_platform != 'linux'" },
     { name = "wandb", version = "0.18.3", source = { registry = "https://pypi.cstcloud.cn/simple" }, marker = "sys_platform == 'linux'" },
-    { name = "wcwidth" },
-    { name = "webencodings" },
-    { name = "werkzeug" },
-    { name = "wheel" },
-    { name = "wrapt" },
-    { name = "xlrd" },
-    { name = "xlsxwriter" },
-    { name = "zipp" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "absl-py", specifier = "==0.10.0" },
-    { name = "argon2-cffi", specifier = "==20.1.0" },
-    { name = "astor", specifier = "==0.8.1" },
-    { name = "astunparse", specifier = "==1.6.3" },
-    { name = "async-generator", specifier = "==1.10" },
-    { name = "attrs", specifier = "==20.2.0" },
-    { name = "backcall", specifier = "==0.2.0" },
-    { name = "backports-functools-lru-cache", specifier = "==1.6.1" },
-    { name = "bleach", specifier = "==3.2.1" },
-    { name = "brotlipy", specifier = "==0.7.0" },
-    { name = "cachetools", specifier = "==4.1.1" },
-    { name = "certifi", specifier = "==2020.6.20" },
-    { name = "cffi", specifier = "==1.14.3" },
-    { name = "chardet", specifier = "==3.0.4" },
-    { name = "cloudpickle", specifier = "==1.2.2" },
-    { name = "colorama", specifier = "==0.4.4" },
-    { name = "commonmark", specifier = "==0.5.4" },
-    { name = "crc32c", specifier = "==2.2" },
-    { name = "cryptography", specifier = "==3.1.1" },
-    { name = "cycler", specifier = "==0.10.0" },
-    { name = "dataclasses", specifier = "==0.6" },
-    { name = "decorator", specifier = "==4.4.2" },
-    { name = "defusedxml", specifier = "==0.6.0" },
-    { name = "docopt", specifier = "==0.6.2" },
-    { name = "docutils", specifier = "==0.16" },
-    { name = "entrypoints", specifier = "==0.3" },
-    { name = "et-xmlfile", specifier = "==1.1.0" },
-    { name = "flatbuffers", specifier = "==1.12" },
-    { name = "gast", specifier = "==0.2.2" },
-    { name = "gitdb", specifier = "==4.0.7" },
-    { name = "gitpython", specifier = "==3.1.14" },
-    { name = "google-auth", specifier = "==1.22.1" },
-    { name = "google-auth-oauthlib", specifier = "==0.4.1" },
-    { name = "google-pasta", specifier = "==0.2.0" },
-    { name = "grpcio", specifier = "==1.32.0" },
     { name = "gymnasium", specifier = ">=0.26.3" },
-    { name = "h5py", specifier = "==2.10.0" },
     { name = "hydra-colorlog", specifier = ">=1.2.0" },
     { name = "hydra-core", specifier = ">=1.3.2" },
     { name = "hydra-submitit-launcher", specifier = ">=1.2.0" },
-    { name = "idna", specifier = "==2.10" },
     { name = "imageio", specifier = ">=2.9.0" },
-    { name = "ipykernel", specifier = "==5.3.4" },
-    { name = "ipython", specifier = "==7.18.1" },
-    { name = "ipython-genutils", specifier = "==0.2.0" },
-    { name = "jedi", specifier = "==0.17.2" },
-    { name = "jinja2", specifier = "==2.11.2" },
     { name = "joblib", specifier = "==0.17.0" },
-    { name = "json5", specifier = "==0.9.5" },
-    { name = "jsonpickle", specifier = "==1.5.2" },
-    { name = "jsonschema", specifier = "==3.2.0" },
-    { name = "jupyter-client", specifier = "==6.1.7" },
-    { name = "jupyter-core", specifier = "==4.6.3" },
-    { name = "jupyterlab", specifier = "==2.2.8" },
-    { name = "jupyterlab-pygments", specifier = "==0.1.2" },
-    { name = "jupyterlab-server", specifier = "==1.2.0" },
-    { name = "kaleido", specifier = "==0.2.1" },
-    { name = "keras-applications", specifier = "==1.0.8" },
-    { name = "keras-preprocessing", specifier = "==1.1.2" },
-    { name = "kiwisolver", specifier = "==1.2.0" },
-    { name = "llvmlite", specifier = "==0.34.0" },
     { name = "mapdn", editable = "packages" },
-    { name = "markdown", specifier = "==3.3.2" },
-    { name = "markupsafe", specifier = "==1.1.1" },
     { name = "matplotlib", specifier = "==2.2.5" },
-    { name = "metakernel", specifier = "==0.27.0" },
-    { name = "mistune", specifier = "==0.8.4" },
-    { name = "mkl-fft", specifier = "==1.2.0" },
-    { name = "mkl-random", specifier = "==1.2.0" },
-    { name = "mkl-service", specifier = "==2.3.0" },
-    { name = "munch", specifier = "==2.5.0" },
-    { name = "nbclient", specifier = "==0.5.1" },
-    { name = "nbconvert", specifier = "==6.0.7" },
-    { name = "nbformat", specifier = "==5.0.8" },
-    { name = "nest-asyncio", specifier = "==1.4.1" },
-    { name = "networkx", specifier = "==2.5" },
-    { name = "notebook", specifier = "==6.1.4" },
-    { name = "numba", specifier = "==0.51.2" },
     { name = "numpy", specifier = "==1.19.5" },
     { name = "numpy-stl", specifier = "==2.16.0" },
-    { name = "oauthlib", specifier = "==3.1.0" },
-    { name = "oct2py", specifier = "==4.0.6" },
-    { name = "octave-kernel", specifier = "==0.32.0" },
     { name = "omegaconf", specifier = ">=2.3.0" },
-    { name = "opencv-python", specifier = "==4.4.0.46" },
-    { name = "openpyxl", specifier = "==3.0.7" },
-    { name = "opt-einsum", specifier = "==3.3.0" },
-    { name = "packaging", specifier = "==20.4" },
     { name = "pandapower", specifier = "==2.7.0" },
     { name = "pandas", specifier = "==1.1.3" },
-    { name = "pandocfilters", specifier = "==1.4.2" },
-    { name = "parso", specifier = "==0.7.1" },
-    { name = "pexpect", specifier = "==4.8.0" },
-    { name = "pickleshare", specifier = "==0.7.5" },
-    { name = "pillow", specifier = "==8.0.1" },
-    { name = "pip", specifier = "==21.2.4" },
     { name = "plotly", specifier = "==5.3.1" },
-    { name = "prometheus-client", specifier = "==0.8.0" },
-    { name = "prompt-toolkit", specifier = "==3.0.8" },
-    { name = "protobuf", specifier = "==3.13.0" },
-    { name = "ptyprocess", specifier = "==0.6.0" },
-    { name = "py-cpuinfo", specifier = "==8.0.0" },
-    { name = "pyasn1", specifier = "==0.4.8" },
-    { name = "pyasn1-modules", specifier = "==0.2.8" },
-    { name = "pycparser", specifier = "==2.20" },
-    { name = "pygame", specifier = "==1.9.6" },
     { name = "pyglet", specifier = "==2.0.dev0" },
-    { name = "pygments", specifier = "==2.7.1" },
-    { name = "pyopenssl", specifier = "==19.1.0" },
-    { name = "pyparsing", specifier = "==3.0.0a2" },
-    { name = "pypower", specifier = "==5.1.4" },
-    { name = "pyrsistent", specifier = "==0.17.3" },
-    { name = "pysocks", specifier = "==1.7.1" },
-    { name = "python-dateutil", specifier = "==2.8.1" },
-    { name = "python-igraph", specifier = "==0.9.6" },
-    { name = "python-utils", specifier = "==2.5.6" },
-    { name = "pytz", specifier = "==2020.1" },
     { name = "pyyaml", specifier = "==6.0.1" },
-    { name = "pyzmq", specifier = "==19.0.2" },
-    { name = "recommonmark", specifier = "==0.4.0" },
-    { name = "requests", specifier = "==2.24.0" },
-    { name = "requests-oauthlib", specifier = "==1.3.0" },
     { name = "rich", specifier = ">=0.3.3" },
-    { name = "rsa", specifier = "==4.6" },
     { name = "ruff", specifier = ">=0.7.3" },
-    { name = "sacred", specifier = "==0.8.2" },
-    { name = "scipy", specifier = "==1.4.1" },
-    { name = "send2trash", specifier = "==1.5.0" },
-    { name = "setuptools", specifier = "==50.3.2" },
-    { name = "simplegeneric", specifier = "==0.8.1" },
     { name = "six", specifier = "==1.15.0" },
-    { name = "smmap", specifier = "==4.0.0" },
-    { name = "soundfile", specifier = "==0.10.3.post1" },
-    { name = "tenacity", specifier = "==8.0.1" },
     { name = "tensorboard", specifier = "==2.1.1" },
     { name = "tensorboard-data-server", specifier = "==0.6.0" },
     { name = "tensorboard-plugin-wit", specifier = "==1.7.0" },
     { name = "tensorboardx", specifier = "==2.2" },
-    { name = "tensorflow", specifier = "==2.1.0" },
-    { name = "tensorflow-estimator", specifier = "==2.1.0" },
-    { name = "termcolor", specifier = "==1.1.0" },
-    { name = "terminado", specifier = "==0.9.1" },
-    { name = "testpath", specifier = "==0.4.4" },
-    { name = "texttable", specifier = "==1.6.4" },
     { name = "torch", specifier = "==1.10.0+cu113", index = "https://download.pytorch.org/whl" },
-    { name = "tornado", specifier = "==6.1b1" },
-    { name = "traitlets", specifier = "==5.0.5" },
-    { name = "typing-extensions", specifier = "==3.7.4.3" },
-    { name = "urllib3", specifier = "==1.25.11" },
     { name = "wandb", specifier = ">=0.13.5" },
-    { name = "wcwidth", specifier = "==0.2.5" },
-    { name = "webencodings", specifier = "==0.5.1" },
-    { name = "werkzeug", specifier = "==1.0.1" },
-    { name = "wheel", specifier = "==0.35.1" },
-    { name = "wrapt", specifier = "==1.12.1" },
-    { name = "xlrd", specifier = "==1.2.0" },
-    { name = "xlsxwriter", specifier = "==1.3.7" },
-    { name = "zipp", specifier = "==3.3.1" },
 ]
 
 [[package]]
@@ -1270,23 +456,6 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/a1/c4/baa09aa2da7281e3da5137b1073e6ebfd6acf52ac885a363b7b3b5556402/Markdown-3.3.2.tar.gz", hash = "sha256:4b71fbd2db30c1dfb400f22b25f41cb823fc1db0aa8b7b67d120644f92cc1011" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/a0/34/4d6b7e3044044e89eaa25ed5395656cc351163c625fda0656d2729de399f/Markdown-3.3.2-py3-none-any.whl", hash = "sha256:77b7bff443b1f97b4814fa438c181fd5882e31edb01b422856b3feca91475f3e" },
-]
-
-[[package]]
-name = "markupsafe"
-version = "1.1.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/ce/c6/f000f1af136ef74e4a95e33785921c73595c5390403f102e9b231b065b7a/MarkupSafe-1.1.1-cp37-cp37m-macosx_10_6_intel.whl", hash = "sha256:8defac2f2ccd6805ebf65f5eeb132adcf2ab57aa11fdf4c0dd5169a004710e7d" },
-    { url = "https://pypi.cstcloud.cn/packages/70/78/b7f1fac566e6d579a15b020dff0e77bc059093a6c5e6f6a777be4c959384/MarkupSafe-1.1.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:bf5aa3cbcfdf57fa2ee9cd1822c862ef23037f5c832ad09cfea57fa846dec193" },
-    { url = "https://pypi.cstcloud.cn/packages/d6/e5/348e7d7977202d9a6c7f4cac3c6d8f71b01bb3c91e0bd4b5c23670951fd6/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:46c99d2de99945ec5cb54f23c8cd5689f6d7177305ebff350a58ce5f8de1669e" },
-    { url = "https://pypi.cstcloud.cn/packages/98/7b/ff284bd8c80654e471b769062a9b43cc5d03e7a615048d96f4619df8d420/MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ba59edeaa2fc6114428f1637ffff42da1e311e29382d81b339c1817d37ec93c6" },
-    { url = "https://pypi.cstcloud.cn/packages/81/e2/2cb8f60843559cd04a161d838b4c824f4569457d0bbd8b6416c0e68c9d25/MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:6fffc775d90dcc9aed1b89219549b329a9250d918fd0b8fa8d93d154918422e1" },
-    { url = "https://pypi.cstcloud.cn/packages/c2/37/2e4def8ce3739a258998215df907f5815ecd1af71e62147f5eea2d12d4e8/MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:a6a744282b7718a2a62d2ed9d993cad6f5f585605ad352c11de459f4108df0a1" },
-    { url = "https://pypi.cstcloud.cn/packages/c1/53/96b8c31ee0947bd080b46f6dc9c0a35cceedae8c56a219cc4b9cce0a4f99/MarkupSafe-1.1.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:195d7d2c4fbb0ee8139a6cf67194f3973a6b3042d742ebe0a9ed36d8b6f0c07f" },
-    { url = "https://pypi.cstcloud.cn/packages/5b/d4/1deb3c5dc3714fb160c7e2116fc6dff36a063d9156a9328cce54ef35cc52/MarkupSafe-1.1.1-cp37-cp37m-win32.whl", hash = "sha256:b00c1de48212e4cc9603895652c5c410df699856a2853135b3967591e4beebc2" },
-    { url = "https://pypi.cstcloud.cn/packages/65/c6/2399700d236d1dd681af8aebff1725558cddfd6e43d7a5184a675f4711f5/MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:9bf40443012702a1d2070043cb6291650a0841ece432556f784f004937f0f32c" },
 ]
 
 [[package]]
@@ -1311,159 +480,6 @@ wheels = [
 ]
 
 [[package]]
-name = "metakernel"
-version = "0.27.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ipykernel" },
-    { name = "pexpect" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/8e/5b/473fa648418bad0676c40611e47b268a19cc498dce6d4c117d334d6be037/metakernel-0.27.0.tar.gz", hash = "sha256:f80e0b2f7987dd5e36b4cda3ff9b4e5cdf84aee0d5a8b821e93e253fd534e0dc" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/37/e4/37e22713e465dab274252e8dea1243079200ceb9f2380865cadff6cafc88/metakernel-0.27.0-py2.py3-none-any.whl", hash = "sha256:191a0e9537fc9b098f277b971f30965052e1ab79b47694ed2bd429db37042e86" },
-]
-
-[[package]]
-name = "mistune"
-version = "0.8.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/2d/a4/509f6e7783ddd35482feda27bc7f72e65b5e7dc910eca4ab2164daf9c577/mistune-0.8.4.tar.gz", hash = "sha256:59a3429db53c50b5c6bcc8a07f8848cb00d7dc8bdb431a4ab41920d201d4756e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/09/ec/4b43dae793655b7d8a25f76119624350b4d65eb663459eb9603d7f1f0345/mistune-0.8.4-py2.py3-none-any.whl", hash = "sha256:88a1051873018da288eee8538d476dffe1262495144b33ecb586c4ab266bb8d4" },
-]
-
-[[package]]
-name = "mkl"
-version = "2025.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "intel-openmp" },
-    { name = "tbb" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/e3/d1/fb513525de46d6a9fd9ee9c4208a6a85db9babd135d75bf47e27452aa55a/mkl-2025.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:a5f71f52ce568df8557fa420bb84282ace7b85d6fa2ee9d374c27867705823ce" },
-    { url = "https://pypi.cstcloud.cn/packages/40/26/541945cfe3775b351a3bbbd65a7f4023a1812cdc3070c13613a4d7e3c3ed/mkl-2025.0.0-py2.py3-none-win_amd64.whl", hash = "sha256:8843aed72205b90a5738c623918421ff353fd173b469536ff57977a0d9596c48" },
-]
-
-[[package]]
-name = "mkl-fft"
-version = "1.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "dpcpp-cpp-rt" },
-    { name = "mkl" },
-    { name = "numpy" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/e1/de/fe883f978594e49075fe57161a4d0327687f57f47152ebe505fb8e6f276c/mkl_fft-1.2.0-10-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:c292711437ef739dc0e04c4dcaf12298213a0945ba9a5d653acfcc5f58cb9eaf" },
-    { url = "https://pypi.cstcloud.cn/packages/d2/80/8f6aeafe4b1d97ecf824f5b5b6986b401242444f5be4a490918ca2ebc162/mkl_fft-1.2.0-10-cp37-cp37m-win_amd64.whl", hash = "sha256:a37752d2b0feff19ebc0a858d93cb39ae0ad52f0655082d33a71bc0382ce5328" },
-]
-
-[[package]]
-name = "mkl-random"
-version = "1.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "dpcpp-cpp-rt" },
-    { name = "mkl" },
-    { name = "numpy" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/fb/08/60d148cb443a53cc5e70f1c51d833082287c9b16a03bbe3e737d830de886/mkl_random-1.2.0-10-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:05c4e0154de123fcbdca836fe47a40e78fc758b2d6b6c91b416b8df29fdda5a3" },
-    { url = "https://pypi.cstcloud.cn/packages/0f/f0/67d8e81c6f8fcd5ecc029262e48d3a6e32e537447110930ac93b7ef21c96/mkl_random-1.2.0-10-cp37-cp37m-win_amd64.whl", hash = "sha256:f81ea6ebe61e79ec22015f2272d463001cc239aa1e1fb5c89e8171e12ee64dc7" },
-]
-
-[[package]]
-name = "mkl-service"
-version = "2.3.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "mkl" },
-    { name = "six" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/1d/b2/fb25f53d275f64dcfd1634d53fbabafae3913c8c367b0337c7190ac2b188/mkl_service-2.3.0-10-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:734c44573e04303f7ff24a7cd14aa9a9a901d646a51f80d28d0df3e289ca0531" },
-    { url = "https://pypi.cstcloud.cn/packages/27/6b/7b1329f7fcb8ee661560c1da1c42fdb64136f23de9b8d29d7703e05445b3/mkl_service-2.3.0-10-cp37-cp37m-win_amd64.whl", hash = "sha256:bed509be3b5a29906901daae069d63adc60909b65cdcd58f1baed1ba622012c3" },
-    { url = "https://pypi.cstcloud.cn/packages/62/16/e3e78546ee9319526e729f31e0a95d5e2dfce39e48581aa1184db95bae91/mkl_service-2.3.0-9-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:c39366a8668794202e702d79d4aa5521bc15bf3990c254f45f3993495ef2deb3" },
-]
-
-[[package]]
-name = "munch"
-version = "2.5.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/43/a1/ec48010724eedfe2add68eb7592a0d238590e14e08b95a4ffb3c7b2f0808/munch-2.5.0.tar.gz", hash = "sha256:2d735f6f24d4dba3417fa448cae40c6e896ec1fdab6cdb5e6510999758a4dbd2" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/cc/ab/85d8da5c9a45e072301beb37ad7f833cd344e04c817d97e0cc75681d248f/munch-2.5.0-py2.py3-none-any.whl", hash = "sha256:6f44af89a2ce4ed04ff8de41f70b226b984db10a91dcc7b9ac2efc1c77022fdd" },
-]
-
-[[package]]
-name = "nbclient"
-version = "0.5.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "async-generator" },
-    { name = "jupyter-client" },
-    { name = "nbformat" },
-    { name = "nest-asyncio" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/21/bf/8bc77713fe0e5c9255233f112cd5819d692a4eded7922e40d82970ce5616/nbclient-0.5.1.tar.gz", hash = "sha256:01e2d726d16eaf2cde6db74a87e2451453547e8832d142f73f72fddcd4fe0250" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/fd/4f/5cbd9bdb30bfaad620f028711bf232b9cec8fdff1dcf68d9259254fcddeb/nbclient-0.5.1-py3-none-any.whl", hash = "sha256:4d6b116187c795c99b9dba13d46e764d596574b14c296d60670c8dfe454db364" },
-]
-
-[[package]]
-name = "nbconvert"
-version = "6.0.7"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "bleach" },
-    { name = "defusedxml" },
-    { name = "entrypoints" },
-    { name = "jinja2" },
-    { name = "jupyter-core" },
-    { name = "jupyterlab-pygments" },
-    { name = "mistune" },
-    { name = "nbclient" },
-    { name = "nbformat" },
-    { name = "pandocfilters" },
-    { name = "pygments" },
-    { name = "testpath" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/8b/93/d2b263036424da6bde39fddc768e6d725830c181b86fd83cb4fa5c653993/nbconvert-6.0.7.tar.gz", hash = "sha256:cbbc13a86dfbd4d1b5dee106539de0795b4db156c894c2c5dc382062bbc29002" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/13/2f/acbe7006548f3914456ee47f97a2033b1b2f3daf921b12ac94105d87c163/nbconvert-6.0.7-py3-none-any.whl", hash = "sha256:39e9f977920b203baea0be67eea59f7b37a761caa542abe80f5897ce3cf6311d" },
-]
-
-[[package]]
-name = "nbformat"
-version = "5.0.8"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ipython-genutils" },
-    { name = "jsonschema" },
-    { name = "jupyter-core" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/ad/6c/ab9715323ed5c0893f619788e5c0a452c42fce4a42c032245eae2c2fa31d/nbformat-5.0.8.tar.gz", hash = "sha256:f545b22138865bfbcc6b1ffe89ed5a2b8e2dc5d4fe876f2ca60d8e6f702a30f8" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/40/f7/b9a7c82aff85b706f2824c97727b8e2106bb992bd553e93082b9c6dd45fe/nbformat-5.0.8-py3-none-any.whl", hash = "sha256:aa9450c16d29286dc69b92ea4913c1bffe86488f90184445996ccc03a2f60382" },
-]
-
-[[package]]
-name = "nest-asyncio"
-version = "1.4.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/98/c2/3855c7e1930598a34aca0918b69ccc4370fb1db76454676dadd2a70b0760/nest_asyncio-1.4.1.tar.gz", hash = "sha256:b86c3193abda5b2eeccf8c79894bc71c680369a178f4b068514ac00720b14e01" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/a0/68/c917f9679b3206952e13e95434d6e70dacea13161dff3476fa088e610987/nest_asyncio-1.4.1-py3-none-any.whl", hash = "sha256:a4487c4f49f2d11a7bb89a512a6886b6a5045f47097f49815b2851aaa8599cf0" },
-]
-
-[[package]]
 name = "networkx"
 version = "2.5"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1473,49 +489,6 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/ef/d0/f706a9e5814a42c544fa1b2876fc33e5d17e1f2c92a5361776632c4f41ab/networkx-2.5.tar.gz", hash = "sha256:7978955423fbc9639c10498878be59caf99b44dc304c2286162fd24b458c1602" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/9b/cd/dc52755d30ba41c60243235460961fc28022e5b6731f16c268667625baea/networkx-2.5-py3-none-any.whl", hash = "sha256:8c5812e9f798d37c50570d15c4a69d5710a18d77bafc903ee9c5fba7454c616c" },
-]
-
-[[package]]
-name = "notebook"
-version = "6.1.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "argon2-cffi" },
-    { name = "ipykernel" },
-    { name = "ipython-genutils" },
-    { name = "jinja2" },
-    { name = "jupyter-client" },
-    { name = "jupyter-core" },
-    { name = "nbconvert" },
-    { name = "nbformat" },
-    { name = "prometheus-client" },
-    { name = "pyzmq" },
-    { name = "send2trash" },
-    { name = "terminado" },
-    { name = "tornado" },
-    { name = "traitlets" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/0b/92/7e4ef9e4cbe56f289b86d9df5bd3f6bc24a1ed59da5a1d0d0c4fa7fb8771/notebook-6.1.4.tar.gz", hash = "sha256:687d01f963ea20360c0b904ee7a37c3d8cda553858c8d6e33fd0afd13e89de32" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/cc/00/0db4005f8410c0c6c598d6beecd650846e00955a3bf800ea09872a9009f1/notebook-6.1.4-py3-none-any.whl", hash = "sha256:07b6e8b8a61aa2f780fe9a97430470485bc71262bc5cae8521f1441b910d2c88" },
-]
-
-[[package]]
-name = "numba"
-version = "0.51.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "llvmlite" },
-    { name = "numpy" },
-    { name = "setuptools" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/5e/81/6fd1dd064bcf71a79da109e8966a39e2da61d68bf0bd1e0839fa997f8c41/numba-0.51.2.tar.gz", hash = "sha256:16bd59572114adbf5f600ea383880d7b2071ae45477e84a24994e089ea390768" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/da/6e/ff2f4e0e74f6661e98fe119b4d920b0c5f0da3243e6a48095938f12ec8a1/numba-0.51.2-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:a628122dacfcba9a3ea68a9e95578c6b6391016e34962c46550ea8e189e0412e" },
-    { url = "https://pypi.cstcloud.cn/packages/5b/8a/19947987040c6dcb437e09be450018693d7a5ffbf318073d1e3910be88db/numba-0.51.2-cp37-cp37m-manylinux2014_i686.whl", hash = "sha256:106736d5a8dab6bebce989d4ab1b3f169c264582598f172e6e5b736210d2e834" },
-    { url = "https://pypi.cstcloud.cn/packages/c4/57/53b6f67bcd16ef0455db2ecaaadfa2768130edce4db32538bc5f1cde4918/numba-0.51.2-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:a12f16fdb4ca5edc94e2ef412e4e768c29217ef9b6fdfc237d064ebe30acfe14" },
-    { url = "https://pypi.cstcloud.cn/packages/be/5b/9598bad5209c0487bf9761e26b6bb0699a7e5e00d2dd9c27e27390f0d644/numba-0.51.2-cp37-cp37m-win32.whl", hash = "sha256:025b033fd31c44bba17802293c81270084b5454b5b055b8c10c394385c232f00" },
-    { url = "https://pypi.cstcloud.cn/packages/6a/8a/6f544bb1408ef57f4111b8931eff11bf13cb9edb48f152c158a06cf5164b/numba-0.51.2-cp37-cp37m-win_amd64.whl", hash = "sha256:081788f584fa500339e9b74bf02e3c5029d408c114e555ada19cae0b92721416" },
 ]
 
 [[package]]
@@ -1554,32 +527,6 @@ wheels = [
 ]
 
 [[package]]
-name = "oct2py"
-version = "4.0.6"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "octave-kernel" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/5c/b7/b3106293f99fbce9d58cc4feae6586d3e61bd6d77a8ab2877725956115f8/oct2py-4.0.6.tar.gz", hash = "sha256:07cbcee467f6bd7bd2430d2ae270fcc035acf2c8ad35f6ad9bb6f7b0f915e179" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/eb/29/929c7a4edb7186f16217fac8494f5ce4565151dc5ed2625c99efc717d34e/oct2py-4.0.6-py2.py3-none-any.whl", hash = "sha256:ec7996cd442a5b468e472e9917294121dc40330858ec30a19b1a6bf90517db03" },
-]
-
-[[package]]
-name = "octave-kernel"
-version = "0.32.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ipykernel" },
-    { name = "jupyter-client" },
-    { name = "metakernel" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/16/c1/41139f00792a50d472a64aa85d3ad5689e602ea9f79cfbe42f172b2ff647/octave_kernel-0.32.0.tar.gz", hash = "sha256:2eeab98a51ce8eddb182d90e5324f1c0bf49b9b42bce6bb996e4afe198ebcb35" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/3a/d4/9b133a13fd846a40a231b6b1e8e218feb9e96398038f82f4e97ff148dcee/octave_kernel-0.32.0-py3-none-any.whl", hash = "sha256:7a4f25874840d72cd364d5e9445462994b66b0da35ea7064e1a6be0e21ac368c" },
-]
-
-[[package]]
 name = "omegaconf"
 version = "2.3.0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1593,22 +540,6 @@ wheels = [
 ]
 
 [[package]]
-name = "opencv-python"
-version = "4.4.0.46"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "numpy" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/30/46/821920986c7ce5bae5518c1d490e520a9ab4cef51e3e54e35094dadf0d68/opencv-python-4.4.0.46.tar.gz", hash = "sha256:d80db278a07f51811dbf0f9c31ff7cd5b2501822fb7a7587e71f9ff27d5c04bd" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/98/c6/19022633bc5e3430cb6e1f2b4bdc329081fc3bedec24f30b0735796f59f8/opencv_python-4.4.0.46-cp37-cp37m-macosx_10_13_x86_64.whl", hash = "sha256:51baebb0f8f3cae4cccd30daf018a5bb75cb759d5658aea29100d34cd5cac106" },
-    { url = "https://pypi.cstcloud.cn/packages/36/d7/aca26f4b9b8608c09974b1cacc030a069040be50c612237aa01ab3914169/opencv_python-4.4.0.46-cp37-cp37m-manylinux2014_i686.whl", hash = "sha256:9659e80059c9f39728c7dcc22032dff0d1d467f07b6cd8e036613393e4b7c71a" },
-    { url = "https://pypi.cstcloud.cn/packages/1b/2d/62eba161d3d713e1720504de1c25d439b02c85159804d9ecead10be5d87e/opencv_python-4.4.0.46-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:f69a56e958ecb549ba84e0497a438080932b4d52ded441cec04d80afde71dc0a" },
-    { url = "https://pypi.cstcloud.cn/packages/cc/b6/1b418e44238f6c090234b3a4ccd0b9a7f7015b8f3e02691cdf655f87bd7d/opencv_python-4.4.0.46-cp37-cp37m-win32.whl", hash = "sha256:68a9ec7e32f82cab267b6f757d9862a9a930371062739f9d00472e7c850c5854" },
-    { url = "https://pypi.cstcloud.cn/packages/33/c9/484c03aa576f2e0ad4d1e8b98128b376c13698e729cb875003730dd648f7/opencv_python-4.4.0.46-cp37-cp37m-win_amd64.whl", hash = "sha256:17581c68400f828700e5c6b3b082f50c781bf74cb9a7b972a04f05d26c8e894a" },
-]
-
-[[package]]
 name = "openpyxl"
 version = "3.0.7"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1618,18 +549,6 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/f1/7d/fb475cd963bd9d244f95a90c98f518f5c834fefe749f25f9f479ca2d8a51/openpyxl-3.0.7.tar.gz", hash = "sha256:6456a3b472e1ef0facb1129f3c6ef00713cebf62e736cd7a75bcc3247432f251" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/39/08/595298c9b7ced75e7d23be3e7596459980d63bc35112ca765ceccafbe9a4/openpyxl-3.0.7-py2.py3-none-any.whl", hash = "sha256:46af4eaf201a89b610fcca177eed957635f88770a5462fb6aae4a2a52b0ff516" },
-]
-
-[[package]]
-name = "opt-einsum"
-version = "3.3.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "numpy" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/7d/bf/9257e53a0e7715bc1127e15063e831f076723c6cd60985333a1c18878fb8/opt_einsum-3.3.0.tar.gz", hash = "sha256:59f6475f77bbc37dcf7cd748519c0ec60722e91e63ca114e68821c0c54a46549" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/bc/19/404708a7e54ad2798907210462fd950c3442ea51acc8790f3da48d2bee8b/opt_einsum-3.3.0-py3-none-any.whl", hash = "sha256:2455e59e3947d3c275477df7f5205b30635e266fe6dc300e3d9f9646bfcea147" },
 ]
 
 [[package]]
@@ -1682,46 +601,10 @@ wheels = [
 ]
 
 [[package]]
-name = "pandocfilters"
-version = "1.4.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/4c/ea/236e2584af67bb6df960832731a6e5325fd4441de001767da328c33368ce/pandocfilters-1.4.2.tar.gz", hash = "sha256:b3dd70e169bb5449e6bc6ff96aea89c5eea8c5f6ab5e207fc2f521a2cf4a0da9" }
-
-[[package]]
-name = "parso"
-version = "0.7.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/40/01/e0b8d2168fb299af90a78a5919257f821e5c21399bf0906c14c9e573db3f/parso-0.7.1.tar.gz", hash = "sha256:caba44724b994a8a5e086460bb212abc5a8bc46951bf4a9a1210745953622eb9" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/93/d1/e635bdde32890db5aeb2ffbde17e74f68986305a4466b0aa373b861e3f00/parso-0.7.1-py2.py3-none-any.whl", hash = "sha256:97218d9159b2520ff45eb78028ba8b50d2bc61dcc062a9682666f2dc4bd331ea" },
-]
-
-[[package]]
 name = "pathtools"
 version = "0.1.2"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/e7/7f/470d6fcdf23f9f3518f6b0b76be9df16dcc8630ad409947f8be2eb0ed13a/pathtools-0.1.2.tar.gz", hash = "sha256:7c35c5421a39bb82e58018febd90e3b6e5db34c5443aaaf742b3f33d4655f1c0" }
-
-[[package]]
-name = "pexpect"
-version = "4.8.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ptyprocess" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/e5/9b/ff402e0e930e70467a7178abb7c128709a30dfb22d8777c043e501bc1b10/pexpect-4.8.0.tar.gz", hash = "sha256:fc65a43959d153d0114afe13997d439c22823a27cefceb5ff35c2178c6784c0c" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/39/7b/88dbb785881c28a102619d46423cb853b46dbccc70d3ac362d99773a78ce/pexpect-4.8.0-py2.py3-none-any.whl", hash = "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937" },
-]
-
-[[package]]
-name = "pickleshare"
-version = "0.7.5"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz", hash = "sha256:87683d47965c1da65cdacaf31c8441d12b8044cdec9aca500cd78fc2c683afca" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl", hash = "sha256:9649af414d74d4df115d5d718f82acb59c9d418196b7b4290ed47a12ce62df56" },
-]
 
 [[package]]
 name = "pillow"
@@ -1736,15 +619,6 @@ wheels = [
     { url = "https://pypi.cstcloud.cn/packages/29/a5/eadf48e731582b166f132ef25fc124b7a6a2995408fb0318446724cd9831/Pillow-8.0.1-cp37-cp37m-win32.whl", hash = "sha256:95edb1ed513e68bddc2aee3de66ceaf743590bf16c023fb9977adc4be15bd3f0" },
     { url = "https://pypi.cstcloud.cn/packages/2b/65/e4a5130b4162d20ed99ff096549a04d18f050cfcdb16fe1643ac751c0181/Pillow-8.0.1-cp37-cp37m-win_amd64.whl", hash = "sha256:e38d58d9138ef972fceb7aeec4be02e3f01d383723965bfcef14d174c8ccd039" },
     { url = "https://pypi.cstcloud.cn/packages/25/8a/218f08cf22e95573c598846324d8c973d217e49b5abd37aacc0c14af3fa8/Pillow-8.0.1-pp37-pypy37_pp73-win32.whl", hash = "sha256:8de332053707c80963b589b22f8e0229f1be1f3ca862a932c1bcd48dafb18dd8" },
-]
-
-[[package]]
-name = "pip"
-version = "21.2.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/52/e1/06c018197d8151383f66ebf6979d951995cf495629fc54149491f5d157d0/pip-21.2.4.tar.gz", hash = "sha256:0eb8a1516c3d138ae8689c0c1a60fde7143310832f9dc77e11d8a4bc62de193b" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/ca/31/b88ef447d595963c01060998cb329251648acf4a067721b0452c45527eb8/pip-21.2.4-py3-none-any.whl", hash = "sha256:fa9ebb85d3fd607617c0c44aca302b1b45d87f9c2a1649b46c26167ca4296323" },
 ]
 
 [[package]]
@@ -1779,15 +653,6 @@ wheels = [
 ]
 
 [[package]]
-name = "prometheus-client"
-version = "0.8.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/d4/e4/04c85d441194059e063e866847c04dbba11b9428bee8d3b8d086fb9a8c51/prometheus_client-0.8.0.tar.gz", hash = "sha256:c6e6b706833a6bd1fd51711299edee907857be10ece535126a158f911ee80915" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/3f/0e/554a265ffdc56e1494ef08e18f765b0cdec78797f510c58c45cf37abb4f4/prometheus_client-0.8.0-py2.py3-none-any.whl", hash = "sha256:983c7ac4b47478720db338f1491ef67a100b474e3bc7dafcbaefb7d0b8f9b01c" },
-]
-
-[[package]]
 name = "promise"
 version = "2.3"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1795,18 +660,6 @@ dependencies = [
     { name = "six", marker = "sys_platform != 'linux'" },
 ]
 sdist = { url = "https://pypi.cstcloud.cn/packages/cf/9c/fb5d48abfe5d791cd496e4242ebcf87a4bb2e0c3dcd6e0ae68c11426a528/promise-2.3.tar.gz", hash = "sha256:dfd18337c523ba4b6a58801c164c1904a9d4d1b1747c7d5dbf45b693a49d93d0" }
-
-[[package]]
-name = "prompt-toolkit"
-version = "3.0.8"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "wcwidth" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/d4/12/7fe77b49d67845a378cfadb484b64218ed09d0e8bf420c663b4fe28f0631/prompt_toolkit-3.0.8.tar.gz", hash = "sha256:25c95d2ac813909f813c93fde734b6e44406d1477a9faef7c915ff37d39c0a8c" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/8a/aa/198e6a857e83ea8b711a6ae0c37717c0eb1b23ff52e3732a644fcd389cb3/prompt_toolkit-3.0.8-py3-none-any.whl", hash = "sha256:7debb9a521e0b1ee7d2fe96ee4bd60ef03c6492784de0547337ca4433e46aa63" },
-]
 
 [[package]]
 name = "protobuf"
@@ -1841,21 +694,6 @@ wheels = [
 ]
 
 [[package]]
-name = "ptyprocess"
-version = "0.6.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/7d/2d/e4b8733cf79b7309d84c9081a4ab558c89d8c89da5961bf4ddb050ca1ce0/ptyprocess-0.6.0.tar.gz", hash = "sha256:923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/d1/29/605c2cc68a9992d18dada28206eeada56ea4bd07a239669da41674648b6f/ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f" },
-]
-
-[[package]]
-name = "py-cpuinfo"
-version = "8.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/e6/ba/77120e44cbe9719152415b97d5bfb29f4053ee987d6cb63f55ce7d50fadc/py-cpuinfo-8.0.0.tar.gz", hash = "sha256:5f269be0e08e33fd959de96b34cd4aeeeacac014dd8305f70eb28d06de2345c5" }
-
-[[package]]
 name = "pyasn1"
 version = "0.4.8"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1886,47 +724,12 @@ wheels = [
 ]
 
 [[package]]
-name = "pygame"
-version = "1.9.6"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/0f/9c/78626be04e193c0624842090fe5555b3805c050dfaa81c8094d6441db2be/pygame-1.9.6.tar.gz", hash = "sha256:301c6428c0880ecd4a9e3951b80e539c33863b6ff356a443db1758de4f297957" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/32/37/453bbb62f90feff2a2b75fc739b674319f5f6a8789d5d21c6d2d7d42face/pygame-1.9.6-cp37-cp37m-macosx_10_11_intel.whl", hash = "sha256:7876d1f29f66d3d7cac46479503891ee1ef409b0fbce54b0d74f3a6b33a46dba" },
-    { url = "https://pypi.cstcloud.cn/packages/6e/21/16b0337d3534c43749acbe4b7ba516f8601fad6cf6c2540491c7307be411/pygame-1.9.6-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:f1f5714d2c23f6a64ef2ac4fcd36a2dd2689da85978d951a99a6ae5dfdf9bdbc" },
-    { url = "https://pypi.cstcloud.cn/packages/18/b3/0bf5afdcf6ef95d2a343cd7865585a6efe5e3e727c1a4f3385c9935248cf/pygame-1.9.6-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:136a3b5711d9ec369a0407e4e08ffced3ba61aa41059e9280ffffa79c8614f65" },
-    { url = "https://pypi.cstcloud.cn/packages/80/2c/3a52e7e9c097229b026b4efbe6711c600f3a84ffdc5f11fd9e7f8932368e/pygame-1.9.6-cp37-cp37m-win32.whl", hash = "sha256:a9ac862dd7159861f2c6443b0029089e1c0c4ec762a8074022914ec52fe4dfac" },
-    { url = "https://pypi.cstcloud.cn/packages/ed/56/b63ab3724acff69f4080e54c4bc5f55d1fbdeeb19b92b70acf45e88a5908/pygame-1.9.6-cp37-cp37m-win_amd64.whl", hash = "sha256:8da13704ad45b7d5de8a8cca135a7f44c7fc6aa9f691abe7b0392468a34a8013" },
-]
-
-[[package]]
 name = "pyglet"
 version = "2.0.dev0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/aa/f0/2890e4b41e079abee17c36adcb3f1204b4f2b4e8ca52ef46d9d314aacca1/pyglet-2.0.dev0.zip", hash = "sha256:83dbbcd9c7ff0b755a8249bfcb370dd832092f4ee2cc9993dd298f47c18c04eb" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/5d/53/b5d749e2ea0c1dc7f25256d78af042bd71d63a3896ce18dc4adfde8d34ab/pyglet-2.0.dev0-py2.py3-none-any.whl", hash = "sha256:9e0349a6c523c0e61553582ebd5ea88661adab840985c465a315c0a9a0d2853d" },
-]
-
-[[package]]
-name = "pygments"
-version = "2.7.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/e2/07/25bd93c9c0175adfa5fb1513a20b25e7dd6c9a67c155e19b11b5f3662104/Pygments-2.7.1.tar.gz", hash = "sha256:926c3f319eda178d1bd90851e4317e6d8cdb5e292a3386aac9bd75eca29cf9c7" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/d7/72/49a7db1b245c13d0e38cfdc96c1adf6e3bd16a7a0dceb7b25faa6612353b/Pygments-2.7.1-py3-none-any.whl", hash = "sha256:307543fe65c0947b126e83dd5a61bd8acbd84abec11f43caebaf5534cbc17998" },
-]
-
-[[package]]
-name = "pyopenssl"
-version = "19.1.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "cryptography" },
-    { name = "six" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/0d/1d/6cc4bd4e79f78be6640fab268555a11af48474fac9df187c3361a1d1d2f0/pyOpenSSL-19.1.0.tar.gz", hash = "sha256:9a24494b2602aaf402be5c9e30a0b82d4a5c67528fe8fb475e3f3bc00dd69507" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/9e/de/f8342b68fa9e981d348039954657bdf681b2ab93de27443be51865ffa310/pyOpenSSL-19.1.0-py2.py3-none-any.whl", hash = "sha256:621880965a720b8ece2f1b2f54ea2071966ab00e2970ad2ce11d596102063504" },
 ]
 
 [[package]]
@@ -1939,27 +742,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pypower"
-version = "5.1.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/ec/e2/2e3dbb314f08ff0222aba90ada335f18bc3e7a022654d949b0d43f027b88/PYPOWER-5.1.4.tar.gz", hash = "sha256:a3e290111d344190713f61b4d85338b97dad42421d94521bf5b7bb2f080270b5" }
-
-[[package]]
-name = "pyrsistent"
-version = "0.17.3"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/4d/70/fd441df751ba8b620e03fd2d2d9ca902103119616f0f6cc42e6405035062/pyrsistent-0.17.3.tar.gz", hash = "sha256:2e636185d9eb976a18a8a8e96efce62f2905fea90041958d8cc2a189756ebf3e" }
-
-[[package]]
-name = "pysocks"
-version = "1.7.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/bd/11/293dd436aea955d45fc4e8a35b6ae7270f5b8e00b53cf6c024c83b657a11/PySocks-1.7.1.tar.gz", hash = "sha256:3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/8d/59/b4572118e098ac8e46e399a1dd0f2d85403ce8bbaad9ec79373ed6badaf9/PySocks-1.7.1-py3-none-any.whl", hash = "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5" },
-]
-
-[[package]]
 name = "python-dateutil"
 version = "2.8.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -1969,25 +751,6 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/d4/70/d60450c3dd48ef87586924207ae8907090de0b306af2bce5d134d78615cb/python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a" },
-]
-
-[[package]]
-name = "python-igraph"
-version = "0.9.6"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "texttable" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/8c/96/0c027d017a334d22237ef29263d314724bd0f345e8ff122e4133c85cec91/python-igraph-0.9.6.tar.gz", hash = "sha256:1824ca0489068100534d717056395d580b2d19bf4fefb378465e6a37a20bf316" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/85/3c/bf011441333ee59ba30a57c49e23f5b8484aec8f8c90e54519bf803e010f/python_igraph-0.9.6-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:530e5934fd968a009c321e9c550bc722aee299edacccdf6e8d8eda9f39cf7f5e" },
-    { url = "https://pypi.cstcloud.cn/packages/17/7e/c02c716d865f5fdc92be5c0b0a48a57242d69d2b1e88649a26902661e578/python_igraph-0.9.6-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:b7d2e133cc1ece35ed6f53042b85cee7fdafb69bc31d12dc4cf78f9a69e9a61a" },
-    { url = "https://pypi.cstcloud.cn/packages/67/aa/2c1056725193acda9608f8a9e036aa7bfbc705f881764457cf463648f4a5/python_igraph-0.9.6-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:36c983966c19986ee7efe7bb18780f391d7a78d2e688b12a06cef2ea1976742d" },
-    { url = "https://pypi.cstcloud.cn/packages/ba/f1/bd5e44ff7cfd2dcb54fc4a12473765680a5f4ad8c5ceb29511ac8bebdfdb/python_igraph-0.9.6-cp37-cp37m-win32.whl", hash = "sha256:a5f06934006f4a6337a08816e63668281bab4599d205969a69d70e0ec4bee275" },
-    { url = "https://pypi.cstcloud.cn/packages/7f/58/e11a973a917af0bf9ba1a7d22cf1e8d597c70154127d70014cef887973b0/python_igraph-0.9.6-cp37-cp37m-win_amd64.whl", hash = "sha256:a117abeda4adcdf8cfdb359bc554c97170971032a431e02ed16129d5b2cf69a7" },
-    { url = "https://pypi.cstcloud.cn/packages/82/de/ae85e772ce91273295e8a784a2960c2bd2edc36dd5870229bdbc4a59d55e/python_igraph-0.9.6-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:27bf66bf5615ebbfc8b0f17fd74096bd7bb088c0f3fab33350fa2ef3f1077c7b" },
-    { url = "https://pypi.cstcloud.cn/packages/77/00/57bb3b29bdee30e2efac04bdf85049d86bfbee5ce3b5cde096644ae4b58d/python_igraph-0.9.6-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:cd32fa9d94a4fcbca8349c3aebcc39f948ec2091471f722540feba4bdd038192" },
-    { url = "https://pypi.cstcloud.cn/packages/87/bc/a2745e158891e7a4cc3c66ec0a9e010d42bab9a0e5837f716f729c9e9007/python_igraph-0.9.6-pp37-pypy37_pp73-win32.whl", hash = "sha256:3bc5bb817bd84c2ec13fd0820845e043d71c181d3275c0c24832ff7230538a86" },
 ]
 
 [[package]]
@@ -2012,24 +775,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pywin32"
-version = "308"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/6c/5d/3f187cc1f7c7a249a98aaea41fa370cdf16bc6fae4746710661b33be2181/pywin32-308-cp37-cp37m-win32.whl", hash = "sha256:1f696ab352a2ddd63bd07430080dd598e6369152ea13a25ebcdd2f503a38f1ff" },
-    { url = "https://pypi.cstcloud.cn/packages/69/52/ac7037ec0eec0aa0a78ec4aab3d34227ea714b7fe5b578c5dca0af3d312f/pywin32-308-cp37-cp37m-win_amd64.whl", hash = "sha256:13dcb914ed4347019fbec6697a01a0aec61019c1046c2b905410d197856326a6" },
-]
-
-[[package]]
-name = "pywinpty"
-version = "2.0.10"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/d3/89/2b9113eabacfe3bbebcdf95c24772e2267c7b6b9fed6e35bffba2080a4c1/pywinpty-2.0.10.tar.gz", hash = "sha256:cdbb5694cf8c7242c2ecfaca35c545d31fa5d5814c3d67a4e628f803f680ebea" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/37/1a/39d71696107d00fe39a22cd6e512d868b46ddd47e687a22f3f0fc71e2cc7/pywinpty-2.0.10-cp37-none-win_amd64.whl", hash = "sha256:38cb924f2778b5751ef91a75febd114776b3af0ae411bc667be45dd84fc881d3" },
-]
-
-[[package]]
 name = "pyyaml"
 version = "6.0.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2041,32 +786,6 @@ wheels = [
     { url = "https://pypi.cstcloud.cn/packages/d7/8f/db62b0df635b9008fe90aa68424e99cee05e68b398740c8a666a98455589/PyYAML-6.0.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:baa90d3f661d43131ca170712d903e6295d1f7a0f595074f151c0aed377c9b9c" },
     { url = "https://pypi.cstcloud.cn/packages/cc/5c/fcabd17918348c7db2eeeb0575705aaf3f7ab1657f6ce29b2e31737dd5d1/PyYAML-6.0.1-cp37-cp37m-win32.whl", hash = "sha256:9046c58c4395dff28dd494285c82ba00b546adfc7ef001486fbf0324bc174fba" },
     { url = "https://pypi.cstcloud.cn/packages/1e/ae/964ccb88a938f20ece5754878f182cfbd846924930d02d29d06af8d4c69e/PyYAML-6.0.1-cp37-cp37m-win_amd64.whl", hash = "sha256:4fb147e7a67ef577a588a0e2c17b6db51dda102c71de36f8549b6816a96e1867" },
-]
-
-[[package]]
-name = "pyzmq"
-version = "19.0.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/05/77/7483975d84fe1fd24cc67881ba7810e0e7b3ee6c2a0e002a5d6703cca49b/pyzmq-19.0.2.tar.gz", hash = "sha256:296540a065c8c21b26d63e3cea2d1d57902373b16e4256afe46422691903a438" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/4f/67/624e77368732b829ae043c5d9e248d524be5f2c6ab075016b81ac5adf732/pyzmq-19.0.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:e36f12f503511d72d9bdfae11cadbadca22ff632ff67c1b5459f69756a029c19" },
-    { url = "https://pypi.cstcloud.cn/packages/2a/12/e4d817be081ef2d7ba2cce98082eba964852b40cf53e6f3d654e7cc43921/pyzmq-19.0.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:c40fbb2b9933369e994b837ee72193d6a4c35dfb9a7c573257ef7ff28961272c" },
-    { url = "https://pypi.cstcloud.cn/packages/cd/ba/144b5f68fcd643937a4a953017abf1527ff34d43d2d912206fed962efde0/pyzmq-19.0.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:5d9fc809aa8d636e757e4ced2302569d6e60e9b9c26114a83f0d9d6519c40493" },
-    { url = "https://pypi.cstcloud.cn/packages/af/99/981893c4d7dce9bdeb6f48b76e3a954533d1fa95889c11cf81daecd639ee/pyzmq-19.0.2-cp37-cp37m-win32.whl", hash = "sha256:3fa6debf4bf9412e59353defad1f8035a1e68b66095a94ead8f7a61ae90b2675" },
-    { url = "https://pypi.cstcloud.cn/packages/30/81/09e2590445eab1bc80836b56e329783c487b79db8122326156bd35ad86df/pyzmq-19.0.2-cp37-cp37m-win_amd64.whl", hash = "sha256:73483a2caaa0264ac717af33d6fb3f143d8379e60a422730ee8d010526ce1913" },
-]
-
-[[package]]
-name = "recommonmark"
-version = "0.4.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "commonmark" },
-    { name = "docutils" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/3d/95/aa1085573adf3dc7b164ae8569d57b1af5e98922e40345bb7efffed5ad2e/recommonmark-0.4.0.tar.gz", hash = "sha256:6e29c723abcf5533842376d87c4589e62923ecb6002a8e059eb608345ddaff9d" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/df/a5/8ee4b84af7f997dfdba71254a88008cfc19c49df98983c9a4919e798f8ce/recommonmark-0.4.0-py2.py3-none-any.whl", hash = "sha256:cd8bf902e469dae94d00367a8197fb7b81fcabc9cfb79d520e0d22d0fbeaa8b7" },
 ]
 
 [[package]]
@@ -2149,25 +868,6 @@ wheels = [
 ]
 
 [[package]]
-name = "sacred"
-version = "0.8.2"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "colorama" },
-    { name = "docopt" },
-    { name = "gitpython" },
-    { name = "jsonpickle" },
-    { name = "munch" },
-    { name = "packaging" },
-    { name = "py-cpuinfo" },
-    { name = "wrapt" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/f4/59/c8dc52254a2ae5fb8cefe0f36f2c4c7b6f829ae870a9bf7d76c050ff906e/sacred-0.8.2.tar.gz", hash = "sha256:98ef43cc93ce39c2243175fdd76973c8175834ae80b8d01c918cc243127b27ce" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/f4/8c/b99f668e8ca9747dcd374bb46cac808e58f3cb8e446df1b3e667f6be9778/sacred-0.8.2-py2.py3-none-any.whl", hash = "sha256:b31e103bcd037816d480140722b82d3c2b34d6f99bfd93711c2aa582c2249bab" },
-]
-
-[[package]]
 name = "scipy"
 version = "1.4.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2181,15 +881,6 @@ wheels = [
     { url = "https://pypi.cstcloud.cn/packages/dd/82/c1fe128f3526b128cfd185580ba40d01371c5d299fcf7f77968e22dfcc2e/scipy-1.4.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:00af72998a46c25bdb5824d2b729e7dabec0c765f9deb0b504f928591f5ff9d4" },
     { url = "https://pypi.cstcloud.cn/packages/17/e8/2aaf518a81bb0bdb0743a21cc7be3fae4101f763b3c8b097d62118d9267f/scipy-1.4.1-cp37-cp37m-win32.whl", hash = "sha256:9508a7c628a165c2c835f2497837bf6ac80eb25291055f56c129df3c943cbaf8" },
     { url = "https://pypi.cstcloud.cn/packages/61/51/046cbc61c7607e5ecead6ff1a9453fba5e7e47a5ea8d608cc7036586a5ef/scipy-1.4.1-cp37-cp37m-win_amd64.whl", hash = "sha256:a2d6df9eb074af7f08866598e4ef068a2b310d98f87dc23bd1b90ec7bdcec802" },
-]
-
-[[package]]
-name = "send2trash"
-version = "1.5.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/13/2e/ea40de0304bb1dc4eb309de90aeec39871b9b7c4bd30f1a3cdcb3496f5c0/Send2Trash-1.5.0.tar.gz", hash = "sha256:60001cc07d707fe247c94f74ca6ac0d3255aabcb930529690897ca2a39db28b2" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/49/46/c3dc27481d1cc57b9385aff41c474ceb7714f7935b1247194adae45db714/Send2Trash-1.5.0-py3-none-any.whl", hash = "sha256:f1691922577b6fa12821234aeb57599d887c4900b9ca537948d2dac34aea888b" },
 ]
 
 [[package]]
@@ -2247,12 +938,6 @@ wheels = [
 ]
 
 [[package]]
-name = "simplegeneric"
-version = "0.8.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/3d/57/4d9c9e3ae9a255cd4e1106bb57e24056d3d0709fc01b2e3e345898e49d5b/simplegeneric-0.8.1.zip", hash = "sha256:dc972e06094b9af5b855b3df4a646395e43d1c9d0d39ed345b7393560d0b9173" }
-
-[[package]]
 name = "six"
 version = "1.15.0"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2271,21 +956,6 @@ wheels = [
 ]
 
 [[package]]
-name = "soundfile"
-version = "0.10.3.post1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "cffi" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/bc/7c/440d411e1bf2ef40ec450bb65a2b85ed8b23aaf12b7a99a1888ab551029c/SoundFile-0.10.3.post1.tar.gz", hash = "sha256:490cff42650733d1832728b937fe99fa1802896f5ef4d61bcf78cf7ebecb107b" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/eb/f2/3cbbbf3b96fb9fa91582c438b574cff3f45b29c772f94c400e2c99ef5db9/SoundFile-0.10.3.post1-py2.py3-none-any.whl", hash = "sha256:2d17e0a6fc2af0d6c1d868bafa5ec80aae6e186a97fec8db07ad6af29842fbc7" },
-    { url = "https://pypi.cstcloud.cn/packages/13/63/073fc76f2405af3ad1a2e667ac237a527fcdd81d4cbc7e2b721727687453/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-macosx_10_5_x86_64.macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl", hash = "sha256:5e342ee293b896d31da67617fe65d0bdca217af193991b0cb6052353b1e0e506" },
-    { url = "https://pypi.cstcloud.cn/packages/73/63/ebf4332964fba68f72cd78723a2722d77cf78f988b13461c6fbf30fc96bc/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-win32.whl", hash = "sha256:4555438c2c4f02b39fea2ed40f6ddeda88a80cd1ee9dd129be4d5f5134698cc2" },
-    { url = "https://pypi.cstcloud.cn/packages/b8/de/24e4035f06540ebb4e9993238ede787063875b003e79c537511d32a74d29/SoundFile-0.10.3.post1-py2.py3.cp26.cp27.cp32.cp33.cp34.cp35.cp36.pp27.pp32.pp33-none-win_amd64.whl", hash = "sha256:b361d4ac1519a2e516cabafa6bf7e93492f999f35d7d25350cd87fdc3e5cb27e" },
-]
-
-[[package]]
 name = "submitit"
 version = "1.4.6"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2296,27 +966,6 @@ dependencies = [
 sdist = { url = "https://pypi.cstcloud.cn/packages/6d/90/e42b6bd5a60e214509c475d72187c7d0e97b2f10fad7238e7006de66b848/submitit-1.4.6.tar.gz", hash = "sha256:6f27037e8beacf744e372efa3998dada9f937f375f23e98a24a1207559a665a7" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/c3/e5/f5e8727f052a26b299a7ee7f90eb2543c9e48ff0002b221a579028eaf372/submitit-1.4.6-py3-none-any.whl", hash = "sha256:ec8033959dcbde6d5d2eebeac1be5d38b6d5b906e3b9529345e09d7e0beea22f" },
-]
-
-[[package]]
-name = "tbb"
-version = "2022.0.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "tcmlib" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/93/4b/2e29f4266be5a66f21fc2dadcde48f9acea86119d6fb1bb2d2a451222ff7/tbb-2022.0.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:15a15a4e3ea4c3f3198bdb3c55fac75c589e15ed2ad0bbb080900d355c5b017e" },
-    { url = "https://pypi.cstcloud.cn/packages/30/02/7b9c333141784aca2370cd3c826efa98eaf9848674f2752961ac6d5f1abf/tbb-2022.0.0-py3-none-win_amd64.whl", hash = "sha256:6a0bae732599ec5c082f46e4aaf14bdbef1621e8cd0c6fcf64d50d347c2ebda4" },
-]
-
-[[package]]
-name = "tcmlib"
-version = "1.2.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/4d/6e/e9544e6ddb3640e92d9937689e9e33018503ddbc069eeb2e6a7581870591/tcmlib-1.2.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:dee9a0665ffa0a74f0ec72844ef7d82e9178ebf6980a76ac65906303d5ed4d03" },
-    { url = "https://pypi.cstcloud.cn/packages/5b/c8/c2a7bb169e21521a5bc82d955b30a064e266ab72485ac2dc33cd6ad153ea/tcmlib-1.2.0-py2.py3-none-win_amd64.whl", hash = "sha256:f751e005fd815ed0efeb87d4523f6a0938c5671e59ac935614f42d8ebb6489c9" },
 ]
 
 [[package]]
@@ -2382,81 +1031,6 @@ wheels = [
 ]
 
 [[package]]
-name = "tensorflow"
-version = "2.1.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "absl-py" },
-    { name = "astor" },
-    { name = "gast" },
-    { name = "google-pasta" },
-    { name = "grpcio" },
-    { name = "keras-applications" },
-    { name = "keras-preprocessing" },
-    { name = "numpy" },
-    { name = "opt-einsum" },
-    { name = "protobuf" },
-    { name = "scipy" },
-    { name = "six" },
-    { name = "tensorboard" },
-    { name = "tensorflow-estimator" },
-    { name = "termcolor" },
-    { name = "wheel" },
-    { name = "wrapt" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/35/55/a0dbd642e68e68f3e309d1413abdc0a7aa7e1534c79c0fc2501defb864ac/tensorflow-2.1.0-cp37-cp37m-macosx_10_11_x86_64.whl", hash = "sha256:2e8fc9764b7ea87687a4c80c2fbde69aeeb459a536eb5a591938d7931ab004c2" },
-    { url = "https://pypi.cstcloud.cn/packages/1d/56/0dbdae2a3c527a119bec0d5cf441655fe030ce1daa6fa6b9542f7dbd8664/tensorflow-2.1.0-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:92c4f1c939de438fbe484d011e5eebe059fc8e5244cfe32a81c6891b3357d109" },
-    { url = "https://pypi.cstcloud.cn/packages/34/d5/ce8c17971067c0184c9045112b755be5461d5ce5253ef65a367e1298d7c5/tensorflow-2.1.0-cp37-cp37m-win_amd64.whl", hash = "sha256:7bad8ea686a1f33d9dac13eb578c4597346789d4f826980c8bbcfbd08e7dc921" },
-]
-
-[[package]]
-name = "tensorflow-estimator"
-version = "2.1.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/18/90/b77c328a1304437ab1310b463e533fa7689f4bfc41549593056d812fab8e/tensorflow_estimator-2.1.0-py2.py3-none-any.whl", hash = "sha256:e5c5f648a636f18d1be4cf7ed46132b108a2f0f3fd9f1c850eba924263dc6972" },
-]
-
-[[package]]
-name = "termcolor"
-version = "1.1.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b" }
-
-[[package]]
-name = "terminado"
-version = "0.9.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ptyprocess", marker = "os_name != 'nt'" },
-    { name = "pywinpty", marker = "os_name == 'nt' and sys_platform != 'linux'" },
-    { name = "tornado" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/24/87/ab5f5bb7e51f5bca46aeee902e216b144e503e93f317c98e2dfebbae1445/terminado-0.9.1.tar.gz", hash = "sha256:3da72a155b807b01c9e8a5babd214e052a0a45a975751da3521a1c3381ce6d76" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/5f/17/fa9560738187cdb185d282a120ec4a147064f001d7c0114271ca1374d0a1/terminado-0.9.1-py3-none-any.whl", hash = "sha256:c55f025beb06c2e2669f7ba5a04f47bb3304c30c05842d4981d8f0fc9ab3b4e3" },
-]
-
-[[package]]
-name = "testpath"
-version = "0.4.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/2c/b3/5d57205e896d8998d77ad12aa42ebce75cd97d8b9a97d00ba078c4c9ffeb/testpath-0.4.4.tar.gz", hash = "sha256:60e0a3261c149755f4399a1fff7d37523179a70fdc3abdf78de9fc2604aeec7e" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/1b/9e/1a170feaa54f22aeb5a5d16c9015e82234275a3c8ab630b552493f9cb8a9/testpath-0.4.4-py2.py3-none-any.whl", hash = "sha256:bfcf9411ef4bf3db7579063e0546938b1edda3d69f4e1fb8756991f5951f85d4" },
-]
-
-[[package]]
-name = "texttable"
-version = "1.6.4"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/d5/78/dbc2a5eab57a01fedaf975f2c16f04e76f09336dbeadb9994258aa0a2b1a/texttable-1.6.4.tar.gz", hash = "sha256:42ee7b9e15f7b225747c3fa08f43c5d6c83bc899f80ff9bae9319334824076e9" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/75/23/8170868d04b153b1b9ed1bb84348212bb4a08f31b292ef9d7f6ea648fd49/texttable-1.6.4-py2.py3-none-any.whl", hash = "sha256:dd2b0eaebb2a9e167d1cefedab4700e5dcbdb076114eed30b58b97ed6b37d6f2" },
-]
-
-[[package]]
 name = "torch"
 version = "1.10.0+cu113"
 source = { registry = "https://download.pytorch.org/whl" }
@@ -2469,52 +1043,12 @@ wheels = [
 ]
 
 [[package]]
-name = "tornado"
-version = "6.1b1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/1b/51/2c4e177ea1d38422bdd08e624169aa0657a575ff51ef7a1edcd8cae8023f/tornado-6.1b1.tar.gz", hash = "sha256:58444df74c89f67aa04c52f8912c9a87548c52d1bdf08c0e6b9e728e3637ec07" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/93/dd/f783576771efb638751ff17bbf2f271bed74bc22a7d3075ea0e7b6cad284/tornado-6.1b1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:511c6ffd6c81840fcca36c39ef07d05c32158d32498ec3958cf3380d6a26b9c8" },
-    { url = "https://pypi.cstcloud.cn/packages/07/59/2564ed835dde21736b30424670f55d1c06a4259f8ab3b3a204029bbf7bb5/tornado-6.1b1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:c50d6823a7ea80628f5ac707c753ec6f6da4e62f8f1804b4b64b42121764a3e5" },
-    { url = "https://pypi.cstcloud.cn/packages/3c/97/e3c09fac8be818099c886d660a0616674c82d6a56f203187a2ccb66bfdc4/tornado-6.1b1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:c1f366cfaa051e59d24cee3466c03f3c990afb322c06c56bf3c13092b722c7b8" },
-    { url = "https://pypi.cstcloud.cn/packages/0b/e5/b949e4289d0732bf19ad211043b41db633f678ea189770373eeeec3e2790/tornado-6.1b1-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:c606c22836605db453c90c7736fd9d8d32ce6f434acf40faa808743baec1da25" },
-    { url = "https://pypi.cstcloud.cn/packages/af/07/6684ff343e0ee858ecdae6567ea0269807d5d73b1addfff75008d4a0a4e1/tornado-6.1b1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:53eb7b073fe6ec16e3233f4a58ac62f899e2f499f0f98113c2ac7a78c8b06fd2" },
-    { url = "https://pypi.cstcloud.cn/packages/f5/02/207ba414bd7c6933504233a7d5894faaefa03733627cd938356693f24765/tornado-6.1b1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:c8c9ff1196551b6a19390ce67a3bab90b1d20fe4168cae1b8a0bbe3d9605eaad" },
-    { url = "https://pypi.cstcloud.cn/packages/00/81/24761cd72c93c344d829112da1916dd4fce08fba399d38b2172f54a8061e/tornado-6.1b1-cp37-cp37m-win32.whl", hash = "sha256:c4cfbec148715b246f993f9b39416373522ab9a6321ace4af559398357f1c9b9" },
-    { url = "https://pypi.cstcloud.cn/packages/00/e8/c2ec2477ce0bd70b9558185d345d7112ecb44804eba6c2ef760015789eff/tornado-6.1b1-cp37-cp37m-win_amd64.whl", hash = "sha256:0e6a5e9e1682e48bf076ca30744e42e54ea00bfb1c9a698210fd7bd96e2a630d" },
-]
-
-[[package]]
-name = "traitlets"
-version = "5.0.5"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "ipython-genutils" },
-]
-sdist = { url = "https://pypi.cstcloud.cn/packages/b8/24/e6dfe45ecfc4c2b0d6774565e631dc1b9e50de2c3536625d377963d56cae/traitlets-5.0.5.tar.gz", hash = "sha256:178f4ce988f69189f7e523337a3e11d91c786ded9360174a3d9ca83e79bc5396" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/f6/7d/3ecb0ebd0ce8dcdfa7bd47ab85c1d4a521e6770ef283d0824f5804994dfe/traitlets-5.0.5-py3-none-any.whl", hash = "sha256:69ff3f9d5351f31a7ad80443c2674b7099df13cc41fc5fa6e2f6d3b0330b0426" },
-]
-
-[[package]]
 name = "typing-extensions"
 version = "3.7.4.3"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
 sdist = { url = "https://pypi.cstcloud.cn/packages/16/06/0f7367eafb692f73158e5c5cbca1aec798cdf78be5167f6415dd4205fa32/typing_extensions-3.7.4.3.tar.gz", hash = "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c" }
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/60/7a/e881b5abb54db0e6e671ab088d079c57ce54e8a01a3ca443f561ccadb37e/typing_extensions-3.7.4.3-py3-none-any.whl", hash = "sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918" },
-]
-
-[[package]]
-name = "umf"
-version = "0.9.0"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-dependencies = [
-    { name = "tcmlib" },
-]
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/5a/42/ebb1d9a0c3053447d6d8bcd562e8d3ec1ab1fb69b223caf55d27297a5e34/umf-0.9.0-py2.py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:c7732591d23e57cdcaed5bf0ffbf48d87fdf7784b9151773f1a4e9ee566616b6" },
-    { url = "https://pypi.cstcloud.cn/packages/bf/aa/02acef2e5a684311860402eecbc3c21c699286e170042035302708688ad1/umf-0.9.0-py2.py3-none-win_amd64.whl", hash = "sha256:a784d630cc5423f9a25c7d2954939b3fbd8bd959d28b83ae1b9c2eb6bb71f2a6" },
 ]
 
 [[package]]
@@ -2584,24 +1118,6 @@ wheels = [
 ]
 
 [[package]]
-name = "wcwidth"
-version = "0.2.5"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784" },
-]
-
-[[package]]
-name = "webencodings"
-version = "0.5.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/0b/02/ae6ceac1baeda530866a85075641cec12989bd8d31af6d5ab4a3e8c92f47/webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923" }
-wheels = [
-    { url = "https://pypi.cstcloud.cn/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78" },
-]
-
-[[package]]
 name = "werkzeug"
 version = "1.0.1"
 source = { registry = "https://pypi.cstcloud.cn/simple" }
@@ -2618,12 +1134,6 @@ sdist = { url = "https://pypi.cstcloud.cn/packages/83/72/611c121b6bd15479cb62f1a
 wheels = [
     { url = "https://pypi.cstcloud.cn/packages/a7/00/3df031b3ecd5444d572141321537080b40c1c25e1caa3d86cdd12e5e919c/wheel-0.35.1-py2.py3-none-any.whl", hash = "sha256:497add53525d16c173c2c1c733b8f655510e909ea78cc0e29d374243544b77a2" },
 ]
-
-[[package]]
-name = "wrapt"
-version = "1.12.1"
-source = { registry = "https://pypi.cstcloud.cn/simple" }
-sdist = { url = "https://pypi.cstcloud.cn/packages/82/f7/e43cefbe88c5fd371f4cf0cf5eb3feccd07515af9fd6cf7dbf1d1793a797/wrapt-1.12.1.tar.gz", hash = "sha256:b62ffa81fb85f4332a4f609cab4ac40709470da05643a082ec1eb88e6d9b97d7" }
 
 [[package]]
 name = "xlrd"
