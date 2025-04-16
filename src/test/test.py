@@ -23,8 +23,9 @@ parser.add_argument("--test-day", type=int, nargs="?", default=730, help="Please
 parser.add_argument("--render", action="store_true", help="Activate the rendering of the environment.")
 argv = parser.parse_args()
 
+global_prefix = "./packages/mapdn"
 # load env args
-with open("./mapdn/args/env_args/"+argv.env+".yaml", "r") as f:
+with open(global_prefix+"/args/env_args/"+argv.env+".yaml", "r") as f:
     env_config_dict = yaml.safe_load(f)["env_args"]
 data_path = env_config_dict["data_path"].split("/")
 data_path[-1] = argv.scenario
@@ -51,12 +52,12 @@ env_config_dict["voltage_barrier_type"] = argv.voltage_barrier_type
 env_config_dict["episode_limit"] = 480
 
 # load default args
-with open("./mapdn/args/default.yaml", "r") as f:
+with open(global_prefix+"/args/default.yaml", "r") as f:
     default_config_dict = yaml.safe_load(f)
 default_config_dict["max_steps"] = 480
 
 # load alg args
-with open("./mapdn/args/alg_args/"+argv.alg+".yaml", "r") as f:
+with open(global_prefix+"/args/alg_args/"+argv.alg+".yaml", "r") as f:
     alg_config_dict = yaml.safe_load(f)["alg_args"]
     alg_config_dict["action_scale"] = env_config_dict["action_scale"]
     alg_config_dict["action_bias"] = env_config_dict["action_bias"]

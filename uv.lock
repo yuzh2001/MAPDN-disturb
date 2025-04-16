@@ -6,12 +6,6 @@ resolution-markers = [
     "sys_platform != 'linux'",
 ]
 
-[manifest]
-members = [
-    "mapdn",
-    "mapdn-tweak",
-]
-
 [[package]]
 name = "absl-py"
 version = "0.10.0"
@@ -936,7 +930,7 @@ wheels = [
 [[package]]
 name = "mapdn"
 version = "0.1.0"
-source = { editable = "packages/mapdn" }
+source = { editable = "packages" }
 
 [[package]]
 name = "mapdn-tweak"
@@ -1167,7 +1161,7 @@ requires-dist = [
     { name = "keras-preprocessing", specifier = "==1.1.2" },
     { name = "kiwisolver", specifier = "==1.2.0" },
     { name = "llvmlite", specifier = "==0.34.0" },
-    { name = "mapdn", editable = "packages/mapdn" },
+    { name = "mapdn", editable = "packages" },
     { name = "markdown", specifier = "==3.3.2" },
     { name = "markupsafe", specifier = "==1.1.1" },
     { name = "matplotlib", specifier = "==2.2.5" },
