@@ -121,3 +121,4 @@ wandb
 
 reproduction/**
 outputs/**
+multirun/**

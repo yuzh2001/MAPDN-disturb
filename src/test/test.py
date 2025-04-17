@@ -87,7 +87,7 @@ def run(configs: DictConfig):
     checkpoint = torch.load(LOAD_PATH, map_location='cpu') if not args.cuda else torch.load(LOAD_PATH)
     behaviour_net.load_state_dict(checkpoint['model_state_dict'])
 
-    rich.print(args)
+    # rich.print(args)
     if strategy == "pg":
         test = PGTester(args, behaviour_net, env, argv.render)
     elif strategy == "q":
