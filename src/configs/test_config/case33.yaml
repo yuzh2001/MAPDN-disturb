@@ -1,0 +1,12 @@
+defaults:
+  - default
+  - _self_
+
+test_config:
+  save_path: reproduction/model_save
+  alg: maddpg
+  alias: 0
+  scenario: case33_3min_final
+  voltage_barrier_type: bowl
+  test_mode: single
+  test_day: 730

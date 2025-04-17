@@ -120,3 +120,4 @@ wandb
 .ipynb_checkpoints
 
 reproduction/**
+outputs/**
