@@ -107,9 +107,9 @@ if argv.test_mode == 'single':
     # record = test.run(199, 23, 2) # (day, hour, 3min)
     # record = test.run(730, 23, 2) # (day, hour, 3min)
     record = test.run(argv.test_day, 23, 2)
-    with open('test_record_'+log_name+f'_day{argv.test_day}'+'.pickle', 'wb') as f:
+    with open('reproduction/eval/test_record_'+log_name+f'_day{argv.test_day}'+'.pickle', 'wb') as f:
         pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)
 elif argv.test_mode == 'batch':
     record = test.batch_run(10)
-    with open('test_record_'+log_name+'_'+argv.test_mode+'.pickle', 'wb') as f:
+    with open('reproduction/eval/test_record_'+log_name+'_'+argv.test_mode+'.pickle', 'wb') as f:
         pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)

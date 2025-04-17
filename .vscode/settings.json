@@ -10,10 +10,10 @@
     ".ipynb_checkpoints/": true,
     ".gitignore": true,
     ".venv/": true,
-    "mapdn.egg-info/": true,
+    "**/**.egg-info/": true,
     "wandb/": true,
-    "mapdn/environments/var_voltage_control/.ipynb_checkpoints/": true,
-    "mapdn/environments/var_voltage_control/__pycache__/": true
+    "**/.ipynb_checkpoints/": true,
+    "**/__pycache__/": true
   },
   "hidefiles.selectedProfile": "Default"
 }
