@@ -23,7 +23,7 @@ parser.add_argument("--test-day", type=int, nargs="?", default=730, help="Please
 parser.add_argument("--render", action="store_true", help="Activate the rendering of the environment.")
 argv = parser.parse_args()
 
-global_prefix = "./packages/mapdn"
+global_prefix = "./mapdn"
 # load env args
 with open(global_prefix+"/args/env_args/"+argv.env+".yaml", "r") as f:
     env_config_dict = yaml.safe_load(f)["env_args"]
