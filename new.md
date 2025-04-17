@@ -1,7 +1,7 @@
 
 first, install uv.
 
-```
+```bash
 uv sync
 apt install freeglut3-dev -y
 

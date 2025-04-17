@@ -396,11 +396,6 @@ wheels = [
 [[package]]
 name = "mapdn"
 version = "0.1.0"
-source = { editable = "packages" }
-
-[[package]]
-name = "mapdn-tweak"
-version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "gymnasium" },
@@ -409,7 +404,6 @@ dependencies = [
     { name = "hydra-submitit-launcher" },
     { name = "imageio" },
     { name = "joblib" },
-    { name = "mapdn" },
     { name = "matplotlib" },
     { name = "numba" },
     { name = "numpy" },
@@ -440,7 +434,6 @@ requires-dist = [
     { name = "hydra-submitit-launcher", specifier = ">=1.2.0" },
     { name = "imageio", specifier = ">=2.9.0" },
     { name = "joblib", specifier = "==0.17.0" },
-    { name = "mapdn", editable = "packages" },
     { name = "matplotlib", specifier = "==2.2.5" },
     { name = "numba", specifier = ">=0.56.4" },
     { name = "numpy", specifier = "==1.19.5" },

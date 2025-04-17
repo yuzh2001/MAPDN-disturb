@@ -1,5 +1,5 @@
 [project]
-name = "mapdn-tweak"
+name = "mapdn"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -30,13 +30,11 @@ dependencies = [
     "tensorboardx==2.2",
     "torch==1.10.0+cu113",
     "wandb>=0.13.5",
-    "mapdn",
     "numba>=0.56.4",
 ]
 
 [tool.uv.sources]
 torch = { index = "pytorch" }
-mapdn = { path = "packages/", editable = true }
 
 [[tool.uv.index]]
 name = "cstcloud"
