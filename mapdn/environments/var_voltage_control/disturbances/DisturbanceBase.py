@@ -8,7 +8,7 @@ class DisturbanceBase:
     """
 
     def __init__(self, env: VoltageControl, disturbance_args: dict):
-        self.env = env
+        self.env: VoltageControl = env
         self.disturbance_args = disturbance_args
 
     def start(self):

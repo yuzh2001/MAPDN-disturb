@@ -1,6 +1,7 @@
 from mapdn.environments.var_voltage_control.disturbances import DisturbanceBase
-
-
+import copy
+import numpy as np
+from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 class LoadChange(DisturbanceBase):
     """
     对负荷做扰动的类。
@@ -10,11 +11,12 @@ class LoadChange(DisturbanceBase):
 
     def start(self):
         super().start()
-        for ter in self.env.terrain:
-            ter.fixtures[0].friction = self.disturbance_args["friction"]
+        self.env: VoltageControl = self.env # 激活python类型推断
+
+        # update the record in the pandapower
+        self.env.powergrid.sgen["p_mw"] = self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
+        self.env.powergrid.load["p_mw"] = self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
+        self.env.powergrid.load["q_mvar"] = self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
 
     def end(self):
-        DEFAULT_FRICTION = 2.5
-        for ter in self.env.terrain:
-            ter.fixtures[0].friction = DEFAULT_FRICTION
         super().end()
