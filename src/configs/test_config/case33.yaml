@@ -8,5 +8,5 @@ test_config:
   alias: 0
   scenario: case33_3min_final
   voltage_barrier_type: bowl
-  test_mode: single
+  test_mode: batch
   test_day: 730
