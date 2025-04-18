@@ -12,10 +12,18 @@ import hydra
 from omegaconf import DictConfig, OmegaConf
 import rich
 
-@hydra.main(config_path="../configs/test_config", config_name="case33.yaml", version_base=None)
-def run(configs: DictConfig):
-    argv = configs.test_config
-    rich.print(configs)
+from eval_hydra_type import EvalHydraEntryConfig, EvalConfig, DisturbanceConfig
+
+@hydra.main(config_path="../configs/eval", config_name="case33.yaml", version_base=None)
+def run(configs: EvalHydraEntryConfig):
+    # 1. 检查配置是否合法
+    OmegaConf.structured(EvalConfig(**configs.eval_config))
+    # for disturbance in configs.disturbances:
+        # OmegaConf.structured(DisturbanceConfig(**disturbance))
+
+    # 2. 运行
+    rich.print(OmegaConf.to_container(configs, resolve=True))
+    argv = configs.eval_config
     global_prefix = "./mapdn"
     # load env args
     with open(global_prefix+"/args/env_args/"+argv.env+".yaml", "r") as f:

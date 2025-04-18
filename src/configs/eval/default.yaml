@@ -1,4 +1,4 @@
-test_config:
+eval_config:
   save_path: reproduction/model_save
   alg: maddpg
   env: var_voltage_control
@@ -9,3 +9,5 @@ test_config:
   test_mode: single
   test_day: 730
   render: false
+
+disturbances: ???
