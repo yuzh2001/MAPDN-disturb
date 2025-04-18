@@ -8,8 +8,9 @@ import os
 from collections import namedtuple
 from .pf_res_plot import pf_res_plotly
 from .voltage_barrier.voltage_barrier_backend import VoltageBarrier
-
-
+from typing import Optional, List
+from mapdn.environments.var_voltage_control.disturbances.DisturbanceConfig import DisturbanceConfig
+from mapdn.environments.var_voltage_control.disturbances.DisturbanceFactory import DisturbanceFactory
 
 def convert(dictionary):
     return namedtuple('GenericDict', dictionary.keys())(**dictionary)
@@ -33,9 +34,15 @@ class VoltageControl(MultiAgentEnv):
             next_state = env.get_obs()
             state = next_state
     """
-    def __init__(self, kwargs):
+    def __init__(self, kwargs, disturbances: List[DisturbanceConfig] = []):
         """initialisation
         """
+        # load disturbance
+        self.disturbances: List[DisturbanceFactory] = []
+        if len(disturbances) > 0:
+            for disturbance in disturbances:
+                self.disturbances.append(DisturbanceFactory(disturbance, self))
+
         # unpack args
         args = kwargs
         if isinstance(args, dict):
@@ -205,6 +212,8 @@ class VoltageControl(MultiAgentEnv):
             terminated = True
         else:
             terminated = False
+            for disturbance in self.disturbances:
+                disturbance.execute_with_frame(self.steps)
         if terminated:
             print (f"Episode terminated at time: {self.steps} with return: {self.sum_rewards:2.4f}.")
 

@@ -5,7 +5,7 @@ class LoadChange(DisturbanceBase):
     """
     对负荷做扰动的类。
 
-    disturbance_args: dict = {"load_change": 0.1}
+    disturbance_args: dict = {"multiplier": 2}
     """
 
     def start(self):

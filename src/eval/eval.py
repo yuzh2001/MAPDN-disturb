@@ -25,16 +25,16 @@ def run(configs: EvalHydraEntryConfig):
     rich.print(OmegaConf.to_container(configs, resolve=True))
     argv = configs.eval_config
     global_prefix = "./mapdn"
+    
     # load env args
-    with open(global_prefix+"/args/env_args/"+argv.env+".yaml", "r") as f:
+    with open(f"{global_prefix}/args/env_args/{argv.env}.yaml", "r") as f:
         env_config_dict = yaml.safe_load(f)["env_args"]
     data_path = env_config_dict["data_path"].split("/")
     data_path[-1] = argv.scenario
     env_config_dict["data_path"] = "/".join(data_path)
-    net_topology = argv.scenario
 
     # set the action range
-    assert net_topology in ['case33_3min_final', 'case141_3min_final', 'case322_3min_final'], f'{net_topology} is not a valid scenario.'
+    net_topology = argv.scenario
     if argv.scenario == 'case33_3min_final':
         env_config_dict["action_bias"] = 0.0
         env_config_dict["action_scale"] = 0.8
@@ -45,6 +45,7 @@ def run(configs: EvalHydraEntryConfig):
         env_config_dict["action_bias"] = 0.0
         env_config_dict["action_scale"] = 0.8
 
+    # 3. 设置环境参数
     assert argv.mode in ['distributed', 'decentralised'], "Please input the correct mode, e.g. distributed or decentralised."
     env_config_dict["mode"] = argv.mode
     env_config_dict["voltage_barrier_type"] = argv.voltage_barrier_type
@@ -67,7 +68,10 @@ def run(configs: EvalHydraEntryConfig):
     alg_config_dict = {**default_config_dict, **alg_config_dict}
 
     # define envs
-    env = VoltageControl(env_config_dict)
+    if configs.disturbances:
+        env = VoltageControl(env_config_dict, configs.disturbances)
+    else:
+        env = VoltageControl(env_config_dict)
 
     alg_config_dict["agent_num"] = env.get_num_of_agents()
     alg_config_dict["obs_size"] = env.get_obs_size()
@@ -75,7 +79,7 @@ def run(configs: EvalHydraEntryConfig):
     alg_config_dict["cuda"] = False
     args = convert(alg_config_dict)
 
-    # define the save path
+    # 读取模型训练结果
     if argv.save_path[-1] == "/":
         save_path = argv.save_path
     else:
@@ -95,7 +99,6 @@ def run(configs: EvalHydraEntryConfig):
     checkpoint = torch.load(LOAD_PATH, map_location='cpu') if not args.cuda else torch.load(LOAD_PATH)
     behaviour_net.load_state_dict(checkpoint['model_state_dict'])
 
-    # rich.print(args)
     if strategy == "pg":
         test = PGTester(args, behaviour_net, env, argv.render)
     elif strategy == "q":

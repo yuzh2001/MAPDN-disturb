@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Any, Optional
 from enum import Enum
-
+from mapdn.environments.var_voltage_control.disturbances.DisturbanceConfig import DisturbanceConfig
 class AlgorithmType(Enum):
     coma = "coma"
     iddpg = "iddpg"
@@ -32,9 +32,6 @@ class TestModeType(Enum):
     single = "single"
     batch = "batch"
 
-class DisturbanceType(Enum):
-    load_change = "load_change"
-
 @dataclass
 class EvalConfig:
     save_path: str
@@ -48,19 +45,6 @@ class EvalConfig:
     test_day: int
     render: bool
 
-@dataclass
-class DisturbanceConfig:
-    type: DisturbanceType
-
-    # for random disturbance
-    is_random: bool
-    random_probability: Optional[int]
-
-    # for pre-defined disturbance
-    start_at: int
-    end_at: int
-
-    disturbance_args: Any
 
 
 @dataclass
