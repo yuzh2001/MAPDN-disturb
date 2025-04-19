@@ -1,3 +1,5 @@
+# source train_case33.sh 0 l1 reproduction
+
 if [ ! -d $3 ]
 then
   mkdir $3

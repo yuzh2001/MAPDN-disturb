@@ -2,24 +2,20 @@ defaults:
   - default
   - _self_
 
-eval_config:
-  save_path: reproduction/model_save
-  alg: mappo
-  alias: 0
+train_config:
+  alias: ""
+  save_path: reproduction
+  alg: maddpg
+  env: var_voltage_control
+  mode: distributed
+
   scenario: case33_3min_final
-  voltage_barrier_type: bowl
-  test_mode: batch
-  test_day: 730
+  voltage_barrier_type: l1
 
 disturbances:
   - type: load_change
-    is_random: False
-    start_at: 360
-    end_at: 460
+    is_random: True
+    random_probability: 0.01
+    random_duration: 100
     disturbance_args:
       multiplier: 2
-  # - type: load_change
-  #   is_random: True
-  #   random_probability: 0.002 # for 480 episodes length, 480 * 0.002 = 0.96, so on average 1 episode will have 1 disturbance
-  #   disturbance_args:
-  #     multiplier: 2

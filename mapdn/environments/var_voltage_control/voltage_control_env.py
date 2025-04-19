@@ -108,7 +108,8 @@ class VoltageControl(MultiAgentEnv):
         self.sum_rewards = 0
         if self.history > 1:
             self.obs_history = {i: [] for i in range(self.n_agents)}
-
+        for disturbance in self.disturbances:
+            disturbance.reset()
         # reset the power grid
         self.powergrid = copy.deepcopy(self.base_powergrid)
         solvable = False

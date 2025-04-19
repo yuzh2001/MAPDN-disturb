@@ -23,13 +23,15 @@ class DisturbanceFactory:
                 disturbance_args=config.disturbance_args,
             )
         )
-        self.start_at = config.start_at
-        self.end_at = config.end_at
         self.disturbance_args = config.disturbance_args
         self.is_random = config.is_random
         if self.is_random:
             self.random_probability = config.random_probability
             self.random_duration = config.random_duration
+        else:
+            self.start_at = config.start_at
+            self.end_at = config.end_at
+
         self.random_generator = np.random.RandomState(42)
 
         self.random_is_active = False
@@ -39,7 +41,10 @@ class DisturbanceFactory:
     def execute_with_frame(self, frame: int):
         if self.is_random:
             if not self.random_is_active:
-                if self.random_generator.rand() < self.random_probability:
+                rand_it = self.random_generator.rand()
+                # print(f"{rand_it} | {self.random_probability}")
+                if rand_it < self.random_probability:
+                    print(f"Random disturbance is triggered at frame {frame}")
                     self.start()
                     self.random_is_active = True
                     self.random_start_at = frame
@@ -55,6 +60,11 @@ class DisturbanceFactory:
                 self.start()
             elif frame == self.end_at:
                 self.recover()
+
+    def reset(self):
+        self.random_is_active = False
+        self.random_start_at = None
+        self.random_should_end_at = None
 
     def start(self):
         self.disturbance.start()
