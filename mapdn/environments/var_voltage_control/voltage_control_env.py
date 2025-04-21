@@ -11,7 +11,7 @@ from .voltage_barrier.voltage_barrier_backend import VoltageBarrier
 from typing import Optional, List
 from mapdn.environments.var_voltage_control.disturbances.DisturbanceConfig import DisturbanceConfig
 from mapdn.environments.var_voltage_control.disturbances.DisturbanceFactory import DisturbanceFactory
-
+import rich
 def convert(dictionary):
     return namedtuple('GenericDict', dictionary.keys())(**dictionary)
 
@@ -116,9 +116,15 @@ class VoltageControl(MultiAgentEnv):
         while not solvable:
             # reset the time stamp
             if reset_time:
-                self._episode_start_hour = self._select_start_hour()
+                # self._episode_start_hour = self._select_start_hour()
+                self._episode_start_hour = 1
                 self._episode_start_day = self._select_start_day()
                 self._episode_start_interval = self._select_start_interval()
+                # rich.print({
+                #     "hour": self._episode_start_hour,
+                #     "day": self._episode_start_day,
+                #     "interval": self._episode_start_interval
+                # })
             # get one episode of data
             self.pv_histories = self._get_episode_pv_history()
             self.active_demand_histories = self._get_episode_active_demand_history()
@@ -564,17 +570,18 @@ class VoltageControl(MultiAgentEnv):
             return True
         except ppException:
             print ("The power flow for the reactive power penetration cannot be solved.")
-            # print (f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
-            # print (f"This is the q: \n{self.powergrid.sgen['q_mvar']}")
-            # print (f"This is the active demand: \n{self.powergrid.load['p_mw']}")
-            # print (f"This is the reactive demand: \n{self.powergrid.load['q_mvar']}")
-            # print (f"This is the res_bus: \n{self.powergrid.res_bus}")
+            print (f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
+            print (f"This is the q: \n{self.powergrid.sgen['q_mvar']}")
+            print (f"This is the active demand: \n{self.powergrid.load['p_mw']}")
+            print (f"This is the reactive demand: \n{self.powergrid.load['q_mvar']}")
+            print (f"This is the res_bus: \n{self.powergrid.res_bus}")
             return False
     
     def _clip_reactive_power(self, reactive_actions, active_power):
         """clip the reactive power to the hard safety range
         """
         reactive_power_constraint = np.sqrt(self.s_max**2 - active_power**2)
+        print(f"[reactive_power_constraint: \n{reactive_power_constraint}]")
         return reactive_power_constraint * reactive_actions
     
     def _calc_reward(self, info={}):
