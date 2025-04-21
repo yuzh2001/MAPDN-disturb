@@ -2,7 +2,8 @@ import torch
 import argparse
 import yaml
 import pickle
-
+import wandb
+from datetime import datetime
 from mapdn.models.model_registry import Model, Strategy
 from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 from mapdn.utilities.util import convert
@@ -64,7 +65,9 @@ def run(configs: EvalHydraEntryConfig):
         alg_config_dict["action_scale"] = env_config_dict["action_scale"]
         alg_config_dict["action_bias"] = env_config_dict["action_bias"]
 
-    log_name = f"{argv.env}-{net_topology}-{argv.mode}-{argv.alg}-{argv.voltage_barrier_type}-{argv.alias}"
+    log_name = f"{argv.env}-{net_topology}-{argv.mode}-{argv.alg}-{argv.voltage_barrier_type}-{argv.alias}"    
+    wandb_name = "-".join([f"[{datetime.now().strftime('%m%d-%H%M')}]", net_topology, argv.mode, argv.alg, argv.voltage_barrier_type, argv.alias])
+    print(f"Now testing: {wandb_name}")
     alg_config_dict = {**default_config_dict, **alg_config_dict}
 
     # define envs
@@ -106,6 +109,7 @@ def run(configs: EvalHydraEntryConfig):
     else:
         raise RuntimeError("Please input the correct strategy, e.g. pg or q.")
 
+    # wandb.init(project="mapdn-eval", name=wandb_name, config=OmegaConf.to_container(configs, resolve=True))
     if argv.test_mode == 'single':
         # record = test.run(199, 23, 2) # (day, hour, 3min)
         # record = test.run(730, 23, 2) # (day, hour, 3min)

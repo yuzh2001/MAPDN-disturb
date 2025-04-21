@@ -1,1 +1,0 @@
-apt-get install xvfb -y

@@ -82,17 +82,27 @@ class PGTester(object):
                 done_ = done or t==self.args.max_steps-1
                 next_state = self.env.get_obs()
                 for k, v in info.items():
-                    if 'mean_test_'+k not in test_results.keys():
-                        test_results['mean_test_'+k] = [v]
+                    if k == "sum_rewards":
+                        continue
+                    if 'mean_'+k not in test_results.keys():
+                        test_results['mean_'+k] = [v]
                     else:
-                        test_results['mean_test_'+k].append(v)
+                        test_results['mean_'+k].append(v)
                 # set the next state
                 state = next_state
                 # set the next last_hid
                 last_hid = hid
                 if done_:
+                    test_results["terminate_cnt"] = test_results.get("terminate_cnt", 0)
+                    if t < self.args.max_steps-1:
+                        test_results["terminate_cnt"] += 1
                     break
             print (f"This is the test episode: {epi}")
+
+            test_results["mean_sum_rewards"] = test_results.get("mean_sum_rewards", [])
+            test_results["mean_sum_rewards"].append(info["sum_rewards"])
+            test_results["mean_terminate_at_step"] = test_results.get("mean_terminate_at_step", [])
+            test_results["mean_terminate_at_step"].append(t)
         for k, v in test_results.items():
             test_results[k] = (np.mean(v), 2 * np.std(v))
         self.print_info(test_results)
