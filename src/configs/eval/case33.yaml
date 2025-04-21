@@ -4,12 +4,12 @@ defaults:
 
 eval_config:
   save_path: reproduction/model_save
-  alg: mappo
-  alias: 0
+  alg: maddpg
+  alias: 0 #''
   scenario: case33_3min_final
   voltage_barrier_type: bowl
   test_mode: batch
-  test_day: 730
+  test_day: 180
 
 disturbances:
   - type: load_change

@@ -1,3 +1,5 @@
+# defaults:
+  # - override hydra/launcher: submitit_local
 train_config:
   alias: ""
   save_path: reproduction
@@ -9,3 +11,7 @@ train_config:
   voltage_barrier_type: ??? # [l1, l2, bowl]
 
 disturbances: ???
+# hydra:
+#   launcher:
+#     timeout_min: 6000
+#     gpus_per_node: 1

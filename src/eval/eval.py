@@ -113,7 +113,7 @@ def run(configs: EvalHydraEntryConfig):
         with open('reproduction/eval/test_record_'+log_name+f'_day{argv.test_day}'+'.pickle', 'wb') as f:
             pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)
     elif argv.test_mode == 'batch':
-        record = test.batch_run(10)
+        record = test.batch_run(50)
         with open('reproduction/eval/test_record_'+log_name+'_'+argv.test_mode+'.pickle', 'wb') as f:
             pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)
 

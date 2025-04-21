@@ -137,5 +137,8 @@ def run(configs: TrainHydraEntryConfig):
 
     logger.close()
 
+    import requests
+    requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
+
 if __name__ == "__main__":
     run()

@@ -10,12 +10,12 @@ train_config:
   mode: distributed
 
   scenario: case33_3min_final
-  voltage_barrier_type: l1
+  voltage_barrier_type: bowl
 
 disturbances:
   - type: load_change
     is_random: True
-    random_probability: 0.01
+    random_probability: 0.005
     random_duration: 100
     disturbance_args:
       multiplier: 2
