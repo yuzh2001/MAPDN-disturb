@@ -18,7 +18,10 @@ import rich
 
 from train_hydra_type import TrainHydraEntryConfig, TrainConfig
 
-@hydra.main(config_path="../configs/train", config_name="case33.yaml", version_base=None)
+
+@hydra.main(
+    config_path="../configs/train", config_name="case33.yaml", version_base=None
+)
 def run(configs: TrainHydraEntryConfig):
     rich.print(OmegaConf.to_container(configs, resolve=True))
     # 1. 检查配置是否合法
@@ -38,18 +41,25 @@ def run(configs: TrainHydraEntryConfig):
     net_topology = argv.scenario
 
     # set the action range
-    assert net_topology in ['case33_3min_final', 'case141_3min_final', 'case322_3min_final'], f'{net_topology} is not a valid scenario.'
-    if argv.scenario == 'case33_3min_final':
+    assert net_topology in [
+        "case33_3min_final",
+        "case141_3min_final",
+        "case322_3min_final",
+    ], f"{net_topology} is not a valid scenario."
+    if argv.scenario == "case33_3min_final":
         env_config_dict["action_bias"] = 0.0
         env_config_dict["action_scale"] = 0.8
-    elif argv.scenario == 'case141_3min_final':
+    elif argv.scenario == "case141_3min_final":
         env_config_dict["action_bias"] = 0.0
         env_config_dict["action_scale"] = 0.6
-    elif argv.scenario == 'case322_3min_final':
+    elif argv.scenario == "case322_3min_final":
         env_config_dict["action_bias"] = 0.0
         env_config_dict["action_scale"] = 0.8
 
-    assert argv.mode in ['distributed', 'decentralised'], "Please input the correct mode, e.g. distributed or decentralised."
+    assert argv.mode in [
+        "distributed",
+        "decentralised",
+    ], "Please input the correct mode, e.g. distributed or decentralised."
     env_config_dict["mode"] = argv.mode
     env_config_dict["voltage_barrier_type"] = argv.voltage_barrier_type
 
@@ -63,14 +73,34 @@ def run(configs: TrainHydraEntryConfig):
         alg_config_dict["action_scale"] = env_config_dict["action_scale"]
         alg_config_dict["action_bias"] = env_config_dict["action_bias"]
 
-    log_name = "-".join([argv.env, net_topology, argv.mode, argv.alg, argv.voltage_barrier_type, argv.alias])
+    log_name = "-".join(
+        [
+            argv.env,
+            net_topology,
+            argv.mode,
+            argv.alg,
+            argv.voltage_barrier_type,
+            argv.alias,
+        ]
+    )
 
-    wandb_name = "-".join([f"[{datetime.now().strftime('%m%d-%H%M')}]", net_topology, argv.mode, argv.alg, argv.voltage_barrier_type, argv.alias])
-
+    wandb_name = "-".join(
+        [
+            f"[{datetime.now().strftime('%m%d-%H%M')}]",
+            net_topology,
+            argv.mode,
+            argv.alg,
+            argv.voltage_barrier_type,
+            argv.alias,
+        ]
+    )
 
     alg_config_dict = {**default_config_dict, **alg_config_dict}
     # define envs
-    env = VoltageControl(env_config_dict, configs.disturbances)
+    env = VoltageControl(
+        env_config_dict,
+        configs.disturbances if configs.disturbances is not None else [],
+    )
 
     alg_config_dict["agent_num"] = env.get_num_of_agents()
     alg_config_dict["obs_size"] = env.get_obs_size()
@@ -79,7 +109,10 @@ def run(configs: TrainHydraEntryConfig):
 
     wandb.init(
         project="MAPDN",
-        config={"hp": OmegaConf.to_container(configs, resolve=True), "train": alg_config_dict},
+        config={
+            "hp": OmegaConf.to_container(configs, resolve=True),
+            "train": alg_config_dict,
+        },
         sync_tensorboard=True,
         name=wandb_name,
     )
@@ -88,7 +121,7 @@ def run(configs: TrainHydraEntryConfig):
     if argv.save_path[-1] == "/":
         save_path = argv.save_path
     else:
-        save_path = argv.save_path+"/"
+        save_path = argv.save_path + "/"
 
     # create the save folders
     if "model_save" not in os.listdir(save_path):
@@ -102,7 +135,7 @@ def run(configs: TrainHydraEntryConfig):
     else:
         path = save_path + "tensorboard/" + log_name
         for f in os.listdir(path):
-            file_path = os.path.join(path,f)
+            file_path = os.path.join(path, f)
             if os.path.isfile(file_path):
                 os.remove(file_path)
 
@@ -121,8 +154,8 @@ def run(configs: TrainHydraEntryConfig):
         raise RuntimeError("Please input the correct strategy, e.g. pg or q.")
 
     with open(save_path + "tensorboard/" + log_name + "/log.txt", "w+") as file:
-        alg_args2str = dict2str(alg_config_dict, 'alg_params')
-        env_args2str = dict2str(env_config_dict, 'env_params')
+        alg_args2str = dict2str(alg_config_dict, "alg_params")
+        env_args2str = dict2str(env_config_dict, "env_params")
         file.write(alg_args2str + "\n")
         file.write(env_args2str + "\n")
 
@@ -130,15 +163,20 @@ def run(configs: TrainHydraEntryConfig):
         stat = {}
         train.run(stat, i)
         train.logging(stat)
-        if i%args.save_model_freq == args.save_model_freq-1:
+        if i % args.save_model_freq == args.save_model_freq - 1:
             train.print_info(stat)
-            th.save({"modwel_state_dict": train.behaviour_net.state_dict()}, save_path + "model_save/" + log_name + "/model.pt")
-            print ("The model is saved!\n")
+            th.save(
+                {"modwel_state_dict": train.behaviour_net.state_dict()},
+                save_path + "model_save/" + log_name + "/model.pt",
+            )
+            print("The model is saved!\n")
 
     logger.close()
 
     import requests
+
     requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
+
 
 if __name__ == "__main__":
     run()

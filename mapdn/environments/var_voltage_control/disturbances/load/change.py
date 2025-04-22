@@ -16,7 +16,7 @@ class LoadChange():
         self.env = self.env # 激活python类型推断
 
         # update the record in the pandapower
-        self.env.powergrid.sgen["p_mw"] = self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
+        # self.env.powergrid.sgen["p_mw"] = self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
         self.env.powergrid.load["p_mw"] = self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
         self.env.powergrid.load["q_mvar"] = self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
 
