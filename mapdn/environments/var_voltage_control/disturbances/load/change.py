@@ -1,6 +1,6 @@
 # from mapdn.environments.var_voltage_control.disturbances import DisturbanceBase
 # from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
-class LoadChange():
+class LoadChange:
     """
     对负荷做扰动的类。
 
@@ -13,12 +13,16 @@ class LoadChange():
         self.disturbance_args = disturbance_args
 
     def start(self):
-        self.env = self.env # 激活python类型推断
+        self.env = self.env  # 激活python类型推断
 
         # update the record in the pandapower
         # self.env.powergrid.sgen["p_mw"] = self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
-        self.env.powergrid.load["p_mw"] = self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
-        self.env.powergrid.load["q_mvar"] = self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
+        self.env.powergrid.load["p_mw"] = (
+            self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
+        )
+        self.env.powergrid.load["q_mvar"] = (
+            self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
+        )
 
     def end(self):
         pass

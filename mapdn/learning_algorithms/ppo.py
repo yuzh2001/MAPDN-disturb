@@ -4,10 +4,9 @@ import torch as th
 import torch.nn as nn
 
 
-
 class PPO(ReinforcementLearning):
     def __init__(self, args):
-        super(PPO, self).__init__('PPO', args)
+        super(PPO, self).__init__("PPO", args)
         self.batchnorm = nn.BatchNorm1d(self.args.agent_num).to(self.device)
 
     def __call__(self, batch, behaviour_net, target_net):
@@ -15,7 +14,20 @@ class PPO(ReinforcementLearning):
 
     def get_loss(self, batch, behaviour_net, target_net):
         batch_size = len(batch.state)
-        state, actions, old_log_prob_a, old_values, old_next_values, rewards, next_state, done, last_step, actions_avail, last_hids, hids = behaviour_net.unpack_data(batch)
+        (
+            state,
+            actions,
+            old_log_prob_a,
+            old_values,
+            old_next_values,
+            rewards,
+            next_state,
+            done,
+            last_step,
+            actions_avail,
+            last_hids,
+            hids,
+        ) = behaviour_net.unpack_data(batch)
         old_values = old_values.squeeze(-1)
         old_next_values = old_next_values.squeeze(-1)
         if self.args.continuous:
@@ -28,7 +40,7 @@ class PPO(ReinforcementLearning):
                 log_stds_ = log_stds
             action_out = (means, log_stds)
             log_prob_a = normal_log_density(actions, means_, log_stds_)
-            restore_mask = 1. - (actions_avail == 0).to(self.device).float()
+            restore_mask = 1.0 - (actions_avail == 0).to(self.device).float()
             log_prob_a = (restore_mask * log_prob_a).sum(dim=-1)
             old_log_prob_a = (restore_mask * old_log_prob_a).sum(dim=-1)
         else:
@@ -37,10 +49,20 @@ class PPO(ReinforcementLearning):
             action_out = logits
             log_prob_a = multinomials_log_density(actions, logits)
         ratios = th.exp(log_prob_a.squeeze(-1) - old_log_prob_a.squeeze(-1).detach())
-        values = behaviour_net.value(state, None).contiguous().view(-1, behaviour_net.n_)
-        next_values = behaviour_net.value(next_state, None).contiguous().view(-1, behaviour_net.n_)
-        advantages = th.zeros( (batch_size, behaviour_net.n_), dtype=th.float ).to(self.device)
-        returns = th.zeros( (batch_size, behaviour_net.n_), dtype=th.float ).to(self.device)
+        values = (
+            behaviour_net.value(state, None).contiguous().view(-1, behaviour_net.n_)
+        )
+        next_values = (
+            behaviour_net.value(next_state, None)
+            .contiguous()
+            .view(-1, behaviour_net.n_)
+        )
+        advantages = th.zeros((batch_size, behaviour_net.n_), dtype=th.float).to(
+            self.device
+        )
+        returns = th.zeros((batch_size, behaviour_net.n_), dtype=th.float).to(
+            self.device
+        )
         assert advantages.size() == values.size() == returns.size()
         # GAE -> advantage
         last_advantages = 0
@@ -49,8 +71,18 @@ class PPO(ReinforcementLearning):
                 mask = 1.0 - done[i]
             else:
                 mask = 1.0
-            deltas_ = rewards[i] + behaviour_net.args.gamma * old_next_values[i].detach() * mask - old_values[i]
-            last_advantages = deltas_ + behaviour_net.args.gamma * behaviour_net.args.lambda_ * last_advantages * mask
+            deltas_ = (
+                rewards[i]
+                + behaviour_net.args.gamma * old_next_values[i].detach() * mask
+                - old_values[i]
+            )
+            last_advantages = (
+                deltas_
+                + behaviour_net.args.gamma
+                * behaviour_net.args.lambda_
+                * last_advantages
+                * mask
+            )
             advantages[i] = last_advantages
         done = done.to(self.device)
         returns = rewards + behaviour_net.args.gamma * (1 - done) * next_values.detach()
@@ -60,11 +92,20 @@ class PPO(ReinforcementLearning):
         # policy loss
         assert ratios.size() == advantages.size()
         surr1 = ratios * advantages.detach()
-        surr2 = th.clamp(ratios, 1 - behaviour_net.args.eps_clip, 1 + behaviour_net.args.eps_clip) * advantages.detach()
-        policy_loss = - th.min(surr1, surr2).mean()
+        surr2 = (
+            th.clamp(
+                ratios, 1 - behaviour_net.args.eps_clip, 1 + behaviour_net.args.eps_clip
+            )
+            * advantages.detach()
+        )
+        policy_loss = -th.min(surr1, surr2).mean()
         # value loss
         assert old_values.size() == values.size()
-        values_clipped = old_values + th.clamp(values - old_values, - behaviour_net.args.eps_clip, behaviour_net.args.eps_clip)
+        values_clipped = old_values + th.clamp(
+            values - old_values,
+            -behaviour_net.args.eps_clip,
+            behaviour_net.args.eps_clip,
+        )
         surr1 = (values - returns).pow(2)
         surr2 = (values_clipped - returns).pow(2)
         value_loss = self.args.value_loss_coef * th.max(surr1, surr2).mean()

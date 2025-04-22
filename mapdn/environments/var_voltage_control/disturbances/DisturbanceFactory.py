@@ -1,27 +1,26 @@
 # from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 from mapdn.environments.var_voltage_control.disturbances import DisturbanceBase
 from mapdn.environments.var_voltage_control.disturbances.load.change import LoadChange
-from mapdn.environments.var_voltage_control.disturbances.DisturbanceConfig import DisturbanceConfig, DisturbanceType
+from mapdn.environments.var_voltage_control.disturbances.DisturbanceConfig import (
+    DisturbanceConfig,
+)
 import numpy as np
 
 disturbance_dict = {
-  "load_change": LoadChange,
+    "load_change": LoadChange,
 }
 
 
 class DisturbanceFactory:
-
     def __init__(
         self,
         config: DisturbanceConfig,
         base_env,
     ):
         self.env = base_env
-        self.disturbance: DisturbanceBase = (
-            disturbance_dict[config.type](
-                env=self.env,
-                disturbance_args=config.disturbance_args,
-            )
+        self.disturbance: DisturbanceBase = disturbance_dict[config.type](
+            env=self.env,
+            disturbance_args=config.disturbance_args,
         )
         self.disturbance_args = config.disturbance_args
         self.is_random = config.is_random

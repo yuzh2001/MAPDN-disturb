@@ -4,10 +4,9 @@ import six
 from gymnasium import error
 
 
-
 try:
     import pyglet
-except ImportError as e:
+except ImportError:
     raise ImportError(
         """
     Cannot import pyglet.
@@ -19,7 +18,7 @@ except ImportError as e:
 
 try:
     from pyglet.gl import *
-except ImportError as e:
+except ImportError:
     raise ImportError(
         """
     Error occured while running `from pyglet.gl import *`
@@ -105,11 +104,12 @@ class Viewer(object):
         env.res_pf_plot()
         img_net = pyglet.image.load(os.path.join(self.fig_path, "pf_res_plot.jpeg"))
         batch = pyglet.graphics.Batch()
-        psp = pyglet.sprite.Sprite(img_net,
-                                   0,
-                                   0,
-                                   batch=batch,    
-                                )
+        psp = pyglet.sprite.Sprite(
+            img_net,
+            0,
+            0,
+            batch=batch,
+        )
         psp.scale_y = 0.8
         psp.scale_x = 0.86
         psp.update()
@@ -118,14 +118,14 @@ class Viewer(object):
     def _display_powerloss(self, env):
         powerloss = env._get_res_line_loss().sum()
         label = pyglet.text.Label(
-            f'The total power loss: \t{powerloss:.3f}',
+            f"The total power loss: \t{powerloss:.3f}",
             font_name="Times New Roman",
             font_size=24,
             bold=True,
             x=10,
-            y=self.height-15,
+            y=self.height - 15,
             anchor_x="left",
             anchor_y="center",
-            dpi=100
+            dpi=100,
         )
         label.draw()

@@ -2,13 +2,14 @@ from dataclasses import dataclass
 from typing import Any, Optional
 from enum import Enum
 
+
 class DisturbanceType(Enum):
     load_change = "load_change"
+
 
 @dataclass
 class DisturbanceConfig:
     type: DisturbanceType
-
 
     # for pre-defined disturbance
     start_at: int
@@ -20,4 +21,3 @@ class DisturbanceConfig:
     is_random: bool = False
     random_probability: Optional[int] = 0.02
     random_duration: Optional[int] = 200
-

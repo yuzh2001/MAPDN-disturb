@@ -1,7 +1,6 @@
 import numpy as np
 
 
-
 class TransReplayBuffer(object):
     def __init__(self, size):
         self.size = size
@@ -19,7 +18,7 @@ class TransReplayBuffer(object):
     def get_truncated_episodes_batch(self, batch_size):
         sample_range = len(self.buffer) - batch_size + 1
         start_indice = np.random.choice(sample_range, 1, replace=False)[0]
-        batch_buffer = [self.buffer[i+start_indice] for i in range(batch_size)]
+        batch_buffer = [self.buffer[i + start_indice] for i in range(batch_size)]
         return batch_buffer
 
     def add_experience(self, trans):

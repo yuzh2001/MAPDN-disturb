@@ -1,6 +1,5 @@
 import torch as th
 import os
-import argparse
 import yaml
 from tensorboardX import SummaryWriter
 
@@ -13,7 +12,7 @@ import wandb
 from datetime import datetime
 
 import hydra
-from omegaconf import DictConfig, OmegaConf
+from omegaconf import OmegaConf
 import rich
 
 from train_hydra_type import TrainHydraEntryConfig, TrainConfig

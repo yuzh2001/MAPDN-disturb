@@ -4,13 +4,13 @@ import torch.nn.functional as F
 import numpy as np
 
 
-
 class AttentionCritic(nn.Module):
     """
     Attention network, used as critic for all agents. Each agent gets its own
     observation and action, and can also attend over the other agents' encoded
     observations and actions.
     """
+
     # sa_sizes, hidden_dim=32, norm_in=True, attend_heads=1
     def __init__(self, args):
         """
@@ -37,7 +37,7 @@ class AttentionCritic(nn.Module):
         self.state_encoders = nn.ModuleList()
         # iterate over agents
         for sdim, adim in self.sa_sizes:
-            idim = sdim + adim 
+            idim = sdim + adim
             if args.continuous:
                 odim = 1
             else:
@@ -45,33 +45,30 @@ class AttentionCritic(nn.Module):
             # s+a encoder
             encoder = nn.Sequential()
             if args.norm_in:
-                encoder.add_module('enc_bn', nn.BatchNorm1d(idim,
-                                                            affine=False))
-            encoder.add_module('enc_fc1', nn.Linear(idim, self.hidden_dim))
-            encoder.add_module('enc_nl', nn.LeakyReLU())
+                encoder.add_module("enc_bn", nn.BatchNorm1d(idim, affine=False))
+            encoder.add_module("enc_fc1", nn.Linear(idim, self.hidden_dim))
+            encoder.add_module("enc_nl", nn.LeakyReLU())
             self.critic_encoders.append(encoder)
             # critic
             critic = nn.Sequential()
-            critic.add_module('critic_fc1', nn.Linear(2 * self.hidden_dim,
-                                                      self.hidden_dim))
-            critic.add_module('critic_nl', nn.LeakyReLU())
-            critic.add_module('critic_fc2', nn.Linear(self.hidden_dim, odim))
+            critic.add_module(
+                "critic_fc1", nn.Linear(2 * self.hidden_dim, self.hidden_dim)
+            )
+            critic.add_module("critic_nl", nn.LeakyReLU())
+            critic.add_module("critic_fc2", nn.Linear(self.hidden_dim, odim))
             self.critics.append(critic)
             # bias
             bias = nn.Sequential()
-            bias.add_module('bias_fc1', nn.Linear(self.hidden_dim,
-                                                  self.hidden_dim))
-            bias.add_module('bias_nl', nn.LeakyReLU())
-            bias.add_module('bias_fc2', nn.Linear(self.hidden_dim, 1))
+            bias.add_module("bias_fc1", nn.Linear(self.hidden_dim, self.hidden_dim))
+            bias.add_module("bias_nl", nn.LeakyReLU())
+            bias.add_module("bias_fc2", nn.Linear(self.hidden_dim, 1))
             self.biases.append(bias)
             # s encoder
             state_encoder = nn.Sequential()
             if args.norm_in:
-                state_encoder.add_module('s_enc_bn', nn.BatchNorm1d(
-                                            sdim, affine=False))
-            state_encoder.add_module('s_enc_fc1', nn.Linear(sdim,
-                                                            self.hidden_dim))
-            state_encoder.add_module('s_enc_nl', nn.LeakyReLU())
+                state_encoder.add_module("s_enc_bn", nn.BatchNorm1d(sdim, affine=False))
+            state_encoder.add_module("s_enc_fc1", nn.Linear(sdim, self.hidden_dim))
+            state_encoder.add_module("s_enc_nl", nn.LeakyReLU())
             self.state_encoders.append(state_encoder)
 
         attend_dim = self.hidden_dim // self.attend_heads
@@ -79,11 +76,15 @@ class AttentionCritic(nn.Module):
         self.selector_extractors = nn.ModuleList()
         self.value_extractors = nn.ModuleList()
         for _ in range(self.attend_heads):
-            self.key_extractors.append(nn.Linear(self.hidden_dim, attend_dim, bias=False))
-            self.selector_extractors.append(nn.Linear(self.hidden_dim, attend_dim, bias=False))
-            self.value_extractors.append(nn.Sequential(nn.Linear(self.hidden_dim,
-                                                                attend_dim),
-                                                       nn.LeakyReLU()))
+            self.key_extractors.append(
+                nn.Linear(self.hidden_dim, attend_dim, bias=False)
+            )
+            self.selector_extractors.append(
+                nn.Linear(self.hidden_dim, attend_dim, bias=False)
+            )
+            self.value_extractors.append(
+                nn.Sequential(nn.Linear(self.hidden_dim, attend_dim), nn.LeakyReLU())
+            )
 
     def forward(self, inps, return_q=True, regularize=True):
         """
@@ -106,31 +107,43 @@ class AttentionCritic(nn.Module):
         # extract state encoding for each agent that we're returning Q for
         s_encodings = [self.state_encoders[a_i](states[a_i]) for a_i in agents]
         # extract keys for each head for each agent
-        all_head_keys = [[k_ext(enc) for enc in sa_encodings] for k_ext in self.key_extractors]
+        all_head_keys = [
+            [k_ext(enc) for enc in sa_encodings] for k_ext in self.key_extractors
+        ]
         # extract sa values for each head for each agent
-        all_head_values = [[v_ext(enc) for enc in sa_encodings] for v_ext in self.value_extractors]
+        all_head_values = [
+            [v_ext(enc) for enc in sa_encodings] for v_ext in self.value_extractors
+        ]
         # extract selectors for each head for each agent that we're returning Q for
-        all_head_selectors = [[sel_ext(enc) for i, enc in enumerate(s_encodings) if i in agents]
-                              for sel_ext in self.selector_extractors]
+        all_head_selectors = [
+            [sel_ext(enc) for i, enc in enumerate(s_encodings) if i in agents]
+            for sel_ext in self.selector_extractors
+        ]
 
         other_all_values = [[] for _ in range(len(agents))]
         all_attend_logits = [[] for _ in range(len(agents))]
         all_attend_probs = [[] for _ in range(len(agents))]
         # calculate attention per head
         for curr_head_keys, curr_head_values, curr_head_selectors in zip(
-                all_head_keys, all_head_values, all_head_selectors):
+            all_head_keys, all_head_values, all_head_selectors
+        ):
             # iterate over agents
-            for i, a_i, selector in zip(range(len(agents)), agents, curr_head_selectors):
+            for i, a_i, selector in zip(
+                range(len(agents)), agents, curr_head_selectors
+            ):
                 keys = [k for j, k in enumerate(curr_head_keys) if j != a_i]
                 values = [v for j, v in enumerate(curr_head_values) if j != a_i]
                 # calculate attention across agents
-                attend_logits = th.matmul(selector.view(selector.shape[0], 1, -1),
-                                             th.stack(keys).permute(1, 2, 0))
+                attend_logits = th.matmul(
+                    selector.view(selector.shape[0], 1, -1),
+                    th.stack(keys).permute(1, 2, 0),
+                )
                 # scale dot-products by size of key (from Attention is All You Need)
                 scaled_attend_logits = attend_logits / np.sqrt(keys[0].shape[1])
                 attend_weights = F.softmax(scaled_attend_logits, dim=2)
-                other_values = (th.stack(values).permute(1, 2, 0) *
-                                attend_weights).sum(dim=2)
+                other_values = (th.stack(values).permute(1, 2, 0) * attend_weights).sum(
+                    dim=2
+                )
                 other_all_values[i].append(other_values)
                 all_attend_logits[i].append(attend_logits)
                 all_attend_probs[i].append(attend_weights)
@@ -153,9 +166,10 @@ class AttentionCritic(nn.Module):
                 agent_rets.append(q - b)
             if regularize:
                 # regularize magnitude of attention logits
-                attend_mag_reg = 1e-3 * sum((logit**2).mean() for logit in
-                                            all_attend_logits[i])
-                regs = attend_mag_reg.view(1,1)
+                attend_mag_reg = 1e-3 * sum(
+                    (logit**2).mean() for logit in all_attend_logits[i]
+                )
+                regs = attend_mag_reg.view(1, 1)
                 agent_rets.append(regs)
             all_rets.append(agent_rets)
         return all_rets
