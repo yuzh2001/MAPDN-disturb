@@ -54,7 +54,7 @@ class EvalConfig:
     test_mode: TestModeType
     test_day: int
     render: bool
-
+    eval_episodes: int
 
 @dataclass
 class EvalHydraEntryConfig:

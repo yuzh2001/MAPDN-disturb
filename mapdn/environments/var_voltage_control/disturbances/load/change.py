@@ -1,5 +1,8 @@
 # from mapdn.environments.var_voltage_control.disturbances import DisturbanceBase
 # from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
+import rich
+
+
 class LoadChange:
     """
     对负荷做扰动的类。
@@ -23,6 +26,7 @@ class LoadChange:
         self.env.powergrid.load["q_mvar"] = (
             self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
         )
+        rich.print(self.env.powergrid.load["q_mvar"])
 
     def end(self):
         pass

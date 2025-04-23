@@ -2,6 +2,7 @@ import torch as th
 from mapdn.utilities.util import translate_action, prep_obs
 import numpy as np
 import time
+import rich
 
 
 class PGTester(object):
@@ -97,6 +98,7 @@ class PGTester(object):
                     .view(1, self.n_, self.obs_dim)
                     .to(self.device)
                 )
+                # rich.print("[State]", state_)
                 action, _, _, _, hid = self.behaviour_net.get_actions(
                     state_,
                     status="test",
@@ -109,6 +111,8 @@ class PGTester(object):
                 reward, done, info = self.env.step(actual, add_noise=False)
                 done_ = done or t == self.args.max_steps - 1
                 next_state = self.env.get_obs()
+                # rich.print("[Next State]", next_state)
+                # rich.print("[Load]", self.env.powergrid.load["q_mvar"])
                 for k, v in info.items():
                     if k == "sum_rewards":
                         continue

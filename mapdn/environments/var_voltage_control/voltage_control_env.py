@@ -154,11 +154,11 @@ class VoltageControl(MultiAgentEnv):
                 print(
                     "The power flow for the initialisation of demand and PV cannot be solved."
                 )
-                print(f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
+                # print(f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
                 print(f"This is the q: \n{self.powergrid.sgen['q_mvar']}")
-                print(f"This is the active demand: \n{self.powergrid.load['p_mw']}")
+                # print(f"This is the active demand: \n{self.powergrid.load['p_mw']}")
                 print(f"This is the reactive demand: \n{self.powergrid.load['q_mvar']}")
-                print(f"This is the res_bus: \n{self.powergrid.res_bus}")
+                # print(f"This is the res_bus: \n{self.powergrid.res_bus}")
                 solvable = False
 
         return self.get_obs(), self.get_state()

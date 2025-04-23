@@ -100,6 +100,7 @@ def run(configs: EvalHydraEntryConfig):
         save_path = argv.save_path + "/"
 
     LOAD_PATH = save_path + log_name + "/model.pt"
+    print(f"Loading model from {LOAD_PATH}")
 
     model = Model[argv.alg]
 
@@ -138,7 +139,7 @@ def run(configs: EvalHydraEntryConfig):
         ) as f:
             pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)
     elif argv.test_mode == "batch":
-        record = test.batch_run(50)
+        record = test.batch_run(argv.eval_episodes)
         with open(
             "reproduction/eval/test_record_"
             + log_name

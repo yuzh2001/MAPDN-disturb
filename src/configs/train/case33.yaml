@@ -3,7 +3,7 @@ defaults:
   - _self_
 
 train_config:
-  alias: ""
+  alias: "dis_new_q_weight_0.5"
   save_path: reproduction
   alg: maddpg
   env: var_voltage_control
@@ -15,7 +15,7 @@ train_config:
 disturbances:
   - type: load_change
     is_random: True
-    random_probability: 0.005
-    random_duration: 100
+    random_probability: 0.003
+    random_duration: 200
     disturbance_args:
-      multiplier: 2
+      multiplier: 10

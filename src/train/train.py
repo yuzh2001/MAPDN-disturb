@@ -165,7 +165,7 @@ def run(configs: TrainHydraEntryConfig):
         if i % args.save_model_freq == args.save_model_freq - 1:
             train.print_info(stat)
             th.save(
-                {"modwel_state_dict": train.behaviour_net.state_dict()},
+                {"model_state_dict": train.behaviour_net.state_dict()},
                 save_path + "model_save/" + log_name + "/model.pt",
             )
             print("The model is saved!\n")

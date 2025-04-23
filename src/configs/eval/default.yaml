@@ -12,6 +12,7 @@ eval_config:
   test_mode: single
   test_day: 730
   render: false
+  eval_episodes: 10
 
 disturbances: ???
 
