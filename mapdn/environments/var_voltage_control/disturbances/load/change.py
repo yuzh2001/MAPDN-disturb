@@ -1,6 +1,5 @@
 # from mapdn.environments.var_voltage_control.disturbances import DisturbanceBase
 # from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
-import rich
 
 
 class LoadChange:
@@ -20,13 +19,13 @@ class LoadChange:
 
         # update the record in the pandapower
         # self.env.powergrid.sgen["p_mw"] = self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
-        self.env.powergrid.load["p_mw"] = (
-            self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
-        )
+        # self.env.powergrid.load["p_mw"] = (
+        #     self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
+        # )
         self.env.powergrid.load["q_mvar"] = (
             self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
         )
-        rich.print(self.env.powergrid.load["q_mvar"])
+        # rich.print(self.env.powergrid.load["q_mvar"])
 
     def end(self):
         pass

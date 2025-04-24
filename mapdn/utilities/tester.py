@@ -3,6 +3,7 @@ from mapdn.utilities.util import translate_action, prep_obs
 import numpy as np
 import time
 import rich
+from tqdm import trange
 
 
 class PGTester(object):
@@ -15,6 +16,7 @@ class PGTester(object):
         self.device = th.device(
             "cuda" if th.cuda.is_available() and self.args.cuda else "cpu"
         )
+        rich.print("Using device:", self.device)
         self.n_ = self.args.agent_num
         self.obs_dim = self.args.obs_size
         self.act_dim = self.args.action_dim
@@ -81,7 +83,7 @@ class PGTester(object):
 
     def batch_run(self, num_epsiodes=100):
         test_results = {}
-        for epi in range(num_epsiodes):
+        for epi in trange(num_epsiodes):
             # reset env
             state, global_state = self.env.reset()
 

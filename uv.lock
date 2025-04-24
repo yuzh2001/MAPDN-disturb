@@ -422,6 +422,7 @@ dependencies = [
     { name = "tensorboard-plugin-wit" },
     { name = "tensorboardx" },
     { name = "torch" },
+    { name = "tqdm" },
     { name = "wandb", version = "0.13.5", source = { registry = "https://pypi.cstcloud.cn/simple" }, marker = "sys_platform != 'linux'" },
     { name = "wandb", version = "0.18.3", source = { registry = "https://pypi.cstcloud.cn/simple" }, marker = "sys_platform == 'linux'" },
     { name = "xvfbwrapper" },
@@ -453,6 +454,7 @@ requires-dist = [
     { name = "tensorboard-plugin-wit", specifier = "==1.7.0" },
     { name = "tensorboardx", specifier = "==2.2" },
     { name = "torch", specifier = "==1.10.0+cu113", index = "https://download.pytorch.org/whl" },
+    { name = "tqdm", specifier = ">=4.67.0" },
     { name = "wandb", specifier = ">=0.13.5" },
     { name = "xvfbwrapper", specifier = ">=0.2.9" },
 ]
@@ -1071,6 +1073,18 @@ dependencies = [
 wheels = [
     { url = "https://download.pytorch.org/whl/cu113/torch-1.10.0%2Bcu113-cp37-cp37m-linux_x86_64.whl", hash = "sha256:2a90db92579ed875d2aa0ad6af55359e3f0426a523056a7b49b002c3cc6d2ad8" },
     { url = "https://download.pytorch.org/whl/cu113/torch-1.10.0%2Bcu113-cp37-cp37m-win_amd64.whl", hash = "sha256:28a830123da22b5371d93bf929880e25fec9b1057ac1b20cd0f99ae38f5e390c" },
+]
+
+[[package]]
+name = "tqdm"
+version = "4.67.0"
+source = { registry = "https://pypi.cstcloud.cn/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://pypi.cstcloud.cn/packages/e8/4f/0153c21dc5779a49a0598c445b1978126b1344bab9ee71e53e44877e14e0/tqdm-4.67.0.tar.gz", hash = "sha256:fe5a6f95e6fe0b9755e9469b77b9c3cf850048224ecaa8293d7d2d31f97d869a" }
+wheels = [
+    { url = "https://pypi.cstcloud.cn/packages/2b/78/57043611a16c655c8350b4c01b8d6abfb38cc2acb475238b62c2146186d7/tqdm-4.67.0-py3-none-any.whl", hash = "sha256:0cd8af9d56911acab92182e88d763100d4788bdf421d251616040cc4d44863be" },
 ]
 
 [[package]]

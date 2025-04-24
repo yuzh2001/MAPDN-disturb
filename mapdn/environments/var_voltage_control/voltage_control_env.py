@@ -308,10 +308,12 @@ class VoltageControl(MultiAgentEnv):
                 if f"'{list(clusters.keys())[i]}'" not in obs_sgen_dict.keys():
                     if "demand" in self.state_space:
                         copy_zone_buses = copy.deepcopy(zone_buses)
-                        obs += list(copy_zone_buses.loc[:, "p_mw"].to_numpy(copy=True))
-                        obs += list(
-                            copy_zone_buses.loc[:, "q_mvar"].to_numpy(copy=True)
+                        demand_p_mw = copy_zone_buses.loc[:, "p_mw"].to_numpy(copy=True)
+                        demand_q_mvar = copy_zone_buses.loc[:, "q_mvar"].to_numpy(
+                            copy=True
                         )
+                        obs += list(demand_p_mw)
+                        obs += list(demand_q_mvar)
                     if "pv" in self.state_space:
                         obs.append(pv)
                     if "reactive" in self.state_space:
@@ -613,6 +615,12 @@ class VoltageControl(MultiAgentEnv):
                 zone_res_buses = self.powergrid.res_bus.sort_index().loc[
                     self.powergrid.bus["zone"] == zone
                 ]
+                # 从load中获取p_mw和q_mvar
+                zone_load = self.powergrid.load.loc[
+                    self.powergrid.load["bus"].isin(zone_res_buses.index)
+                ]
+                zone_res_buses["p_mw"] = zone_load["p_mw"].values
+                zone_res_buses["q_mvar"] = zone_load["q_mvar"].values
                 clusters[f"sgen{i}"] = (zone_res_buses, zone, pv, q, sgen_bus)
         elif self.args.mode == "decentralised":
             for i in range(self.n_agents):
@@ -628,8 +636,13 @@ class VoltageControl(MultiAgentEnv):
                 q = self.powergrid.sgen["q_mvar"].loc[
                     self.powergrid.sgen["name"] == f"zone{i+1}"
                 ]
+                # 从load中获取p_mw和q_mvar
+                zone_load = self.powergrid.load.loc[
+                    self.powergrid.load["bus"].isin(zone_res_buses.index)
+                ]
+                zone_res_buses["p_mw"] = zone_load["p_mw"].values
+                zone_res_buses["q_mvar"] = zone_load["q_mvar"].values
                 clusters[f"zone{i+1}"] = (zone_res_buses, pv, q, sgen_res_buses)
-
         return clusters
 
     def _take_action(self, actions):
@@ -649,11 +662,11 @@ class VoltageControl(MultiAgentEnv):
             print("The power flow for the reactive power penetration cannot be solved.")
             print(ppException)
             print("This is the actions: \n", actions)
-            print(f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
-            print(f"This is the q: \n{self.powergrid.sgen['q_mvar']}")
-            print(f"This is the active demand: \n{self.powergrid.load['p_mw']}")
-            print(f"This is the reactive demand: \n{self.powergrid.load['q_mvar']}")
-            print(f"This is the res_bus: \n{self.powergrid.res_bus}")
+            # print(f"This is the pv: \n{self.powergrid.sgen['p_mw']}")
+            # print(f"This is the q: \n{self.powergrid.sgen['q_mvar']}")
+            # print(f"This is the active demand: \n{self.powergrid.load['p_mw']}")
+            # print(f"This is the reactive demand: \n{self.powergrid.load['q_mvar']}")
+            # print(f"This is the res_bus: \n{self.powergrid.res_bus}")
             return False
 
     def _clip_reactive_power(self, reactive_actions, active_power):
