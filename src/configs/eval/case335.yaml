@@ -5,14 +5,14 @@ defaults:
 eval_config:
   save_path: reproduction/model_save
   alg: mappo
-  # alias: 'original' #'dis_new_q_weight_0.1_20t'
+  alias: 'original' #'dis_new_q_weight_0.1_20t'
   # alias: 'dis_new_q_weight_0.1_20t'
-  alias: 'dis_new_q_weight_0.1_10t'
+  # alias: 'dis_new_q_weight_0.1_10t'
   scenario: case33_3min_final
   voltage_barrier_type: bowl
   test_mode: batch
   test_day: 180
-  eval_episodes: 100
+  eval_episodes: 50
 
 disturbances:
   - type: load_change

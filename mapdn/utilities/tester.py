@@ -142,18 +142,11 @@ class PGTester(object):
             if t < self.args.max_steps - 2:
                 test_results["mean_terminate_at_step"].append(t)
         for k, v in test_results.items():
-            test_results[k] = (np.mean(v), 2 * np.std(v))
+            test_results[k] = np.mean(v)  # , 2 * np.std(v))
 
-        self.print_info(test_results)
+        # self.print_info(test_results)
+        rich.print(test_results)
         wandb.log(test_results)
-        wandb.log(
-            {
-                "results_table": wandb.Table(
-                    columns=list(test_results.keys()),
-                    data=[v[0] for v in test_results.values()],
-                )
-            }
-        )
         return test_results
 
     def print_info(self, stat):

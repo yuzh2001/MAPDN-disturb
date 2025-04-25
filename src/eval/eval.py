@@ -136,7 +136,7 @@ def run(configs: EvalHydraEntryConfig):
     else:
         raise RuntimeError("Please input the correct strategy, e.g. pg or q.")
 
-    wandb.init(
+    runa = wandb.init(
         project="mapdn-eval",
         name=wandb_name,
         save_code=True,
@@ -158,6 +158,16 @@ def run(configs: EvalHydraEntryConfig):
             pickle.dump(record, f, pickle.HIGHEST_PROTOCOL)
     elif argv.test_mode == "batch":
         record = test.batch_run(argv.eval_episodes)
+        data = [v for v in record.values()]
+        wandb.log(
+            {
+                "results_table": wandb.Table(
+                    columns=["wandb_name"] + list(record.keys()),
+                    data=[[wandb_name] + data],
+                )
+            }
+        )
+        runa.finish()
         with open(
             "reproduction/eval/test_record_"
             + log_name
