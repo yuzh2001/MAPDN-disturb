@@ -86,16 +86,19 @@ def run(configs: TrainHydraEntryConfig):
     wandb_name = "-".join(
         [
             f"[{datetime.now().strftime('%m%d-%H%M')}]",
-            net_topology,
-            argv.mode,
+            # net_topology,
+            # argv.mode,
             argv.alg,
-            argv.voltage_barrier_type,
+            # argv.voltage_barrier_type,
             argv.alias,
         ]
     )
 
     alg_config_dict = {**default_config_dict, **alg_config_dict}
+
     # define envs
+    if configs.train_config.alias == "original":
+        configs.disturbances = None
     env = VoltageControl(
         env_config_dict,
         configs.disturbances if configs.disturbances is not None else [],
@@ -106,6 +109,7 @@ def run(configs: TrainHydraEntryConfig):
     alg_config_dict["action_dim"] = env.get_total_actions()
     args = convert(alg_config_dict)
 
+    # ============wandb============
     run = wandb.init(
         project="MAPDN",
         config={
@@ -114,6 +118,10 @@ def run(configs: TrainHydraEntryConfig):
         },
         sync_tensorboard=True,
         name=wandb_name,
+        save_code=True,
+        group=configs.group_name,
+        tags=[configs.train_config.alg, configs.train_config.alias],
+        job_type="train",
     )
 
     # define the save path
@@ -164,9 +172,12 @@ def run(configs: TrainHydraEntryConfig):
         train.logging(stat)
         if i % args.save_model_freq == args.save_model_freq - 1:
             train.print_info(stat)
+            os.makedirs(
+                save_path + f"models/{configs.group_name}/{log_name}", exist_ok=True
+            )
             th.save(
                 {"model_state_dict": train.behaviour_net.state_dict()},
-                save_path + "model_save/" + log_name + "/model.pt",
+                save_path + f"models/{configs.group_name}/" + log_name + "/model.pt",
             )
             print("The model is saved!\n")
 
@@ -175,9 +186,7 @@ def run(configs: TrainHydraEntryConfig):
     import requests
 
     requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
-    run.log_model(
-        path=save_path + "model_save/" + log_name + "/model.pt", name=wandb_name
-    )
+    run.log_model(path=save_path + "models/" + log_name + "/model.pt", name=wandb_name)
 
 
 if __name__ == "__main__":

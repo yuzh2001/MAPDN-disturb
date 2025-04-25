@@ -56,7 +56,9 @@ class EvalConfig:
     render: bool
     eval_episodes: int
 
+
 @dataclass
 class EvalHydraEntryConfig:
+    group_name: str
     eval_config: EvalConfig
     disturbances: Optional[List[DisturbanceConfig]]

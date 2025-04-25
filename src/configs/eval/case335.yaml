@@ -2,8 +2,10 @@ defaults:
   - default
   - _self_
 
+group_name: case335
+
 eval_config:
-  save_path: reproduction/model_save
+  save_path: reproduction/models
   alg: mappo
   alias: 'original' #'dis_new_q_weight_0.1_20t'
   # alias: 'dis_new_q_weight_0.1_20t'

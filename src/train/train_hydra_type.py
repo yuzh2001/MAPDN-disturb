@@ -56,5 +56,6 @@ class TrainConfig:
 
 @dataclass
 class TrainHydraEntryConfig:
+    group_name: str
     train_config: TrainConfig
     disturbances: Optional[List[DisturbanceConfig]]

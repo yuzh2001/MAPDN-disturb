@@ -2,6 +2,8 @@ defaults:
   - default
   - _self_
 
+group_name: case322
+
 train_config:
   alias: "disturb"
   save_path: reproduction

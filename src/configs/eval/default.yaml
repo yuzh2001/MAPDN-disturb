@@ -1,8 +1,10 @@
 # defaults:
 #   - override hydra/launcher: submitit_local
 
+group_name: ???
+
 eval_config:
-  save_path: reproduction/model_save
+  save_path: reproduction/models
   alg: maddpg
   env: var_voltage_control
   alias: ""

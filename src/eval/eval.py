@@ -1,7 +1,6 @@
 import torch
 import yaml
 import pickle
-from datetime import datetime
 from mapdn.models.model_registry import Model, Strategy
 from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 from mapdn.utilities.util import convert
@@ -14,6 +13,7 @@ import rich
 from eval_hydra_type import EvalHydraEntryConfig, EvalConfig
 
 import wandb
+from datetime import datetime
 
 
 @hydra.main(config_path="../configs/eval", config_name="case33.yaml", version_base=None)
@@ -79,13 +79,15 @@ def run(configs: EvalHydraEntryConfig):
             argv.alias,
         ]
     )
+
+    date_stamp = datetime.now().strftime("%m%d-%H%M")
     wandb_name = "-".join(
         [
-            f"[{datetime.now().strftime('%m%d-%H%M')}]",
-            net_topology,
-            argv.mode,
+            f"[{date_stamp}]",
+            # net_topology,
+            # argv.mode,
             argv.alg,
-            argv.voltage_barrier_type,
+            # argv.voltage_barrier_type,
             argv.alias,
         ]
     )
@@ -110,7 +112,7 @@ def run(configs: EvalHydraEntryConfig):
     else:
         save_path = argv.save_path + "/"
 
-    LOAD_PATH = save_path + log_name + "/model.pt"
+    LOAD_PATH = save_path + f"/{configs.group_name}/" + log_name + "/model.pt"
     print(f"Loading model from {LOAD_PATH}")
 
     model = Model[argv.alg]
@@ -141,6 +143,9 @@ def run(configs: EvalHydraEntryConfig):
         name=wandb_name,
         save_code=True,
         config=OmegaConf.to_container(configs, resolve=True),
+        group=configs.group_name,
+        tags=[configs.eval_config.alg, configs.eval_config.alias],
+        job_type=f"eval-[{date_stamp}]",
     )
     wandb.define_metric("terminate_cnt", summary="min")
 

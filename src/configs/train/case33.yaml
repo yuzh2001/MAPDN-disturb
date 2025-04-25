@@ -2,6 +2,8 @@ defaults:
   - default
   - _self_
 
+group_name: case33
+
 train_config:
   alias: "dis_new_q_weight_0.1_10t"
   save_path: reproduction
