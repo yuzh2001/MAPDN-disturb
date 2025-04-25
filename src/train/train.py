@@ -106,7 +106,7 @@ def run(configs: TrainHydraEntryConfig):
     alg_config_dict["action_dim"] = env.get_total_actions()
     args = convert(alg_config_dict)
 
-    wandb.init(
+    run = wandb.init(
         project="MAPDN",
         config={
             "hp": OmegaConf.to_container(configs, resolve=True),
@@ -175,6 +175,9 @@ def run(configs: TrainHydraEntryConfig):
     import requests
 
     requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
+    run.log_model(
+        path=save_path + "model_save/" + log_name + "/model.pt", name=wandb_name
+    )
 
 
 if __name__ == "__main__":

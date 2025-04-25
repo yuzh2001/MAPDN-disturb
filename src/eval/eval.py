@@ -13,6 +13,8 @@ import rich
 
 from eval_hydra_type import EvalHydraEntryConfig, EvalConfig
 
+import wandb
+
 
 @hydra.main(config_path="../configs/eval", config_name="case33.yaml", version_base=None)
 def run(configs: EvalHydraEntryConfig):
@@ -134,7 +136,14 @@ def run(configs: EvalHydraEntryConfig):
     else:
         raise RuntimeError("Please input the correct strategy, e.g. pg or q.")
 
-    # wandb.init(project="mapdn-eval", name=wandb_name, config=OmegaConf.to_container(configs, resolve=True))
+    wandb.init(
+        project="mapdn-eval",
+        name=wandb_name,
+        save_code=True,
+        config=OmegaConf.to_container(configs, resolve=True),
+    )
+    wandb.define_metric("terminate_cnt", summary="min")
+
     if argv.test_mode == "single":
         # record = test.run(199, 23, 2) # (day, hour, 3min)
         # record = test.run(730, 23, 2) # (day, hour, 3min)
