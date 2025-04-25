@@ -67,7 +67,16 @@ def run(configs: EvalHydraEntryConfig):
         alg_config_dict["action_scale"] = env_config_dict["action_scale"]
         alg_config_dict["action_bias"] = env_config_dict["action_bias"]
 
-    log_name = f"{argv.env}-{net_topology}-{argv.mode}-{argv.alg}-{argv.voltage_barrier_type}-{argv.alias}"
+    log_name = "-".join(
+        [
+            # argv.env,
+            net_topology,
+            # argv.mode,
+            argv.alg,
+            argv.voltage_barrier_type,
+            argv.alias,
+        ]
+    )
     wandb_name = "-".join(
         [
             f"[{datetime.now().strftime('%m%d-%H%M')}]",
@@ -90,7 +99,7 @@ def run(configs: EvalHydraEntryConfig):
     alg_config_dict["agent_num"] = env.get_num_of_agents()
     alg_config_dict["obs_size"] = env.get_obs_size()
     alg_config_dict["action_dim"] = env.get_total_actions()
-    alg_config_dict["cuda"] = True
+    alg_config_dict["cuda"] = False
     args = convert(alg_config_dict)
 
     # 读取模型训练结果

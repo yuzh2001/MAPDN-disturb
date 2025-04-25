@@ -74,9 +74,9 @@ def run(configs: TrainHydraEntryConfig):
 
     log_name = "-".join(
         [
-            argv.env,
+            # argv.env,
             net_topology,
-            argv.mode,
+            # argv.mode,
             argv.alg,
             argv.voltage_barrier_type,
             argv.alias,
