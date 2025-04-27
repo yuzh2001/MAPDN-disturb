@@ -14,7 +14,7 @@ eval_config:
   voltage_barrier_type: bowl
   test_mode: batch
   test_day: 180
-  eval_episodes: 50
+  eval_episodes: 1000
 
 disturbances:
   - type: load_change

@@ -16,7 +16,9 @@ import wandb
 from datetime import datetime
 
 
-@hydra.main(config_path="../configs/eval", config_name="case33.yaml", version_base=None)
+@hydra.main(
+    config_path="../configs/eval", config_name="case335.yaml", version_base=None
+)
 def run(configs: EvalHydraEntryConfig):
     # 1. 检查配置是否合法
     OmegaConf.structured(EvalConfig(**configs.eval_config))
@@ -103,7 +105,7 @@ def run(configs: EvalHydraEntryConfig):
     alg_config_dict["agent_num"] = env.get_num_of_agents()
     alg_config_dict["obs_size"] = env.get_obs_size()
     alg_config_dict["action_dim"] = env.get_total_actions()
-    alg_config_dict["cuda"] = False
+    alg_config_dict["cuda"] = True
     args = convert(alg_config_dict)
 
     # 读取模型训练结果
@@ -112,7 +114,7 @@ def run(configs: EvalHydraEntryConfig):
     else:
         save_path = argv.save_path + "/"
 
-    LOAD_PATH = save_path + f"/{configs.group_name}/" + log_name + "/model.pt"
+    LOAD_PATH = save_path + f"{configs.group_name}/" + log_name + "/model.pt"
     print(f"Loading model from {LOAD_PATH}")
 
     model = Model[argv.alg]
