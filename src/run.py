@@ -44,7 +44,7 @@ class HydraRunConfig:
     wandb: WandbConfig
 
 
-@hydra.main(config_path="configs/run", config_name="default.yaml", version_base=None)
+@hydra.main(config_path="runs", config_name="default", version_base=None)
 def main(config: HydraRunConfig):
     rich.print(config)
     if config.description == "_DEFAULT_DESCRIPTION_":
