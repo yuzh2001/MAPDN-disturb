@@ -141,7 +141,7 @@ def run(configs: EvalHydraEntryConfig):
         raise RuntimeError("Please input the correct strategy, e.g. pg or q.")
 
     runa = wandb.init(
-        project="mapdn-eval",
+        project="mapdn",
         name=wandb_name,
         save_code=True,
         config=OmegaConf.to_container(configs, resolve=True),
