@@ -1,1 +1,0 @@
-uv run src/eval/eval.py --multirun eval_config.alias=dis,original > eval_0421.log
