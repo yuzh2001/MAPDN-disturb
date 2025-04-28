@@ -47,6 +47,10 @@ class HydraRunConfig:
 @hydra.main(config_path="configs/run", config_name="default.yaml", version_base=None)
 def main(config: HydraRunConfig):
     rich.print(config)
+    if config.description == "_DEFAULT_DESCRIPTION_":
+        raise ValueError(
+            "不允许使用默认文件，务必复制并新建一个run config以带来最好可复现性。"
+        )
 
     # 组合存储的文件夹
     hydra_output_dir = hydra.core.hydra_config.HydraConfig.get().runtime.output_dir
@@ -114,15 +118,10 @@ def main(config: HydraRunConfig):
             config=OmegaConf.to_container(config, resolve=True),
             notes=config.description,
         )
-        reproduce_artifact = wandb.Artifact(
-            type="reproduce_configuration", name="reproduce_configuration"
-        )
-        reproduce_artifact.add_dir(hydra_output_dir)
-        # reproduce_artifact.add_file(hydra_output_dir + "/reproduce.sh")
-        # reproduce_artifact.add_file(hydra_output_dir + "/train/case33.yaml")
-        # reproduce_artifact.add_file(hydra_output_dir + "/eval/case335.yaml")
-        reproduce_artifact.save()
-        run_run.log_artifact(reproduce_artifact)
+        run_run.log_code(hydra_output_dir)
+        run_run.log_code(hydra_output_dir + "/reproduce.sh")
+        run_run.log_code(hydra_output_dir + "/train")
+        run_run.log_code(hydra_output_dir + "/eval")
         run_run.finish()
 
     # 执行代码

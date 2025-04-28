@@ -1,7 +1,7 @@
 run_group: latest
 save_group: latest
 
-description: hello world!
+description: _DEFAULT_DESCRIPTION_
 
 wandb:
   use_wandb: True
