@@ -59,6 +59,7 @@ class EvalConfig:
 
 @dataclass
 class EvalHydraEntryConfig:
-    group_name: str
+    save_group: str
+    run_group: str
     eval_config: EvalConfig
     disturbances: Optional[List[DisturbanceConfig]]

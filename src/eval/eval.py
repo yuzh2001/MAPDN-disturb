@@ -114,7 +114,7 @@ def run(configs: EvalHydraEntryConfig):
     else:
         save_path = argv.save_path + "/"
 
-    LOAD_PATH = save_path + f"{configs.group_name}/" + log_name + "/model.pt"
+    LOAD_PATH = save_path + f"{configs.save_group}/" + log_name + "/model.pt"
     print(f"Loading model from {LOAD_PATH}")
 
     model = Model[argv.alg]
@@ -145,7 +145,7 @@ def run(configs: EvalHydraEntryConfig):
         name=wandb_name,
         save_code=True,
         config=OmegaConf.to_container(configs, resolve=True),
-        group=configs.group_name,
+        group=configs.run_group,
         tags=[configs.eval_config.alg, configs.eval_config.alias],
         job_type=f"eval-[{date_stamp}]",
     )

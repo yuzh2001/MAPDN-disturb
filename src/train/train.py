@@ -119,7 +119,7 @@ def run(configs: TrainHydraEntryConfig):
         sync_tensorboard=True,
         name=wandb_name,
         save_code=True,
-        group=configs.group_name,
+        group=configs.run_group,
         tags=[configs.train_config.alg, configs.train_config.alias],
         job_type="train",
     )
@@ -173,11 +173,11 @@ def run(configs: TrainHydraEntryConfig):
         if i % args.save_model_freq == args.save_model_freq - 1:
             train.print_info(stat)
             os.makedirs(
-                save_path + f"models/{configs.group_name}/{log_name}", exist_ok=True
+                save_path + f"models/{configs.save_group}/{log_name}", exist_ok=True
             )
             th.save(
                 {"model_state_dict": train.behaviour_net.state_dict()},
-                save_path + f"models/{configs.group_name}/" + log_name + "/model.pt",
+                save_path + f"models/{configs.save_group}/" + log_name + "/model.pt",
             )
             print("The model is saved!\n")
 
