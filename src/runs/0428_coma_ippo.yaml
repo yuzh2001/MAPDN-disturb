@@ -20,3 +20,8 @@ steps:
     args:
       - eval_config.alg=ippo,coma
       - eval_config.alias=original,dis_new_q_weight_0.1_10t
+  - type: bark
+    config_name: default
+    multirun: False
+    args:
+      - 训练完成

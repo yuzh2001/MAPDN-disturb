@@ -8,12 +8,14 @@ import shutil
 import os
 import wandb
 from datetime import datetime
+from utils.notify import notify
 
 
 class HydraStepType(Enum):
     train = "train"
     eval = "eval"
     bash = "bash"
+    bark = "bark"
 
 
 @dataclass
@@ -83,6 +85,8 @@ def main(config: HydraRunConfig):
             return f"{file_cmd} {config_cmd} {multirun_cmd} {args_cmd} {group_cmd}"
         elif HydraStepType(step.type) == HydraStepType.bash:
             return " ".join(step.args)
+        elif HydraStepType(step.type) == HydraStepType.bark:
+            return "bark"
         return ""
 
     commands = []
@@ -98,12 +102,12 @@ def main(config: HydraRunConfig):
     for step in config.steps:
         if step.type == HydraStepType.train:
             shutil.copy(
-                f"configs/train/{step.config_name}.yaml",
+                f"src/configs/train/{step.config_name}.yaml",
                 hydra_output_dir + f"/train/{step.config_name}.yaml",
             )
         elif step.type == HydraStepType.eval:
             shutil.copy(
-                f"configs/eval/{step.config_name}.yaml",
+                f"src/configs/eval/{step.config_name}.yaml",
                 hydra_output_dir + f"/eval/{step.config_name}.yaml",
             )
 
@@ -127,7 +131,10 @@ def main(config: HydraRunConfig):
     # 执行代码
     for command in commands:
         rich.print(f"Running command: 【{command}】")
-        os.system(command)
+        if command == "bark":
+            notify("训练完成/" + config.description)
+        else:
+            os.system(command)
 
 
 if __name__ == "__main__":
