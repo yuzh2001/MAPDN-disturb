@@ -147,7 +147,7 @@ def run(configs: EvalHydraEntryConfig):
         config=OmegaConf.to_container(configs, resolve=True),
         group=configs.run_group,
         tags=[configs.eval_config.alg, configs.eval_config.alias],
-        job_type=f"eval-[{date_stamp}]",
+        job_type="eval",
     )
     wandb.define_metric("terminate_cnt", summary="min")
 

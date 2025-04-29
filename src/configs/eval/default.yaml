@@ -2,6 +2,8 @@
 #   - override hydra/launcher: submitit_local
 
 group_name: ???
+run_group: ???
+save_group: ???
 
 eval_config:
   save_path: reproduction/models
