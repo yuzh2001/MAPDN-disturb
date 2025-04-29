@@ -152,6 +152,8 @@ def run(configs: EvalHydraEntryConfig):
     strategy = Strategy[argv.alg]
     assert strategy == "pg"
     test = PGTester(args, behaviour_net, env, argv.render)
+    # env = VoltageControl(env_config_dict, configs.disturbances)
+    # behaviour_net.load_state_dict(checkpoint["model_state_dict"])
 
     if argv.test_mode == "single":
         record = test.run(argv.test_day, 23, 2)
