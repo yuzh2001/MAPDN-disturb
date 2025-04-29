@@ -34,6 +34,7 @@ dependencies = [
     "xvfbwrapper>=0.2.9",
     "tqdm>=4.67.0",
     "python-dotenv>=0.21.1",
+    "hydra-joblib-launcher>=1.2.0",
 ]
 
 [tool.uv.sources]

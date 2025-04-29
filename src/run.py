@@ -9,6 +9,7 @@ import os
 import wandb
 from datetime import datetime
 from utils.notify import notify
+import torch
 
 
 class HydraStepType(Enum):
@@ -16,6 +17,7 @@ class HydraStepType(Enum):
     eval = "eval"
     bash = "bash"
     bark = "bark"
+    parallel_gpu = "parallel_gpu"
 
 
 @dataclass
@@ -85,6 +87,19 @@ def main(config: HydraRunConfig):
             return f"{file_cmd} {config_cmd} {multirun_cmd} {args_cmd} {group_cmd}"
         elif HydraStepType(step.type) == HydraStepType.bash:
             return " ".join(step.args)
+        elif HydraStepType(step.type) == HydraStepType.parallel_gpu:
+            gpu_count = torch.cuda.device_count()
+            para_cmds = []
+            gpu_idx = 0
+            for i, arg in enumerate(step.args):
+                os.makedirs(hydra_output_dir + "/logs", exist_ok=True)
+                para_cmds.append(
+                    f"CUDA_VISIBLE_DEVICES={gpu_idx} nohup {arg} run_group={config.run_group} save_group={config.save_group} > {hydra_output_dir}/logs/{i}.out &"
+                )
+                gpu_idx += 1
+                if gpu_idx >= gpu_count:
+                    gpu_idx = 0
+            return "\n".join(para_cmds)
         elif HydraStepType(step.type) == HydraStepType.bark:
             return "bark"
         return ""
