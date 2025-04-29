@@ -211,7 +211,13 @@ class VoltageControl(MultiAgentEnv):
         """function for the interaction between agent and the env each time step"""
         last_powergrid = copy.deepcopy(self.powergrid)
 
+        for disturbance in self.disturbances:
+            if disturbance.disturbance.type == "pv_stop" and disturbance.should_trigger:
+                pv_id = disturbance.disturbance_args.get("pv_id", [])
+                actions[pv_id] = 0
+
         # check whether the power balance is unsolvable
+
         solvable = self._take_action(actions)
         if solvable:
             # get the reward of current actions

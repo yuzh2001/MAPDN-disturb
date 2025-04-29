@@ -11,7 +11,7 @@ def notify(msg: str):
     """
     try:
         # 使用python-dotenv加载.env.local文件
-        load_dotenv(".env")
+        load_dotenv("src/.env")
 
         # 获取BARK_URL环境变量
         bark_url = os.getenv("BARK_URL")
