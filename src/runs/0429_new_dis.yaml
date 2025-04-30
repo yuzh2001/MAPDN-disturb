@@ -3,17 +3,17 @@ defaults:
   - _self_
 
 run_group: latest
-save_group: 0429/1308
+save_group: latest
 
 description: 重新训练新的扰动
 
 steps:
-  # - type: train
-  #   config_name: case33
-  #   multirun: True
-  #   args:
-  #     - train_config.alg=matd3,coma,ippo
-  #     - train_config.alias=original #dis_new_q_weight_0.1_10t
+  - type: train
+    config_name: case33
+    multirun: True
+    args:
+      - train_config.alg=matd3,coma,ippo
+      - train_config.alias=dis_new_q_weight_0.1_10t
   - type: eval
     config_name: case335
     multirun: True
