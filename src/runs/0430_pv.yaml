@@ -2,7 +2,7 @@ defaults:
   - default
   - _self_
 
-run_group: 0430_pv_eval
+run_group: 0430_1745_pv_eval
 save_group: 0429/1308
 
 description: pv扰动的训练已经完成

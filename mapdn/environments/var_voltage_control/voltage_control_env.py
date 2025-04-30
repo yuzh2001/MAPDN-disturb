@@ -207,13 +207,18 @@ class VoltageControl(MultiAgentEnv):
         last_powergrid = copy.deepcopy(self.powergrid)
 
         for disFactory in self.disturbances:
-            if (
-                disFactory.disturbance.type == "pv_stop"
-                and self.steps >= disFactory.start_at
-                and self.steps < disFactory.end_at
-            ):
-                pv_id = disFactory.disturbance_args.get("pv_id", [])
-                actions[pv_id] = 0
+            if disFactory.disturbance.type == "pv_stop":
+                if disFactory.is_random:
+                    if disFactory.random_is_active:
+                        pv_id = disFactory.disturbance_args.get("pv_id", [])
+                        actions[pv_id] = 0
+                else:
+                    if (
+                        self.steps >= disFactory.start_at
+                        and self.steps < disFactory.end_at
+                    ):
+                        pv_id = disFactory.disturbance_args.get("pv_id", [])
+                        actions[pv_id] = 0
         # rich.print(
         #     {
         #         "step": self.steps,

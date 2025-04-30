@@ -29,7 +29,11 @@ class DisturbanceFactory:
         if self.is_random:
             self.random_probability = config.random_probability
             self.random_duration = config.random_duration
+            self.start_at = 1e9
+            self.end_at = 1e9
         else:
+            self.random_probability = 0
+            self.random_duration = 0
             self.start_at = config.start_at
             self.end_at = config.end_at
 
