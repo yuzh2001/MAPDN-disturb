@@ -59,9 +59,9 @@ class DisturbanceFactory:
                     self.random_start_at = None
                     self.random_should_end_at = None
         else:
-            if frame == self.start_at:
+            if frame >= self.start_at:
                 self.should_trigger = True
-            elif frame == self.end_at:
+            elif frame >= self.end_at:
                 self.should_trigger = False
 
         if self.should_trigger:

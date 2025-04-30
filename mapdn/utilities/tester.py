@@ -97,6 +97,7 @@ class PGTester(object):
         state, global_state = self.env.reset()
         last_hid = self.behaviour_net.policy_dicts[0].init_hidden()
         info = None
+        infos = []
         t_terminate = self.args.max_steps - 1
         for t in range(self.args.max_steps):
             if self.render:
@@ -122,10 +123,11 @@ class PGTester(object):
             next_state = self.env.get_obs()
             state = next_state
             last_hid = hid
+            infos.append(copy.deepcopy(info))
             if done_:
                 t_terminate = t
                 break
-        return info, t_terminate
+        return infos, t_terminate
 
     def batch_run(self, num_epsiodes=100, gpus=[0, 1]):
         """
@@ -161,14 +163,15 @@ class PGTester(object):
         test_results = {}
         terminate_cnt = 0
         terminate_steps = []
-        for info, t_terminate in results:
-            for k, v in info.items():
-                if k == "sum_rewards":
-                    continue
-                if "mean_" + k not in test_results:
-                    test_results["mean_" + k] = [v]
-                else:
-                    test_results["mean_" + k].append(v)
+        for infos, t_terminate in results:
+            for info in infos:
+                for k, v in info.items():
+                    if k == "sum_rewards":
+                        continue
+                    if "mean_" + k not in test_results:
+                        test_results["mean_" + k] = [v]
+                    else:
+                        test_results["mean_" + k].append(v)
             if t_terminate < self.args.max_steps - 2:
                 terminate_cnt += 1
                 terminate_steps.append(t_terminate)

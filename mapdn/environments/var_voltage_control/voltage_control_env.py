@@ -131,11 +131,6 @@ class VoltageControl(MultiAgentEnv):
                 # self._episode_start_hour = 1
                 self._episode_start_day = self._select_start_day()
                 self._episode_start_interval = self._select_start_interval()
-                # rich.print({
-                #     "hour": self._episode_start_hour,
-                #     "day": self._episode_start_day,
-                #     "interval": self._episode_start_interval
-                # })
             # get one episode of data
             self.pv_histories = self._get_episode_pv_history()
             self.active_demand_histories = self._get_episode_active_demand_history()
@@ -211,10 +206,24 @@ class VoltageControl(MultiAgentEnv):
         """function for the interaction between agent and the env each time step"""
         last_powergrid = copy.deepcopy(self.powergrid)
 
-        for disturbance in self.disturbances:
-            if disturbance.disturbance.type == "pv_stop" and disturbance.should_trigger:
-                pv_id = disturbance.disturbance_args.get("pv_id", [])
+        for disFactory in self.disturbances:
+            if (
+                disFactory.disturbance.type == "pv_stop"
+                and self.steps >= disFactory.start_at
+                and self.steps < disFactory.end_at
+            ):
+                pv_id = disFactory.disturbance_args.get("pv_id", [])
                 actions[pv_id] = 0
+        # rich.print(
+        #     {
+        #         "step": self.steps,
+        #         "disturbances": self.disturbances,
+        #         "actions_after": actions,
+        #     }
+        # )
+
+        # pv_id = [0, 1, 2, 3, 4, 5]
+        # actions[pv_id] = 1
 
         # check whether the power balance is unsolvable
         solvable = self._take_action(actions)
@@ -659,6 +668,7 @@ class VoltageControl(MultiAgentEnv):
             actions, self.powergrid.sgen["p_mw"]
         )
 
+        # print(f"q_mvar: {self.powergrid.sgen['q_mvar']}")
         # solve power flow to get the latest voltage with new reactive power and old deamnd and PV active power
         try:
             pp.runpp(self.powergrid)

@@ -20,7 +20,7 @@ disturbances:
   - type: pv_stop
     is_random: False
     start_at: 10
-    end_at: 360
+    end_at: 200
     disturbance_args:
       pv_id: [0,1,2,3,4,5]
 

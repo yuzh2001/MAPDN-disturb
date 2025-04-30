@@ -5,7 +5,15 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true
+    "**/.DS_Store": true,
+    ".vscode/": true,
+    ".ipynb_checkpoints/": true,
+    ".gitignore": true,
+    ".venv/": true,
+    "**/**.egg-info/": true,
+    "wandb/": true,
+    "**/.ipynb_checkpoints/": true,
+    "**/__pycache__/": true
   },
-  "hidefiles.selectedProfile": "Show All Files"
+  "hidefiles.selectedProfile": "Default"
 }

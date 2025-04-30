@@ -29,4 +29,5 @@ class PVStop:
         # rich.print(self.env.powergrid.load["q_mvar"])
 
     def end(self):
-        pass
+        self.env = self.env
+        # pass

@@ -183,9 +183,7 @@ def run(configs: TrainHydraEntryConfig):
 
     logger.close()
 
-    import requests
-
-    requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
+    # requests.get("https://api.day.app/Ya5CADvAuDWf5NR4E8ZGt5/训练完成")
     wandb_run.log_model(
         path=save_path + "models/" + log_name + "/model.pt", name=wandb_name
     )
