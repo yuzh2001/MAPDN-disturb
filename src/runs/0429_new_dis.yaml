@@ -12,13 +12,13 @@ steps:
   #   config_name: case33
   #   multirun: True
   #   args:
-  #     - train_config.alg=mappo,maddpg
-  #     - train_config.alias=dis_new_q_weight_0.1_10t
+  #     - train_config.alg=matd3,coma,ippo
+  #     - train_config.alias=original #dis_new_q_weight_0.1_10t
   - type: eval
     config_name: case335
     multirun: True
     args:
-      - eval_config.alg=mappo,maddpg
+      - eval_config.alg=matd3,coma,ippo
       - eval_config.alias=original,dis_new_q_weight_0.1_10t
   - type: bark
     config_name: default

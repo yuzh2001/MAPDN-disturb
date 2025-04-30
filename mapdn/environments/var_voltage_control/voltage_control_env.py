@@ -217,7 +217,6 @@ class VoltageControl(MultiAgentEnv):
                 actions[pv_id] = 0
 
         # check whether the power balance is unsolvable
-
         solvable = self._take_action(actions)
         if solvable:
             # get the reward of current actions

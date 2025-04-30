@@ -23,9 +23,17 @@ class LoadChange:
         # self.env.powergrid.load["p_mw"] = (
         #     self.env.powergrid.load["p_mw"] * self.disturbance_args["multiplier"]
         # )
+
         self.env.powergrid.load["q_mvar"] = (
             self.env.powergrid.load["q_mvar"] * self.disturbance_args["multiplier"]
         )
+        # self.env.powergrid.sgen["p_mw"] = (
+        #     self.env.powergrid.sgen["p_mw"] * self.disturbance_args["multiplier"]
+        # )
+        # for i, v in enumerate(self.env.s_max):
+        #     if self.env.powergrid.sgen["p_mw"][i] > v:
+        #         self.env.powergrid.sgen["p_mw"][i] = v
+
         # rich.print(self.env.powergrid.load["q_mvar"])
 
     def end(self):

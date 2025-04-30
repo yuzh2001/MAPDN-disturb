@@ -14,15 +14,17 @@ eval_config:
   voltage_barrier_type: bowl
   test_mode: batch
   test_day: 180
-  eval_episodes: 1000
+  eval_episodes: 100
 
 disturbances:
-  - type: load_change
+  - type: pv_stop
     is_random: False
     start_at: 10
-    end_at: 460
+    end_at: 360
     disturbance_args:
-      multiplier: 8  # - type: load_change
+      pv_id: [0,1,2,3,4,5]
+
+  # - type: load_change
   #   is_random: True
   #   random_probability: 0.002 # for 480 episodes length, 480 * 0.002 = 0.96, so on average 1 episode will have 1 disturbance
   #   disturbance_args:
