@@ -34,6 +34,15 @@ def run(configs: TrainHydraEntryConfig):
     # load env args
     with open(f"{global_prefix}/args/env_args/{argv.env}.yaml", "r") as f:
         env_config_dict = yaml.safe_load(f)["env_args"]
+    if configs.train_config.alias == "pv_obs":
+        env_config_dict["state_space"] = [
+            "pv",
+            "demand",
+            "reactive",
+            "vm_pu",
+            "va_degree",
+            "pv_disturbance_active",
+        ]
     data_path = env_config_dict["data_path"].split("/")
     data_path[-1] = argv.scenario
     env_config_dict["data_path"] = "/".join(data_path)

@@ -112,8 +112,12 @@ class VoltageControl(MultiAgentEnv):
         self.voltage_barrier = VoltageBarrier(self.voltage_barrier_type)
         self._rendering_initialized = False
 
+        # codes about pv disturbance
+        self.pv_disturbance_active = [False for t in range(self.n_agents)]
+
     def reset(self, reset_time=True):
         """reset the env"""
+        self.pv_disturbance_active = [False for t in range(self.n_agents)]
         # reset the time step, cumulative rewards and obs history
         self.steps = 1
         self.sum_rewards = 0
@@ -211,14 +215,27 @@ class VoltageControl(MultiAgentEnv):
                 if disFactory.is_random:
                     if disFactory.random_is_active:
                         pv_id = disFactory.disturbance_args.get("pv_id", [])
-                        actions[pv_id] = 0
+                        for pid in pv_id:
+                            actions[pid] = 0
+                            self.pv_disturbance_active[pid] = True
+                    else:
+                        self.pv_disturbance_active = [
+                            False for t in range(self.n_agents)
+                        ]
                 else:
                     if (
                         self.steps >= disFactory.start_at
                         and self.steps < disFactory.end_at
                     ):
                         pv_id = disFactory.disturbance_args.get("pv_id", [])
-                        actions[pv_id] = 0
+                        for pid in pv_id:
+                            actions[pid] = 0
+                            self.pv_disturbance_active[pid] = True
+                    else:
+                        self.pv_disturbance_active = [
+                            False for t in range(self.n_agents)
+                        ]
+
         # rich.print(
         #     {
         #         "step": self.steps,
@@ -346,6 +363,13 @@ class VoltageControl(MultiAgentEnv):
                             * np.pi
                             / 180
                         )
+                    if "pv_disturbance_active" in self.state_space:
+                        obs += np.array(
+                            [
+                                1 if active else 0
+                                for active in self.pv_disturbance_active
+                            ]
+                        ).tolist()
                     obs_sgen_dict[f"'{list(clusters.keys())[i]}'"] = np.array(obs)
                 obs_len_list.append(
                     obs_sgen_dict[f"'{list(clusters.keys())[i]}'"].shape[0]

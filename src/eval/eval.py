@@ -50,6 +50,7 @@ def run(configs: EvalHydraEntryConfig):
             argv.alias,
         ]
     )
+
     print(f"Now testing: {wandb_name}")
     runa = wandb.init(
         project="mapdn",
@@ -88,6 +89,16 @@ def run(configs: EvalHydraEntryConfig):
         env_config_dict["mode"] = argv.mode
         env_config_dict["voltage_barrier_type"] = argv.voltage_barrier_type
         env_config_dict["episode_limit"] = 480  # for one-day test
+
+        if configs.eval_config.alias == "pv_obs":
+            env_config_dict["state_space"] = [
+                "pv",
+                "demand",
+                "reactive",
+                "vm_pu",
+                "va_degree",
+                "pv_disturbance_active",
+            ]
         return env_config_dict
 
     env_config_dict = _read_env_args()
