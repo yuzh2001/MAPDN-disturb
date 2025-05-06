@@ -101,7 +101,7 @@ def main(config: HydraRunConfig):
                     gpu_idx = 0
             return "\n".join(para_cmds)
         elif HydraStepType(step.type) == HydraStepType.bark:
-            return "bark"
+            return f"bark||{config.description}"
         return ""
 
     commands = []
@@ -146,8 +146,8 @@ def main(config: HydraRunConfig):
     # 执行代码
     for command in commands:
         rich.print(f"Running command: 【{command}】")
-        if command == "bark":
-            notify("训练完成/" + config.description)
+        if command.startswith("bark||"):
+            notify("训练完成/" + command.split("||")[1])
         else:
             os.system(command)
 
