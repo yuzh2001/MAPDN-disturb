@@ -101,7 +101,7 @@ def main(config: HydraRunConfig):
                     gpu_idx = 0
             return "\n".join(para_cmds)
         elif HydraStepType(step.type) == HydraStepType.bark:
-            return f"bark||{config.description}"
+            return f"bark||{step.args[0]}"
         return ""
 
     commands = []
