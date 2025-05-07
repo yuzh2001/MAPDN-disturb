@@ -16,13 +16,13 @@ eval_config:
   test_day: 180
   eval_episodes: 1000
 
-disturbances:
-  - type: pv_stop
-    is_random: False
-    start_at: 10
-    end_at: 150
-    disturbance_args:
-      pv_id: [1,5]
+disturbances: []
+  # - type: pv_stop
+  #   is_random: False
+  #   start_at: 10
+  #   end_at: 150
+  #   disturbance_args:
+  #     pv_id: [1,5]
 
   # - type: load_change
   #   is_random: True

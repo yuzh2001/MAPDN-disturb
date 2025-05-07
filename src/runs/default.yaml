@@ -5,7 +5,7 @@ description: _DEFAULT_DESCRIPTION_
 
 wandb:
   use_wandb: True
-  project: mapdn
+  project: mapdn_new
 
 
 steps:

@@ -4,7 +4,7 @@ from mapdn.models.model_registry import Model, Strategy
 from mapdn.environments.var_voltage_control.voltage_control_env import VoltageControl
 from mapdn.utilities.util import convert
 from mapdn.utilities.tester import PGTester
-
+from hydra.core.hydra_config import HydraConfig
 import hydra
 from omegaconf import OmegaConf
 import rich
@@ -26,6 +26,7 @@ def run(configs: EvalHydraEntryConfig):
 
     # 2. 读取参数
     rich.print(OmegaConf.to_container(configs, resolve=True))
+    config_name = HydraConfig.get().job.config_name
     argv = configs.eval_config
     global_prefix = "./mapdn"
 
@@ -53,7 +54,7 @@ def run(configs: EvalHydraEntryConfig):
 
     print(f"Now testing: {wandb_name}")
     runa = wandb.init(
-        project="mapdn",
+        project="mapdn_new",
         name=wandb_name,
         save_code=True,
         config=OmegaConf.to_container(configs, resolve=True),
@@ -174,8 +175,8 @@ def run(configs: EvalHydraEntryConfig):
         wandb.log(
             {
                 "results_table": wandb.Table(
-                    columns=["wandb_name"] + list(record.keys()),
-                    data=[[wandb_name] + data],
+                    columns=["wandb_name", "config_name"] + list(record.keys()),
+                    data=[[wandb_name, config_name] + data],
                 )
             }
         )

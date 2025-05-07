@@ -120,7 +120,7 @@ def run(configs: TrainHydraEntryConfig):
 
     # ============wandb============
     wandb_run = wandb.init(
-        project="MAPDN",
+        project="mapdn_new",
         config={
             "hp": OmegaConf.to_container(configs, resolve=True),
             "train": alg_config_dict,
