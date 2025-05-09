@@ -105,6 +105,9 @@ def run(configs: TrainHydraEntryConfig):
 
     alg_config_dict = {**default_config_dict, **alg_config_dict}
 
+    if configs.alg_override is not None:
+        alg_config_dict["max_steps"] = configs.alg_override.max_steps
+
     # define envs
     if configs.train_config.alias == "original":
         configs.disturbances = None

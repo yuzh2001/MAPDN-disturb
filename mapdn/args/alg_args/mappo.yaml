@@ -14,3 +14,4 @@ alg_args:
     "action_enforcebound": True
     "behaviour_update_freq": 240 # transition update: steps / episodic update: episodes
     "target_update_freq": 480 # transition update: steps / episodic update: episodes
+    # "batch_size": 2

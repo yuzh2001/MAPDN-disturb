@@ -18,3 +18,7 @@ disturbances: ???
 #   launcher:
 #     timeout_min: 6000
 #     gpus_per_node: 1
+
+
+alg_override:
+  max_steps: 240

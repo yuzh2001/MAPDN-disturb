@@ -55,8 +55,14 @@ class TrainConfig:
 
 
 @dataclass
+class AlgOverrideConfig:
+    max_steps: int
+
+
+@dataclass
 class TrainHydraEntryConfig:
     save_group: str
     run_group: str
     train_config: TrainConfig
     disturbances: Optional[List[DisturbanceConfig]]
+    alg_override: Optional[AlgOverrideConfig]

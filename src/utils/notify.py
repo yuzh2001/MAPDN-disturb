@@ -22,7 +22,7 @@ def notify(msg: str):
         # 发送GET请求
         url = f"{bark_url}/{msg}"
         print(url)
-        response = requests.get(f"{bark_url}{msg}?level=critical&volume=5&badge=1")
+        response = requests.get(f"{bark_url}{msg}")
         if response.status_code == 200:
             print("通知发送成功")
         else:
