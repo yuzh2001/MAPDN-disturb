@@ -129,7 +129,7 @@ def run(configs: EvalHydraEntryConfig):
         alg_config_dict["agent_num"] = env.get_num_of_agents()
         alg_config_dict["obs_size"] = env.get_obs_size()
         alg_config_dict["action_dim"] = env.get_total_actions()
-        alg_config_dict["cuda"] = True  # gpu!
+        alg_config_dict["cuda"] = False  # gpu!
 
         return alg_config_dict
 

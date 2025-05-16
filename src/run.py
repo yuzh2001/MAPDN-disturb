@@ -147,7 +147,7 @@ def main(config: HydraRunConfig):
     for command in commands:
         rich.print(f"Running command: 【{command}】")
         if command.startswith("bark||"):
-            notify("训练完成/" + command.split("||")[1])
+            notify(command.split("||")[1])
         else:
             os.system(command)
 
